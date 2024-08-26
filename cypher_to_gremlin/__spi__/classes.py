@@ -11,6 +11,7 @@ class Context:
     labels: dict = field(default_factory=lambda: {})
     wheres: List['CypherElement'] = field(default_factory=lambda: [])
     value_resolver: ValueResolver = lambda *e: e[2]
+    as_code: bool = False
 
     def with_source(self, source: Optional['CypherElement']):
         return Context(source, self.labels, self.wheres, self.value_resolver)

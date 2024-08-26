@@ -22,6 +22,8 @@ class OCPartialComparisonExpression(CypherElement):
 
         if isinstance(value, list):
             values = ", ".join([f'"{e}"' for e in value])
+            if context.as_code:
+                return f'.has("{context.source.execute(context)}", within([{values}]))'
             return f'.has("{context.source.execute(context)}", within({values}))'
 
         if self.operator == "=":
