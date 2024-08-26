@@ -19,10 +19,14 @@ class OCPartialComparisonExpression(CypherElement):
 
         # FIXME:
         value = context.value_resolver(context.labels[_variable], _property, value[1:-1])
-        value = f'"{value}"'
+
+        if isinstance(value, list):
+            values = ", ".join([f'"{e}"' for e in value])
+            return f'.has("{context.source.execute(context)}", within({values}))'
 
         if self.operator == "=":
-            return f'.has("{context.source.execute(context)}", {value})'
+            return f'.has("{context.source.execute(context)}", "{value}")'
+
         raise ValueError(f"unknown expression operator '{self.operator}'")
 
     # noinspection PyMethodMayBeStatic
