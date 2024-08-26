@@ -14,10 +14,10 @@ class Context:
     as_code: bool = False
 
     def with_source(self, source: Optional['CypherElement']):
-        return Context(source, self.labels, self.wheres, self.value_resolver)
+        return Context(source, self.labels, self.wheres, self.value_resolver, self.as_code)
 
     def with_wheres(self, wheres: List['CypherElement']):
-        return Context(self.source, self.labels, [*wheres], self.value_resolver)
+        return Context(self.source, self.labels, [*wheres], self.value_resolver, self.as_code)
 
 
 class CypherElement(ABC):
