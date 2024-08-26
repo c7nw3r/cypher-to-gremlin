@@ -1,0 +1,1 @@
+antlr4 -visitor -Dlanguage=Python3 -o . ./cypher_to_gremlin/antlr/*.g4
