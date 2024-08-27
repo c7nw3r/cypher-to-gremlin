@@ -18,7 +18,7 @@ class OCNodePattern(CypherElement):
 
         filters = [e for e in context.wheres if e.is_sufficient(context)]
 
-        segments = [f".hasLabel({', '.join(labels)})"]
+        segments = [f".hasLabel({', '.join(labels)})"] if len(labels) > 0 else []
 
         for _filter in filters:
             segments.append(_filter.execute(context))

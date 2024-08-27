@@ -35,3 +35,9 @@ class CypherToGremlinTest(TestCase):
         RETURN product, vendor
         """)
         assert engine.to_gremlin() == 'V().hasLabel("Product").has("name", "A").out("createdBy").hasLabel("Vendor").has("name", "B")'
+
+    def test_edge_with_multiple_types(self):
+        engine = CypherEngine.parse("""
+        MATCH (document:Document)-[r:HAS_TOPIC|HAS_KEYWORD]->(n) WHERE n.text = "Stahl" RETURN document
+        """)
+        assert engine.to_gremlin() == 'V().hasLabel("Document").out("HAS_TOPIC", "HAS_KEYWORD").has("text", "Stahl")'
