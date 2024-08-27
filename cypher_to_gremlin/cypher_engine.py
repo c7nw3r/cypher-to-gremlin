@@ -11,7 +11,7 @@ from cypher_to_gremlin.cypher_visitor import CypherVisitorImpl
 from cypher_to_gremlin.listener.error_listener import CypherErrorListener
 
 
-class CypherEngine(ABC):
+class CypherToGremlin(ABC):
 
     def __init__(self, tree: List[CypherElement]):
         self.tree = tree
@@ -30,8 +30,8 @@ class CypherEngine(ABC):
         raise ValueError(str(source) + " cannot be converted to input stream")
 
     @staticmethod
-    def parse(source: CypherSource) -> 'CypherEngine':
-        lexer = CypherLexer(CypherEngine.stream(source))
+    def parse(source: CypherSource) -> 'CypherToGremlin':
+        lexer = CypherLexer(CypherToGremlin.stream(source))
         stream = CommonTokenStream(lexer)
         parser = CypherParser(stream)
 
@@ -47,7 +47,11 @@ class CypherEngine(ABC):
         if len(error_listener.errors) > 0:
             raise ValueError(str(error_listener.errors[0]))
 
-        return CypherEngine(tree)
+        return CypherToGremlin(tree)
 
     def to_gremlin(self, context: Optional[Context] = None) -> str:
-        return "V()" +  "".join([e.execute(context or Context()) for e in self.tree])
+        return "V()" + "".join([e.execute(context or Context()) for e in self.tree])
+
+    @staticmethod
+    def convert(source: CypherSource, context: Optional[Context] = None) -> str:
+        return CypherToGremlin.parse(source).to_gremlin(context)
