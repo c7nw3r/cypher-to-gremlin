@@ -5,6 +5,7 @@ from io import StringIO
 from typing.io import TextIO
 import sys
 
+
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u0081")
@@ -13,8 +14,8 @@ def serializedATN():
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
         buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
-        buf.write("\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t")
-        buf.write("&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
+        buf.write('\4\37\t\37\4 \t \4!\t!\4"\t"\4#\t#\4$\t$\4%\t%\4&\t')
+        buf.write("&\4'\t'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
         buf.write("/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t\64")
         buf.write("\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:\4;\t")
         buf.write(";\4<\t<\4=\t=\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\tC\4D\t")
@@ -70,12 +71,12 @@ def serializedATN():
         buf.write("\u025e\n\35\3\36\3\36\3\36\3\36\3\36\3\36\3\36\5\36\u0267")
         buf.write("\n\36\3\37\3\37\3\37\3\37\3\37\3\37\3\37\5\37\u0270\n")
         buf.write("\37\3\37\7\37\u0273\n\37\f\37\16\37\u0276\13\37\3 \3 ")
-        buf.write("\3 \3 \3!\3!\3!\3!\3\"\3\"\5\"\u0282\n\"\3\"\5\"\u0285")
-        buf.write("\n\"\3#\3#\3#\3#\3$\3$\5$\u028d\n$\3$\3$\5$\u0291\n$\3")
+        buf.write('\3 \3 \3!\3!\3!\3!\3"\3"\5"\u0282\n"\3"\5"\u0285')
+        buf.write('\n"\3#\3#\3#\3#\3$\3$\5$\u028d\n$\3$\3$\5$\u0291\n$\3')
         buf.write("$\7$\u0294\n$\f$\16$\u0297\13$\3%\3%\5%\u029b\n%\3%\3")
-        buf.write("%\5%\u029f\n%\3%\3%\3%\5%\u02a4\n%\3&\3&\3\'\3\'\5\'\u02aa")
-        buf.write("\n\'\3\'\7\'\u02ad\n\'\f\'\16\'\u02b0\13\'\3\'\3\'\3\'")
-        buf.write("\3\'\5\'\u02b6\n\'\3(\3(\5(\u02ba\n(\3(\6(\u02bd\n(\r")
+        buf.write("%\5%\u029f\n%\3%\3%\3%\5%\u02a4\n%\3&\3&\3'\3'\5'\u02aa")
+        buf.write("\n'\3'\7'\u02ad\n'\f'\16'\u02b0\13'\3'\3'\3'")
+        buf.write("\3'\5'\u02b6\n'\3(\3(\5(\u02ba\n(\3(\6(\u02bd\n(\r")
         buf.write("(\16(\u02be\3)\3)\5)\u02c3\n)\3)\3)\5)\u02c7\n)\5)\u02c9")
         buf.write("\n)\3)\3)\5)\u02cd\n)\5)\u02cf\n)\3)\3)\5)\u02d3\n)\5")
         buf.write(")\u02d5\n)\3)\3)\3*\3*\5*\u02db\n*\3*\3*\3+\3+\5+\u02e1")
@@ -151,7 +152,7 @@ def serializedATN():
         buf.write("`\3`\5`\u0609\n`\7`\u060b\n`\f`\16`\u060e\13`\5`\u0610")
         buf.write("\n`\3`\3`\3a\3a\3b\3b\3b\5b\u0619\nb\3c\3c\5c\u061d\n")
         buf.write("c\3d\3d\3e\3e\3f\3f\3g\3g\3h\3h\3h\2\2i\2\4\6\b\n\f\16")
-        buf.write("\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDF")
+        buf.write('\20\22\24\26\30\32\34\36 "$&(*,.\60\62\64\668:<>@BDF')
         buf.write("HJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084\u0086")
         buf.write("\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098")
         buf.write("\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa")
@@ -164,7 +165,7 @@ def serializedATN():
         buf.write("\u0124\3\2\2\2\20\u013c\3\2\2\2\22\u0147\3\2\2\2\24\u014c")
         buf.write("\3\2\2\2\26\u0150\3\2\2\2\30\u015d\3\2\2\2\32\u0167\3")
         buf.write("\2\2\2\34\u017d\3\2\2\2\36\u017f\3\2\2\2 \u0185\3\2\2")
-        buf.write("\2\"\u01bb\3\2\2\2$\u01bf\3\2\2\2&\u01d3\3\2\2\2(\u01e7")
+        buf.write('\2"\u01bb\3\2\2\2$\u01bf\3\2\2\2&\u01d3\3\2\2\2(\u01e7')
         buf.write("\3\2\2\2*\u01e9\3\2\2\2,\u01f4\3\2\2\2.\u0205\3\2\2\2")
         buf.write("\60\u021e\3\2\2\2\62\u0222\3\2\2\2\64\u022a\3\2\2\2\66")
         buf.write("\u0231\3\2\2\28\u025d\3\2\2\2:\u0266\3\2\2\2<\u0268\3")
@@ -275,10 +276,10 @@ def serializedATN():
         buf.write("\2\u0182\u0183\3\2\2\2\u0183\u0184\5F$\2\u0184\37\3\2")
         buf.write("\2\2\u0185\u0187\79\2\2\u0186\u0188\7\177\2\2\u0187\u0186")
         buf.write("\3\2\2\2\u0187\u0188\3\2\2\2\u0188\u0189\3\2\2\2\u0189")
-        buf.write("\u0194\5\"\22\2\u018a\u018c\7\177\2\2\u018b\u018a\3\2")
+        buf.write('\u0194\5"\22\2\u018a\u018c\7\177\2\2\u018b\u018a\3\2')
         buf.write("\2\2\u018b\u018c\3\2\2\2\u018c\u018d\3\2\2\2\u018d\u018f")
         buf.write("\7\4\2\2\u018e\u0190\7\177\2\2\u018f\u018e\3\2\2\2\u018f")
-        buf.write("\u0190\3\2\2\2\u0190\u0191\3\2\2\2\u0191\u0193\5\"\22")
+        buf.write('\u0190\3\2\2\2\u0190\u0191\3\2\2\2\u0191\u0193\5"\22')
         buf.write("\2\u0192\u018b\3\2\2\2\u0193\u0196\3\2\2\2\u0194\u0192")
         buf.write("\3\2\2\2\u0194\u0195\3\2\2\2\u0195!\3\2\2\2\u0196\u0194")
         buf.write("\3\2\2\2\u0197\u0199\5f\64\2\u0198\u019a\7\177\2\2\u0199")
@@ -315,7 +316,7 @@ def serializedATN():
         buf.write("\7\4\2\2\u01da\u01dc\7\177\2\2\u01db\u01da\3\2\2\2\u01db")
         buf.write("\u01dc\3\2\2\2\u01dc\u01dd\3\2\2\2\u01dd\u01df\5(\25\2")
         buf.write("\u01de\u01d7\3\2\2\2\u01df\u01e2\3\2\2\2\u01e0\u01de\3")
-        buf.write("\2\2\2\u01e0\u01e1\3\2\2\2\u01e1\'\3\2\2\2\u01e2\u01e0")
+        buf.write("\2\2\2\u01e0\u01e1\3\2\2\2\u01e1'\3\2\2\2\u01e2\u01e0")
         buf.write("\3\2\2\2\u01e3\u01e4\5\u00b0Y\2\u01e4\u01e5\5\\/\2\u01e5")
         buf.write("\u01e8\3\2\2\2\u01e6\u01e8\5f\64\2\u01e7\u01e3\3\2\2\2")
         buf.write("\u01e7\u01e6\3\2\2\2\u01e8)\3\2\2\2\u01e9\u01ea\7=\2\2")
@@ -376,10 +377,10 @@ def serializedATN():
         buf.write("\u0263\u0264\5\u00b0Y\2\u0264\u0267\3\2\2\2\u0265\u0267")
         buf.write("\5h\65\2\u0266\u025f\3\2\2\2\u0266\u0265\3\2\2\2\u0267")
         buf.write(";\3\2\2\2\u0268\u0269\7B\2\2\u0269\u026a\7\177\2\2\u026a")
-        buf.write("\u026b\7C\2\2\u026b\u026c\7\177\2\2\u026c\u0274\5B\"\2")
+        buf.write('\u026b\7C\2\2\u026b\u026c\7\177\2\2\u026c\u0274\5B"\2')
         buf.write("\u026d\u026f\7\4\2\2\u026e\u0270\7\177\2\2\u026f\u026e")
         buf.write("\3\2\2\2\u026f\u0270\3\2\2\2\u0270\u0271\3\2\2\2\u0271")
-        buf.write("\u0273\5B\"\2\u0272\u026d\3\2\2\2\u0273\u0276\3\2\2\2")
+        buf.write('\u0273\5B"\2\u0272\u026d\3\2\2\2\u0273\u0276\3\2\2\2')
         buf.write("\u0274\u0272\3\2\2\2\u0274\u0275\3\2\2\2\u0275=\3\2\2")
         buf.write("\2\u0276\u0274\3\2\2\2\u0277\u0278\7D\2\2\u0278\u0279")
         buf.write("\7\177\2\2\u0279\u027a\5h\65\2\u027a?\3\2\2\2\u027b\u027c")
@@ -400,13 +401,13 @@ def serializedATN():
         buf.write("\7\5\2\2\u029d\u029f\7\177\2\2\u029e\u029d\3\2\2\2\u029e")
         buf.write("\u029f\3\2\2\2\u029f\u02a0\3\2\2\2\u02a0\u02a1\5J&\2\u02a1")
         buf.write("\u02a4\3\2\2\2\u02a2\u02a4\5J&\2\u02a3\u0298\3\2\2\2\u02a3")
-        buf.write("\u02a2\3\2\2\2\u02a4I\3\2\2\2\u02a5\u02a6\5L\'\2\u02a6")
+        buf.write("\u02a2\3\2\2\2\u02a4I\3\2\2\2\u02a5\u02a6\5L'\2\u02a6")
         buf.write("K\3\2\2\2\u02a7\u02ae\5P)\2\u02a8\u02aa\7\177\2\2\u02a9")
         buf.write("\u02a8\3\2\2\2\u02a9\u02aa\3\2\2\2\u02aa\u02ab\3\2\2\2")
         buf.write("\u02ab\u02ad\5R*\2\u02ac\u02a9\3\2\2\2\u02ad\u02b0\3\2")
         buf.write("\2\2\u02ae\u02ac\3\2\2\2\u02ae\u02af\3\2\2\2\u02af\u02b6")
         buf.write("\3\2\2\2\u02b0\u02ae\3\2\2\2\u02b1\u02b2\7\b\2\2\u02b2")
-        buf.write("\u02b3\5L\'\2\u02b3\u02b4\7\t\2\2\u02b4\u02b6\3\2\2\2")
+        buf.write("\u02b3\5L'\2\u02b3\u02b4\7\t\2\2\u02b4\u02b6\3\2\2\2")
         buf.write("\u02b5\u02a7\3\2\2\2\u02b5\u02b1\3\2\2\2\u02b6M\3\2\2")
         buf.write("\2\u02b7\u02bc\5P)\2\u02b8\u02ba\7\177\2\2\u02b9\u02b8")
         buf.write("\3\2\2\2\u02b9\u02ba\3\2\2\2\u02ba\u02bb\3\2\2\2\u02bb")
@@ -851,67 +852,254 @@ def serializedATN():
         return buf.getvalue()
 
 
-class CypherParser ( Parser ):
+class CypherParser(Parser):
 
     grammarFileName = "Cypher.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "';'", "','", "'='", "'+='", "'*'", "'('", 
-                     "')'", "'['", "']'", "':'", "'|'", "'..'", "'<>'", 
-                     "'<'", "'>'", "'<='", "'>='", "'+'", "'-'", "'/'", 
-                     "'%'", "'^'", "'.'", "'{'", "'}'", "'$'", "'\u27E8'", 
-                     "'\u3008'", "'\uFE64'", "'\uFF1C'", "'\u27E9'", "'\u3009'", 
-                     "'\uFE65'", "'\uFF1E'", "'\u00AD'", "'\u2010'", "'\u2011'", 
-                     "'\u2012'", "'\u2013'", "'\u2014'", "'\u2015'", "'\u2212'", 
-                     "'\uFE58'", "'\uFE63'", "'\uFF0D'", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'0'" ]
+    literalNames = [
+        "<INVALID>",
+        "';'",
+        "','",
+        "'='",
+        "'+='",
+        "'*'",
+        "'('",
+        "')'",
+        "'['",
+        "']'",
+        "':'",
+        "'|'",
+        "'..'",
+        "'<>'",
+        "'<'",
+        "'>'",
+        "'<='",
+        "'>='",
+        "'+'",
+        "'-'",
+        "'/'",
+        "'%'",
+        "'^'",
+        "'.'",
+        "'{'",
+        "'}'",
+        "'$'",
+        "'\u27E8'",
+        "'\u3008'",
+        "'\uFE64'",
+        "'\uFF1C'",
+        "'\u27E9'",
+        "'\u3009'",
+        "'\uFE65'",
+        "'\uFF1E'",
+        "'\u00AD'",
+        "'\u2010'",
+        "'\u2011'",
+        "'\u2012'",
+        "'\u2013'",
+        "'\u2014'",
+        "'\u2015'",
+        "'\u2212'",
+        "'\uFE58'",
+        "'\uFE63'",
+        "'\uFF0D'",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "'0'",
+    ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "UNION", "ALL", "OPTIONAL", 
-                      "MATCH", "UNWIND", "AS", "MERGE", "ON", "CREATE", 
-                      "SET", "DETACH", "DELETE", "REMOVE", "CALL", "YIELD", 
-                      "WITH", "RETURN", "DISTINCT", "ORDER", "BY", "L_SKIP", 
-                      "LIMIT", "ASCENDING", "ASC", "DESCENDING", "DESC", 
-                      "WHERE", "OR", "XOR", "AND", "NOT", "STARTS", "ENDS", 
-                      "CONTAINS", "IN", "IS", "NULL", "COUNT", "CASE", "ELSE", 
-                      "END", "WHEN", "THEN", "ANY", "NONE", "SINGLE", "EXISTS", 
-                      "TRUE", "FALSE", "HexInteger", "DecimalInteger", "OctalInteger", 
-                      "HexLetter", "HexDigit", "Digit", "NonZeroDigit", 
-                      "NonZeroOctDigit", "OctDigit", "ZeroDigit", "ExponentDecimalReal", 
-                      "RegularDecimalReal", "StringLiteral", "EscapedChar", 
-                      "CONSTRAINT", "DO", "FOR", "REQUIRE", "UNIQUE", "MANDATORY", 
-                      "SCALAR", "OF", "ADD", "DROP", "FILTER", "EXTRACT", 
-                      "UnescapedSymbolicName", "IdentifierStart", "IdentifierPart", 
-                      "EscapedSymbolicName", "SP", "WHITESPACE", "Comment" ]
+    symbolicNames = [
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "UNION",
+        "ALL",
+        "OPTIONAL",
+        "MATCH",
+        "UNWIND",
+        "AS",
+        "MERGE",
+        "ON",
+        "CREATE",
+        "SET",
+        "DETACH",
+        "DELETE",
+        "REMOVE",
+        "CALL",
+        "YIELD",
+        "WITH",
+        "RETURN",
+        "DISTINCT",
+        "ORDER",
+        "BY",
+        "L_SKIP",
+        "LIMIT",
+        "ASCENDING",
+        "ASC",
+        "DESCENDING",
+        "DESC",
+        "WHERE",
+        "OR",
+        "XOR",
+        "AND",
+        "NOT",
+        "STARTS",
+        "ENDS",
+        "CONTAINS",
+        "IN",
+        "IS",
+        "NULL",
+        "COUNT",
+        "CASE",
+        "ELSE",
+        "END",
+        "WHEN",
+        "THEN",
+        "ANY",
+        "NONE",
+        "SINGLE",
+        "EXISTS",
+        "TRUE",
+        "FALSE",
+        "HexInteger",
+        "DecimalInteger",
+        "OctalInteger",
+        "HexLetter",
+        "HexDigit",
+        "Digit",
+        "NonZeroDigit",
+        "NonZeroOctDigit",
+        "OctDigit",
+        "ZeroDigit",
+        "ExponentDecimalReal",
+        "RegularDecimalReal",
+        "StringLiteral",
+        "EscapedChar",
+        "CONSTRAINT",
+        "DO",
+        "FOR",
+        "REQUIRE",
+        "UNIQUE",
+        "MANDATORY",
+        "SCALAR",
+        "OF",
+        "ADD",
+        "DROP",
+        "FILTER",
+        "EXTRACT",
+        "UnescapedSymbolicName",
+        "IdentifierStart",
+        "IdentifierPart",
+        "EscapedSymbolicName",
+        "SP",
+        "WHITESPACE",
+        "Comment",
+    ]
 
     RULE_oC_Cypher = 0
     RULE_oC_Statement = 1
@@ -1017,192 +1205,264 @@ class CypherParser ( Parser ):
     RULE_oC_RightArrowHead = 101
     RULE_oC_Dash = 102
 
-    ruleNames =  [ "oC_Cypher", "oC_Statement", "oC_Query", "oC_RegularQuery", 
-                   "oC_Union", "oC_SingleQuery", "oC_SinglePartQuery", "oC_MultiPartQuery", 
-                   "oC_UpdatingClause", "oC_ReadingClause", "oC_Match", 
-                   "oC_Unwind", "oC_Merge", "oC_MergeAction", "oC_Create", 
-                   "oC_Set", "oC_SetItem", "oC_Delete", "oC_Remove", "oC_RemoveItem", 
-                   "oC_InQueryCall", "oC_StandaloneCall", "oC_YieldItems", 
-                   "oC_YieldItem", "oC_With", "oC_Return", "oC_ProjectionBody", 
-                   "oC_ProjectionItems", "oC_ProjectionItem", "oC_Order", 
-                   "oC_Skip", "oC_Limit", "oC_SortItem", "oC_Where", "oC_Pattern", 
-                   "oC_PatternPart", "oC_AnonymousPatternPart", "oC_PatternElement", 
-                   "oC_RelationshipsPattern", "oC_NodePattern", "oC_PatternElementChain", 
-                   "oC_RelationshipPattern", "oC_RelationshipDetail", "oC_Properties", 
-                   "oC_RelationshipTypes", "oC_NodeLabels", "oC_NodeLabel", 
-                   "oC_RangeLiteral", "oC_LabelName", "oC_RelTypeName", 
-                   "oC_PropertyExpression", "oC_Expression", "oC_OrExpression", 
-                   "oC_XorExpression", "oC_AndExpression", "oC_NotExpression", 
-                   "oC_ComparisonExpression", "oC_PartialComparisonExpression", 
-                   "oC_StringListNullPredicateExpression", "oC_StringPredicateExpression", 
-                   "oC_ListPredicateExpression", "oC_NullPredicateExpression", 
-                   "oC_AddOrSubtractExpression", "oC_MultiplyDivideModuloExpression", 
-                   "oC_PowerOfExpression", "oC_UnaryAddOrSubtractExpression", 
-                   "oC_NonArithmeticOperatorExpression", "oC_ListOperatorExpression", 
-                   "oC_PropertyLookup", "oC_Atom", "oC_CaseExpression", 
-                   "oC_CaseAlternative", "oC_ListComprehension", "oC_PatternComprehension", 
-                   "oC_Quantifier", "oC_FilterExpression", "oC_PatternPredicate", 
-                   "oC_ParenthesizedExpression", "oC_IdInColl", "oC_FunctionInvocation", 
-                   "oC_FunctionName", "oC_ExistentialSubquery", "oC_ExplicitProcedureInvocation", 
-                   "oC_ImplicitProcedureInvocation", "oC_ProcedureResultField", 
-                   "oC_ProcedureName", "oC_Namespace", "oC_Variable", "oC_Literal", 
-                   "oC_BooleanLiteral", "oC_NumberLiteral", "oC_IntegerLiteral", 
-                   "oC_DoubleLiteral", "oC_ListLiteral", "oC_MapLiteral", 
-                   "oC_PropertyKeyName", "oC_Parameter", "oC_SchemaName", 
-                   "oC_ReservedWord", "oC_SymbolicName", "oC_LeftArrowHead", 
-                   "oC_RightArrowHead", "oC_Dash" ]
+    ruleNames = [
+        "oC_Cypher",
+        "oC_Statement",
+        "oC_Query",
+        "oC_RegularQuery",
+        "oC_Union",
+        "oC_SingleQuery",
+        "oC_SinglePartQuery",
+        "oC_MultiPartQuery",
+        "oC_UpdatingClause",
+        "oC_ReadingClause",
+        "oC_Match",
+        "oC_Unwind",
+        "oC_Merge",
+        "oC_MergeAction",
+        "oC_Create",
+        "oC_Set",
+        "oC_SetItem",
+        "oC_Delete",
+        "oC_Remove",
+        "oC_RemoveItem",
+        "oC_InQueryCall",
+        "oC_StandaloneCall",
+        "oC_YieldItems",
+        "oC_YieldItem",
+        "oC_With",
+        "oC_Return",
+        "oC_ProjectionBody",
+        "oC_ProjectionItems",
+        "oC_ProjectionItem",
+        "oC_Order",
+        "oC_Skip",
+        "oC_Limit",
+        "oC_SortItem",
+        "oC_Where",
+        "oC_Pattern",
+        "oC_PatternPart",
+        "oC_AnonymousPatternPart",
+        "oC_PatternElement",
+        "oC_RelationshipsPattern",
+        "oC_NodePattern",
+        "oC_PatternElementChain",
+        "oC_RelationshipPattern",
+        "oC_RelationshipDetail",
+        "oC_Properties",
+        "oC_RelationshipTypes",
+        "oC_NodeLabels",
+        "oC_NodeLabel",
+        "oC_RangeLiteral",
+        "oC_LabelName",
+        "oC_RelTypeName",
+        "oC_PropertyExpression",
+        "oC_Expression",
+        "oC_OrExpression",
+        "oC_XorExpression",
+        "oC_AndExpression",
+        "oC_NotExpression",
+        "oC_ComparisonExpression",
+        "oC_PartialComparisonExpression",
+        "oC_StringListNullPredicateExpression",
+        "oC_StringPredicateExpression",
+        "oC_ListPredicateExpression",
+        "oC_NullPredicateExpression",
+        "oC_AddOrSubtractExpression",
+        "oC_MultiplyDivideModuloExpression",
+        "oC_PowerOfExpression",
+        "oC_UnaryAddOrSubtractExpression",
+        "oC_NonArithmeticOperatorExpression",
+        "oC_ListOperatorExpression",
+        "oC_PropertyLookup",
+        "oC_Atom",
+        "oC_CaseExpression",
+        "oC_CaseAlternative",
+        "oC_ListComprehension",
+        "oC_PatternComprehension",
+        "oC_Quantifier",
+        "oC_FilterExpression",
+        "oC_PatternPredicate",
+        "oC_ParenthesizedExpression",
+        "oC_IdInColl",
+        "oC_FunctionInvocation",
+        "oC_FunctionName",
+        "oC_ExistentialSubquery",
+        "oC_ExplicitProcedureInvocation",
+        "oC_ImplicitProcedureInvocation",
+        "oC_ProcedureResultField",
+        "oC_ProcedureName",
+        "oC_Namespace",
+        "oC_Variable",
+        "oC_Literal",
+        "oC_BooleanLiteral",
+        "oC_NumberLiteral",
+        "oC_IntegerLiteral",
+        "oC_DoubleLiteral",
+        "oC_ListLiteral",
+        "oC_MapLiteral",
+        "oC_PropertyKeyName",
+        "oC_Parameter",
+        "oC_SchemaName",
+        "oC_ReservedWord",
+        "oC_SymbolicName",
+        "oC_LeftArrowHead",
+        "oC_RightArrowHead",
+        "oC_Dash",
+    ]
 
     EOF = Token.EOF
-    T__0=1
-    T__1=2
-    T__2=3
-    T__3=4
-    T__4=5
-    T__5=6
-    T__6=7
-    T__7=8
-    T__8=9
-    T__9=10
-    T__10=11
-    T__11=12
-    T__12=13
-    T__13=14
-    T__14=15
-    T__15=16
-    T__16=17
-    T__17=18
-    T__18=19
-    T__19=20
-    T__20=21
-    T__21=22
-    T__22=23
-    T__23=24
-    T__24=25
-    T__25=26
-    T__26=27
-    T__27=28
-    T__28=29
-    T__29=30
-    T__30=31
-    T__31=32
-    T__32=33
-    T__33=34
-    T__34=35
-    T__35=36
-    T__36=37
-    T__37=38
-    T__38=39
-    T__39=40
-    T__40=41
-    T__41=42
-    T__42=43
-    T__43=44
-    T__44=45
-    UNION=46
-    ALL=47
-    OPTIONAL=48
-    MATCH=49
-    UNWIND=50
-    AS=51
-    MERGE=52
-    ON=53
-    CREATE=54
-    SET=55
-    DETACH=56
-    DELETE=57
-    REMOVE=58
-    CALL=59
-    YIELD=60
-    WITH=61
-    RETURN=62
-    DISTINCT=63
-    ORDER=64
-    BY=65
-    L_SKIP=66
-    LIMIT=67
-    ASCENDING=68
-    ASC=69
-    DESCENDING=70
-    DESC=71
-    WHERE=72
-    OR=73
-    XOR=74
-    AND=75
-    NOT=76
-    STARTS=77
-    ENDS=78
-    CONTAINS=79
-    IN=80
-    IS=81
-    NULL=82
-    COUNT=83
-    CASE=84
-    ELSE=85
-    END=86
-    WHEN=87
-    THEN=88
-    ANY=89
-    NONE=90
-    SINGLE=91
-    EXISTS=92
-    TRUE=93
-    FALSE=94
-    HexInteger=95
-    DecimalInteger=96
-    OctalInteger=97
-    HexLetter=98
-    HexDigit=99
-    Digit=100
-    NonZeroDigit=101
-    NonZeroOctDigit=102
-    OctDigit=103
-    ZeroDigit=104
-    ExponentDecimalReal=105
-    RegularDecimalReal=106
-    StringLiteral=107
-    EscapedChar=108
-    CONSTRAINT=109
-    DO=110
-    FOR=111
-    REQUIRE=112
-    UNIQUE=113
-    MANDATORY=114
-    SCALAR=115
-    OF=116
-    ADD=117
-    DROP=118
-    FILTER=119
-    EXTRACT=120
-    UnescapedSymbolicName=121
-    IdentifierStart=122
-    IdentifierPart=123
-    EscapedSymbolicName=124
-    SP=125
-    WHITESPACE=126
-    Comment=127
+    T__0 = 1
+    T__1 = 2
+    T__2 = 3
+    T__3 = 4
+    T__4 = 5
+    T__5 = 6
+    T__6 = 7
+    T__7 = 8
+    T__8 = 9
+    T__9 = 10
+    T__10 = 11
+    T__11 = 12
+    T__12 = 13
+    T__13 = 14
+    T__14 = 15
+    T__15 = 16
+    T__16 = 17
+    T__17 = 18
+    T__18 = 19
+    T__19 = 20
+    T__20 = 21
+    T__21 = 22
+    T__22 = 23
+    T__23 = 24
+    T__24 = 25
+    T__25 = 26
+    T__26 = 27
+    T__27 = 28
+    T__28 = 29
+    T__29 = 30
+    T__30 = 31
+    T__31 = 32
+    T__32 = 33
+    T__33 = 34
+    T__34 = 35
+    T__35 = 36
+    T__36 = 37
+    T__37 = 38
+    T__38 = 39
+    T__39 = 40
+    T__40 = 41
+    T__41 = 42
+    T__42 = 43
+    T__43 = 44
+    T__44 = 45
+    UNION = 46
+    ALL = 47
+    OPTIONAL = 48
+    MATCH = 49
+    UNWIND = 50
+    AS = 51
+    MERGE = 52
+    ON = 53
+    CREATE = 54
+    SET = 55
+    DETACH = 56
+    DELETE = 57
+    REMOVE = 58
+    CALL = 59
+    YIELD = 60
+    WITH = 61
+    RETURN = 62
+    DISTINCT = 63
+    ORDER = 64
+    BY = 65
+    L_SKIP = 66
+    LIMIT = 67
+    ASCENDING = 68
+    ASC = 69
+    DESCENDING = 70
+    DESC = 71
+    WHERE = 72
+    OR = 73
+    XOR = 74
+    AND = 75
+    NOT = 76
+    STARTS = 77
+    ENDS = 78
+    CONTAINS = 79
+    IN = 80
+    IS = 81
+    NULL = 82
+    COUNT = 83
+    CASE = 84
+    ELSE = 85
+    END = 86
+    WHEN = 87
+    THEN = 88
+    ANY = 89
+    NONE = 90
+    SINGLE = 91
+    EXISTS = 92
+    TRUE = 93
+    FALSE = 94
+    HexInteger = 95
+    DecimalInteger = 96
+    OctalInteger = 97
+    HexLetter = 98
+    HexDigit = 99
+    Digit = 100
+    NonZeroDigit = 101
+    NonZeroOctDigit = 102
+    OctDigit = 103
+    ZeroDigit = 104
+    ExponentDecimalReal = 105
+    RegularDecimalReal = 106
+    StringLiteral = 107
+    EscapedChar = 108
+    CONSTRAINT = 109
+    DO = 110
+    FOR = 111
+    REQUIRE = 112
+    UNIQUE = 113
+    MANDATORY = 114
+    SCALAR = 115
+    OF = 116
+    ADD = 117
+    DROP = 118
+    FILTER = 119
+    EXTRACT = 120
+    UnescapedSymbolicName = 121
+    IdentifierStart = 122
+    IdentifierPart = 123
+    EscapedSymbolicName = 124
+    SP = 125
+    WHITESPACE = 126
+    Comment = 127
 
-    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+    def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.7.2")
-        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
+        self._interp = ParserATNSimulator(
+            self, self.atn, self.decisionsToDFA, self.sharedContextCache
+        )
         self._predicates = None
-
-
 
     class OC_CypherContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Statement(self):
-            return self.getTypedRuleContext(CypherParser.OC_StatementContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_StatementContext, 0)
 
         def EOF(self):
             return self.getToken(CypherParser.EOF, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -1211,63 +1471,56 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Cypher
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Cypher" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Cypher"):
                 listener.enterOC_Cypher(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Cypher" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Cypher"):
                 listener.exitOC_Cypher(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Cypher" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Cypher"):
                 return visitor.visitOC_Cypher(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Cypher(self):
 
         localctx = CypherParser.OC_CypherContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_oC_Cypher)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 207
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 206
                 self.match(CypherParser.SP)
-
 
             self.state = 209
             self.oC_Statement()
             self.state = 214
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 2, self._ctx)
             if la_ == 1:
                 self.state = 211
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 210
                     self.match(CypherParser.SP)
-
 
                 self.state = 213
                 self.match(CypherParser.T__0)
 
-
             self.state = 217
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 216
                 self.match(CypherParser.SP)
-
 
             self.state = 219
             self.match(CypherParser.EOF)
@@ -1281,33 +1534,31 @@ class CypherParser ( Parser ):
 
     class OC_StatementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Query(self):
-            return self.getTypedRuleContext(CypherParser.OC_QueryContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_QueryContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Statement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Statement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Statement"):
                 listener.enterOC_Statement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Statement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Statement"):
                 listener.exitOC_Statement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Statement" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Statement"):
                 return visitor.visitOC_Statement(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Statement(self):
 
@@ -1327,37 +1578,34 @@ class CypherParser ( Parser ):
 
     class OC_QueryContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_RegularQuery(self):
-            return self.getTypedRuleContext(CypherParser.OC_RegularQueryContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_RegularQueryContext, 0)
 
         def oC_StandaloneCall(self):
-            return self.getTypedRuleContext(CypherParser.OC_StandaloneCallContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_StandaloneCallContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Query
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Query" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Query"):
                 listener.enterOC_Query(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Query" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Query"):
                 listener.exitOC_Query(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Query" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Query"):
                 return visitor.visitOC_Query(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Query(self):
 
@@ -1366,7 +1614,7 @@ class CypherParser ( Parser ):
         try:
             self.state = 225
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 4, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 223
@@ -1379,7 +1627,6 @@ class CypherParser ( Parser ):
                 self.oC_StandaloneCall()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1390,22 +1637,22 @@ class CypherParser ( Parser ):
 
     class OC_RegularQueryContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SingleQuery(self):
-            return self.getTypedRuleContext(CypherParser.OC_SingleQueryContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_SingleQueryContext, 0)
 
-
-        def oC_Union(self, i:int=None):
+        def oC_Union(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_UnionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_UnionContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_UnionContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -1414,50 +1661,46 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RegularQuery
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RegularQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RegularQuery"):
                 listener.enterOC_RegularQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RegularQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RegularQuery"):
                 listener.exitOC_RegularQuery(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RegularQuery" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RegularQuery"):
                 return visitor.visitOC_RegularQuery(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_RegularQuery(self):
 
         localctx = CypherParser.OC_RegularQueryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_oC_RegularQuery)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 227
             self.oC_SingleQuery()
             self.state = 234
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 6, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 229
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 228
                         self.match(CypherParser.SP)
 
-
                     self.state = 231
-                    self.oC_Union() 
+                    self.oC_Union()
                 self.state = 236
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 6, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1469,14 +1712,16 @@ class CypherParser ( Parser ):
 
     class OC_UnionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def UNION(self):
             return self.getToken(CypherParser.UNION, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -1486,38 +1731,34 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.ALL, 0)
 
         def oC_SingleQuery(self):
-            return self.getTypedRuleContext(CypherParser.OC_SingleQueryContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SingleQueryContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Union
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Union" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Union"):
                 listener.enterOC_Union(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Union" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Union"):
                 listener.exitOC_Union(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Union" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Union"):
                 return visitor.visitOC_Union(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Union(self):
 
         localctx = CypherParser.OC_UnionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_oC_Union)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 249
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 9, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 237
@@ -1529,10 +1770,9 @@ class CypherParser ( Parser ):
                 self.state = 241
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 240
                     self.match(CypherParser.SP)
-
 
                 self.state = 243
                 self.oC_SingleQuery()
@@ -1545,15 +1785,13 @@ class CypherParser ( Parser ):
                 self.state = 246
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 245
                     self.match(CypherParser.SP)
-
 
                 self.state = 248
                 self.oC_SingleQuery()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1565,37 +1803,34 @@ class CypherParser ( Parser ):
 
     class OC_SingleQueryContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SinglePartQuery(self):
-            return self.getTypedRuleContext(CypherParser.OC_SinglePartQueryContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SinglePartQueryContext, 0)
 
         def oC_MultiPartQuery(self):
-            return self.getTypedRuleContext(CypherParser.OC_MultiPartQueryContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_MultiPartQueryContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_SingleQuery
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_SingleQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_SingleQuery"):
                 listener.enterOC_SingleQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_SingleQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_SingleQuery"):
                 listener.exitOC_SingleQuery(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_SingleQuery" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_SingleQuery"):
                 return visitor.visitOC_SingleQuery(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_SingleQuery(self):
 
@@ -1604,7 +1839,7 @@ class CypherParser ( Parser ):
         try:
             self.state = 253
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 10, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 251
@@ -1617,7 +1852,6 @@ class CypherParser ( Parser ):
                 self.oC_MultiPartQuery()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1628,78 +1862,83 @@ class CypherParser ( Parser ):
 
     class OC_SinglePartQueryContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Return(self):
-            return self.getTypedRuleContext(CypherParser.OC_ReturnContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_ReturnContext, 0)
 
-
-        def oC_ReadingClause(self, i:int=None):
+        def oC_ReadingClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ReadingClauseContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ReadingClauseContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_ReadingClauseContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def oC_UpdatingClause(self, i:int=None):
+        def oC_UpdatingClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_UpdatingClauseContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_UpdatingClauseContext,i)
-
+                return self.getTypedRuleContext(
+                    CypherParser.OC_UpdatingClauseContext, i
+                )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_SinglePartQuery
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_SinglePartQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_SinglePartQuery"):
                 listener.enterOC_SinglePartQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_SinglePartQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_SinglePartQuery"):
                 listener.exitOC_SinglePartQuery(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_SinglePartQuery" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_SinglePartQuery"):
                 return visitor.visitOC_SinglePartQuery(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_SinglePartQuery(self):
 
         localctx = CypherParser.OC_SinglePartQueryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_oC_SinglePartQuery)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 290
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 19, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 261
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.OPTIONAL) | (1 << CypherParser.MATCH) | (1 << CypherParser.UNWIND) | (1 << CypherParser.CALL))) != 0):
+                while ((_la) & ~0x3F) == 0 and (
+                    (1 << _la)
+                    & (
+                        (1 << CypherParser.OPTIONAL)
+                        | (1 << CypherParser.MATCH)
+                        | (1 << CypherParser.UNWIND)
+                        | (1 << CypherParser.CALL)
+                    )
+                ) != 0:
                     self.state = 255
                     self.oC_ReadingClause()
                     self.state = 257
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 256
                         self.match(CypherParser.SP)
-
 
                     self.state = 263
                     self._errHandler.sync(self)
@@ -1714,16 +1953,23 @@ class CypherParser ( Parser ):
                 self.state = 271
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.OPTIONAL) | (1 << CypherParser.MATCH) | (1 << CypherParser.UNWIND) | (1 << CypherParser.CALL))) != 0):
+                while ((_la) & ~0x3F) == 0 and (
+                    (1 << _la)
+                    & (
+                        (1 << CypherParser.OPTIONAL)
+                        | (1 << CypherParser.MATCH)
+                        | (1 << CypherParser.UNWIND)
+                        | (1 << CypherParser.CALL)
+                    )
+                ) != 0:
                     self.state = 265
                     self.oC_ReadingClause()
                     self.state = 267
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 266
                         self.match(CypherParser.SP)
-
 
                     self.state = 273
                     self._errHandler.sync(self)
@@ -1733,41 +1979,37 @@ class CypherParser ( Parser ):
                 self.oC_UpdatingClause()
                 self.state = 281
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,16,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 16, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 276
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 275
                             self.match(CypherParser.SP)
 
-
                         self.state = 278
-                        self.oC_UpdatingClause() 
+                        self.oC_UpdatingClause()
                     self.state = 283
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,16,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 16, self._ctx)
 
                 self.state = 288
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 18, self._ctx)
                 if la_ == 1:
                     self.state = 285
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 284
                         self.match(CypherParser.SP)
-
 
                     self.state = 287
                     self.oC_Return()
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1779,36 +2021,36 @@ class CypherParser ( Parser ):
 
     class OC_MultiPartQueryContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SinglePartQuery(self):
-            return self.getTypedRuleContext(CypherParser.OC_SinglePartQueryContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_SinglePartQueryContext, 0)
 
-
-        def oC_With(self, i:int=None):
+        def oC_With(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_WithContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_WithContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_WithContext, i)
 
-
-        def oC_ReadingClause(self, i:int=None):
+        def oC_ReadingClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ReadingClauseContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ReadingClauseContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_ReadingClauseContext, i)
 
-
-        def oC_UpdatingClause(self, i:int=None):
+        def oC_UpdatingClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_UpdatingClauseContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_UpdatingClauseContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_UpdatingClauseContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -1817,48 +2059,52 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_MultiPartQuery
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_MultiPartQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_MultiPartQuery"):
                 listener.enterOC_MultiPartQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_MultiPartQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_MultiPartQuery"):
                 listener.exitOC_MultiPartQuery(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_MultiPartQuery" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_MultiPartQuery"):
                 return visitor.visitOC_MultiPartQuery(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_MultiPartQuery(self):
 
         localctx = CypherParser.OC_MultiPartQueryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_oC_MultiPartQuery)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 314 
+            self.state = 314
             self._errHandler.sync(self)
             _alt = 1
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
                     self.state = 298
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.OPTIONAL) | (1 << CypherParser.MATCH) | (1 << CypherParser.UNWIND) | (1 << CypherParser.CALL))) != 0):
+                    while ((_la) & ~0x3F) == 0 and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.OPTIONAL)
+                            | (1 << CypherParser.MATCH)
+                            | (1 << CypherParser.UNWIND)
+                            | (1 << CypherParser.CALL)
+                        )
+                    ) != 0:
                         self.state = 292
                         self.oC_ReadingClause()
                         self.state = 294
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 293
                             self.match(CypherParser.SP)
-
 
                         self.state = 300
                         self._errHandler.sync(self)
@@ -1867,16 +2113,25 @@ class CypherParser ( Parser ):
                     self.state = 307
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.MERGE) | (1 << CypherParser.CREATE) | (1 << CypherParser.SET) | (1 << CypherParser.DETACH) | (1 << CypherParser.DELETE) | (1 << CypherParser.REMOVE))) != 0):
+                    while ((_la) & ~0x3F) == 0 and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.MERGE)
+                            | (1 << CypherParser.CREATE)
+                            | (1 << CypherParser.SET)
+                            | (1 << CypherParser.DETACH)
+                            | (1 << CypherParser.DELETE)
+                            | (1 << CypherParser.REMOVE)
+                        )
+                    ) != 0:
                         self.state = 301
                         self.oC_UpdatingClause()
                         self.state = 303
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 302
                             self.match(CypherParser.SP)
-
 
                         self.state = 309
                         self._errHandler.sync(self)
@@ -1887,17 +2142,15 @@ class CypherParser ( Parser ):
                     self.state = 312
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 311
                         self.match(CypherParser.SP)
 
-
-
                 else:
                     raise NoViableAltException(self)
-                self.state = 316 
+                self.state = 316
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 25, self._ctx)
 
             self.state = 318
             self.oC_SinglePartQuery()
@@ -1911,49 +2164,43 @@ class CypherParser ( Parser ):
 
     class OC_UpdatingClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Create(self):
-            return self.getTypedRuleContext(CypherParser.OC_CreateContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_CreateContext, 0)
 
         def oC_Merge(self):
-            return self.getTypedRuleContext(CypherParser.OC_MergeContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_MergeContext, 0)
 
         def oC_Delete(self):
-            return self.getTypedRuleContext(CypherParser.OC_DeleteContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_DeleteContext, 0)
 
         def oC_Set(self):
-            return self.getTypedRuleContext(CypherParser.OC_SetContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SetContext, 0)
 
         def oC_Remove(self):
-            return self.getTypedRuleContext(CypherParser.OC_RemoveContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_RemoveContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_UpdatingClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_UpdatingClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_UpdatingClause"):
                 listener.enterOC_UpdatingClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_UpdatingClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_UpdatingClause"):
                 listener.exitOC_UpdatingClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_UpdatingClause" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_UpdatingClause"):
                 return visitor.visitOC_UpdatingClause(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_UpdatingClause(self):
 
@@ -2001,41 +2248,37 @@ class CypherParser ( Parser ):
 
     class OC_ReadingClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Match(self):
-            return self.getTypedRuleContext(CypherParser.OC_MatchContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_MatchContext, 0)
 
         def oC_Unwind(self):
-            return self.getTypedRuleContext(CypherParser.OC_UnwindContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_UnwindContext, 0)
 
         def oC_InQueryCall(self):
-            return self.getTypedRuleContext(CypherParser.OC_InQueryCallContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_InQueryCallContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ReadingClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ReadingClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ReadingClause"):
                 listener.enterOC_ReadingClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ReadingClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ReadingClause"):
                 listener.exitOC_ReadingClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ReadingClause" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ReadingClause"):
                 return visitor.visitOC_ReadingClause(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ReadingClause(self):
 
@@ -2073,7 +2316,9 @@ class CypherParser ( Parser ):
 
     class OC_MatchContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2081,86 +2326,77 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.MATCH, 0)
 
         def oC_Pattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PatternContext, 0)
 
         def OPTIONAL(self):
             return self.getToken(CypherParser.OPTIONAL, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_Where(self):
-            return self.getTypedRuleContext(CypherParser.OC_WhereContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_WhereContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Match
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Match" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Match"):
                 listener.enterOC_Match(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Match" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Match"):
                 listener.exitOC_Match(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Match" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Match"):
                 return visitor.visitOC_Match(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Match(self):
 
         localctx = CypherParser.OC_MatchContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_oC_Match)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 334
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.OPTIONAL:
+            if _la == CypherParser.OPTIONAL:
                 self.state = 332
                 self.match(CypherParser.OPTIONAL)
                 self.state = 333
                 self.match(CypherParser.SP)
-
 
             self.state = 336
             self.match(CypherParser.MATCH)
             self.state = 338
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 337
                 self.match(CypherParser.SP)
-
 
             self.state = 340
             self.oC_Pattern()
             self.state = 345
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,31,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 31, self._ctx)
             if la_ == 1:
                 self.state = 342
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 341
                     self.match(CypherParser.SP)
 
-
                 self.state = 344
                 self.oC_Where()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2172,7 +2408,9 @@ class CypherParser ( Parser ):
 
     class OC_UnwindContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2180,10 +2418,9 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.UNWIND, 0)
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -2193,34 +2430,30 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.AS, 0)
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Unwind
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Unwind" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Unwind"):
                 listener.enterOC_Unwind(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Unwind" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Unwind"):
                 listener.exitOC_Unwind(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Unwind" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Unwind"):
                 return visitor.visitOC_Unwind(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Unwind(self):
 
         localctx = CypherParser.OC_UnwindContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_oC_Unwind)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 347
@@ -2228,10 +2461,9 @@ class CypherParser ( Parser ):
             self.state = 349
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 348
                 self.match(CypherParser.SP)
-
 
             self.state = 351
             self.oC_Expression()
@@ -2253,7 +2485,9 @@ class CypherParser ( Parser ):
 
     class OC_MergeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2261,47 +2495,42 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.MERGE, 0)
 
         def oC_PatternPart(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternPartContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_PatternPartContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def oC_MergeAction(self, i:int=None):
+        def oC_MergeAction(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_MergeActionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_MergeActionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_MergeActionContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Merge
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Merge" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Merge"):
                 listener.enterOC_Merge(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Merge" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Merge"):
                 listener.exitOC_Merge(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Merge" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Merge"):
                 return visitor.visitOC_Merge(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Merge(self):
 
         localctx = CypherParser.OC_MergeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_oC_Merge)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 357
@@ -2309,25 +2538,24 @@ class CypherParser ( Parser ):
             self.state = 359
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 358
                 self.match(CypherParser.SP)
-
 
             self.state = 361
             self.oC_PatternPart()
             self.state = 366
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 34, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 362
                     self.match(CypherParser.SP)
                     self.state = 363
-                    self.oC_MergeAction() 
+                    self.oC_MergeAction()
                 self.state = 368
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 34, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2339,14 +2567,16 @@ class CypherParser ( Parser ):
 
     class OC_MergeActionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def ON(self):
             return self.getToken(CypherParser.ON, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -2356,8 +2586,7 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.MATCH, 0)
 
         def oC_Set(self):
-            return self.getTypedRuleContext(CypherParser.OC_SetContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SetContext, 0)
 
         def CREATE(self):
             return self.getToken(CypherParser.CREATE, 0)
@@ -2365,22 +2594,19 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_MergeAction
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_MergeAction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_MergeAction"):
                 listener.enterOC_MergeAction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_MergeAction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_MergeAction"):
                 listener.exitOC_MergeAction(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_MergeAction" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_MergeAction"):
                 return visitor.visitOC_MergeAction(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_MergeAction(self):
 
@@ -2389,7 +2615,7 @@ class CypherParser ( Parser ):
         try:
             self.state = 379
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,35,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 35, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 369
@@ -2418,7 +2644,6 @@ class CypherParser ( Parser ):
                 self.oC_Set()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2429,7 +2654,9 @@ class CypherParser ( Parser ):
 
     class OC_CreateContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2437,8 +2664,7 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.CREATE, 0)
 
         def oC_Pattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PatternContext, 0)
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -2446,28 +2672,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Create
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Create" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Create"):
                 listener.enterOC_Create(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Create" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Create"):
                 listener.exitOC_Create(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Create" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Create"):
                 return visitor.visitOC_Create(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Create(self):
 
         localctx = CypherParser.OC_CreateContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_oC_Create)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 381
@@ -2475,10 +2698,9 @@ class CypherParser ( Parser ):
             self.state = 383
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 382
                 self.match(CypherParser.SP)
-
 
             self.state = 385
             self.oC_Pattern()
@@ -2492,21 +2714,22 @@ class CypherParser ( Parser ):
 
     class OC_SetContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def SET(self):
             return self.getToken(CypherParser.SET, 0)
 
-        def oC_SetItem(self, i:int=None):
+        def oC_SetItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_SetItemContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_SetItemContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_SetItemContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -2515,28 +2738,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Set
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Set" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Set"):
                 listener.enterOC_Set(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Set" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Set"):
                 listener.exitOC_Set(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Set" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Set"):
                 return visitor.visitOC_Set(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Set(self):
 
         localctx = CypherParser.OC_SetContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_oC_Set)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 387
@@ -2544,41 +2764,38 @@ class CypherParser ( Parser ):
             self.state = 389
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 388
                 self.match(CypherParser.SP)
-
 
             self.state = 391
             self.oC_SetItem()
             self.state = 402
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,40,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 40, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 393
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 392
                         self.match(CypherParser.SP)
-
 
                     self.state = 395
                     self.match(CypherParser.T__1)
                     self.state = 397
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 396
                         self.match(CypherParser.SP)
 
-
                     self.state = 399
-                    self.oC_SetItem() 
+                    self.oC_SetItem()
                 self.state = 404
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,40,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 40, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2590,61 +2807,58 @@ class CypherParser ( Parser ):
 
     class OC_SetItemContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_PropertyExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_PropertyExpressionContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_PropertyExpressionContext, 0
+            )
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def oC_NodeLabels(self):
-            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_SetItem
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_SetItem" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_SetItem"):
                 listener.enterOC_SetItem(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_SetItem" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_SetItem"):
                 listener.exitOC_SetItem(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_SetItem" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_SetItem"):
                 return visitor.visitOC_SetItem(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_SetItem(self):
 
         localctx = CypherParser.OC_SetItemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_oC_SetItem)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 441
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,48,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 48, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 405
@@ -2652,20 +2866,18 @@ class CypherParser ( Parser ):
                 self.state = 407
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 406
                     self.match(CypherParser.SP)
-
 
                 self.state = 409
                 self.match(CypherParser.T__2)
                 self.state = 411
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 410
                     self.match(CypherParser.SP)
-
 
                 self.state = 413
                 self.oC_Expression()
@@ -2678,20 +2890,18 @@ class CypherParser ( Parser ):
                 self.state = 417
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 416
                     self.match(CypherParser.SP)
-
 
                 self.state = 419
                 self.match(CypherParser.T__2)
                 self.state = 421
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 420
                     self.match(CypherParser.SP)
-
 
                 self.state = 423
                 self.oC_Expression()
@@ -2704,20 +2914,18 @@ class CypherParser ( Parser ):
                 self.state = 427
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 426
                     self.match(CypherParser.SP)
-
 
                 self.state = 429
                 self.match(CypherParser.T__3)
                 self.state = 431
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 430
                     self.match(CypherParser.SP)
-
 
                 self.state = 433
                 self.oC_Expression()
@@ -2730,15 +2938,13 @@ class CypherParser ( Parser ):
                 self.state = 437
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 436
                     self.match(CypherParser.SP)
-
 
                 self.state = 439
                 self.oC_NodeLabels()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2750,24 +2956,25 @@ class CypherParser ( Parser ):
 
     class OC_DeleteContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def DELETE(self):
             return self.getToken(CypherParser.DELETE, 0)
 
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
         def DETACH(self):
             return self.getToken(CypherParser.DETACH, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -2776,80 +2983,73 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Delete
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Delete" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Delete"):
                 listener.enterOC_Delete(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Delete" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Delete"):
                 listener.exitOC_Delete(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Delete" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Delete"):
                 return visitor.visitOC_Delete(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Delete(self):
 
         localctx = CypherParser.OC_DeleteContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_oC_Delete)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 445
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.DETACH:
+            if _la == CypherParser.DETACH:
                 self.state = 443
                 self.match(CypherParser.DETACH)
                 self.state = 444
                 self.match(CypherParser.SP)
-
 
             self.state = 447
             self.match(CypherParser.DELETE)
             self.state = 449
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 448
                 self.match(CypherParser.SP)
-
 
             self.state = 451
             self.oC_Expression()
             self.state = 462
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,53,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 53, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 453
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 452
                         self.match(CypherParser.SP)
-
 
                     self.state = 455
                     self.match(CypherParser.T__1)
                     self.state = 457
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 456
                         self.match(CypherParser.SP)
 
-
                     self.state = 459
-                    self.oC_Expression() 
+                    self.oC_Expression()
                 self.state = 464
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,53,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 53, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2861,51 +3061,49 @@ class CypherParser ( Parser ):
 
     class OC_RemoveContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def REMOVE(self):
             return self.getToken(CypherParser.REMOVE, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def oC_RemoveItem(self, i:int=None):
+        def oC_RemoveItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_RemoveItemContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_RemoveItemContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_RemoveItemContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Remove
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Remove" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Remove"):
                 listener.enterOC_Remove(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Remove" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Remove"):
                 listener.exitOC_Remove(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Remove" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Remove"):
                 return visitor.visitOC_Remove(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Remove(self):
 
         localctx = CypherParser.OC_RemoveContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_oC_Remove)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 465
@@ -2916,32 +3114,30 @@ class CypherParser ( Parser ):
             self.oC_RemoveItem()
             self.state = 478
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,56,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 56, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 469
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 468
                         self.match(CypherParser.SP)
-
 
                     self.state = 471
                     self.match(CypherParser.T__1)
                     self.state = 473
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 472
                         self.match(CypherParser.SP)
 
-
                     self.state = 475
-                    self.oC_RemoveItem() 
+                    self.oC_RemoveItem()
                 self.state = 480
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,56,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 56, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2953,41 +3149,39 @@ class CypherParser ( Parser ):
 
     class OC_RemoveItemContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def oC_NodeLabels(self):
-            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext, 0)
 
         def oC_PropertyExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_PropertyExpressionContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_PropertyExpressionContext, 0
+            )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RemoveItem
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RemoveItem" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RemoveItem"):
                 listener.enterOC_RemoveItem(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RemoveItem" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RemoveItem"):
                 listener.exitOC_RemoveItem(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RemoveItem" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RemoveItem"):
                 return visitor.visitOC_RemoveItem(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_RemoveItem(self):
 
@@ -2996,7 +3190,7 @@ class CypherParser ( Parser ):
         try:
             self.state = 485
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,57,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 57, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 481
@@ -3011,7 +3205,6 @@ class CypherParser ( Parser ):
                 self.oC_PropertyExpression()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3022,55 +3215,54 @@ class CypherParser ( Parser ):
 
     class OC_InQueryCallContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def CALL(self):
             return self.getToken(CypherParser.CALL, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_ExplicitProcedureInvocation(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExplicitProcedureInvocationContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_ExplicitProcedureInvocationContext, 0
+            )
 
         def YIELD(self):
             return self.getToken(CypherParser.YIELD, 0)
 
         def oC_YieldItems(self):
-            return self.getTypedRuleContext(CypherParser.OC_YieldItemsContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_YieldItemsContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_InQueryCall
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_InQueryCall" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_InQueryCall"):
                 listener.enterOC_InQueryCall(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_InQueryCall" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_InQueryCall"):
                 listener.exitOC_InQueryCall(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_InQueryCall" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_InQueryCall"):
                 return visitor.visitOC_InQueryCall(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_InQueryCall(self):
 
         localctx = CypherParser.OC_InQueryCallContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_oC_InQueryCall)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 487
@@ -3081,15 +3273,14 @@ class CypherParser ( Parser ):
             self.oC_ExplicitProcedureInvocation()
             self.state = 496
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,59,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 59, self._ctx)
             if la_ == 1:
                 self.state = 491
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 490
                     self.match(CypherParser.SP)
-
 
                 self.state = 493
                 self.match(CypherParser.YIELD)
@@ -3097,7 +3288,6 @@ class CypherParser ( Parser ):
                 self.match(CypherParser.SP)
                 self.state = 495
                 self.oC_YieldItems()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -3109,59 +3299,59 @@ class CypherParser ( Parser ):
 
     class OC_StandaloneCallContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def CALL(self):
             return self.getToken(CypherParser.CALL, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_ExplicitProcedureInvocation(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExplicitProcedureInvocationContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_ExplicitProcedureInvocationContext, 0
+            )
 
         def oC_ImplicitProcedureInvocation(self):
-            return self.getTypedRuleContext(CypherParser.OC_ImplicitProcedureInvocationContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_ImplicitProcedureInvocationContext, 0
+            )
 
         def YIELD(self):
             return self.getToken(CypherParser.YIELD, 0)
 
         def oC_YieldItems(self):
-            return self.getTypedRuleContext(CypherParser.OC_YieldItemsContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_YieldItemsContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_StandaloneCall
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_StandaloneCall" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_StandaloneCall"):
                 listener.enterOC_StandaloneCall(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_StandaloneCall" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_StandaloneCall"):
                 listener.exitOC_StandaloneCall(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_StandaloneCall" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_StandaloneCall"):
                 return visitor.visitOC_StandaloneCall(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_StandaloneCall(self):
 
         localctx = CypherParser.OC_StandaloneCallContext(self, self._ctx, self.state)
         self.enterRule(localctx, 42, self.RULE_oC_StandaloneCall)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 498
@@ -3170,7 +3360,7 @@ class CypherParser ( Parser ):
             self.match(CypherParser.SP)
             self.state = 502
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,60,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 60, self._ctx)
             if la_ == 1:
                 self.state = 500
                 self.oC_ExplicitProcedureInvocation()
@@ -3181,18 +3371,16 @@ class CypherParser ( Parser ):
                 self.oC_ImplicitProcedureInvocation()
                 pass
 
-
             self.state = 513
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,63,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 63, self._ctx)
             if la_ == 1:
                 self.state = 505
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 504
                     self.match(CypherParser.SP)
-
 
                 self.state = 507
                 self.match(CypherParser.YIELD)
@@ -3205,14 +3393,22 @@ class CypherParser ( Parser ):
                     self.state = 509
                     self.match(CypherParser.T__4)
                     pass
-                elif token in [CypherParser.COUNT, CypherParser.ANY, CypherParser.NONE, CypherParser.SINGLE, CypherParser.HexLetter, CypherParser.FILTER, CypherParser.EXTRACT, CypherParser.UnescapedSymbolicName, CypherParser.EscapedSymbolicName]:
+                elif token in [
+                    CypherParser.COUNT,
+                    CypherParser.ANY,
+                    CypherParser.NONE,
+                    CypherParser.SINGLE,
+                    CypherParser.HexLetter,
+                    CypherParser.FILTER,
+                    CypherParser.EXTRACT,
+                    CypherParser.UnescapedSymbolicName,
+                    CypherParser.EscapedSymbolicName,
+                ]:
                     self.state = 510
                     self.oC_YieldItems()
                     pass
                 else:
                     raise NoViableAltException(self)
-
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -3224,22 +3420,22 @@ class CypherParser ( Parser ):
 
     class OC_YieldItemsContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_YieldItem(self, i:int=None):
+        def oC_YieldItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_YieldItemContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_YieldItemContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_YieldItemContext, i)
 
         def oC_Where(self):
-            return self.getTypedRuleContext(CypherParser.OC_WhereContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_WhereContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -3248,76 +3444,69 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_YieldItems
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_YieldItems" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_YieldItems"):
                 listener.enterOC_YieldItems(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_YieldItems" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_YieldItems"):
                 listener.exitOC_YieldItems(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_YieldItems" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_YieldItems"):
                 return visitor.visitOC_YieldItems(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_YieldItems(self):
 
         localctx = CypherParser.OC_YieldItemsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 44, self.RULE_oC_YieldItems)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 515
             self.oC_YieldItem()
             self.state = 526
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,66,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 66, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 517
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 516
                         self.match(CypherParser.SP)
-
 
                     self.state = 519
                     self.match(CypherParser.T__1)
                     self.state = 521
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 520
                         self.match(CypherParser.SP)
 
-
                     self.state = 523
-                    self.oC_YieldItem() 
+                    self.oC_YieldItem()
                 self.state = 528
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,66,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 66, self._ctx)
 
             self.state = 533
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,68,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 68, self._ctx)
             if la_ == 1:
                 self.state = 530
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 529
                     self.match(CypherParser.SP)
 
-
                 self.state = 532
                 self.oC_Where()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -3329,19 +3518,21 @@ class CypherParser ( Parser ):
 
     class OC_YieldItemContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def oC_ProcedureResultField(self):
-            return self.getTypedRuleContext(CypherParser.OC_ProcedureResultFieldContext,0)
+            return self.getTypedRuleContext(
+                CypherParser.OC_ProcedureResultFieldContext, 0
+            )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -3353,22 +3544,19 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_YieldItem
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_YieldItem" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_YieldItem"):
                 listener.enterOC_YieldItem(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_YieldItem" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_YieldItem"):
                 listener.exitOC_YieldItem(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_YieldItem" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_YieldItem"):
                 return visitor.visitOC_YieldItem(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_YieldItem(self):
 
@@ -3378,7 +3566,7 @@ class CypherParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 540
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,69,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 69, self._ctx)
             if la_ == 1:
                 self.state = 535
                 self.oC_ProcedureResultField()
@@ -3388,7 +3576,6 @@ class CypherParser ( Parser ):
                 self.match(CypherParser.AS)
                 self.state = 538
                 self.match(CypherParser.SP)
-
 
             self.state = 542
             self.oC_Variable()
@@ -3402,7 +3589,9 @@ class CypherParser ( Parser ):
 
     class OC_WithContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3410,12 +3599,10 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.WITH, 0)
 
         def oC_ProjectionBody(self):
-            return self.getTypedRuleContext(CypherParser.OC_ProjectionBodyContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ProjectionBodyContext, 0)
 
         def oC_Where(self):
-            return self.getTypedRuleContext(CypherParser.OC_WhereContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_WhereContext, 0)
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -3423,28 +3610,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_With
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_With" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_With"):
                 listener.enterOC_With(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_With" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_With"):
                 listener.exitOC_With(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_With" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_With"):
                 return visitor.visitOC_With(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_With(self):
 
         localctx = CypherParser.OC_WithContext(self, self._ctx, self.state)
         self.enterRule(localctx, 48, self.RULE_oC_With)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 544
@@ -3453,19 +3637,17 @@ class CypherParser ( Parser ):
             self.oC_ProjectionBody()
             self.state = 550
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,71,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 71, self._ctx)
             if la_ == 1:
                 self.state = 547
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 546
                     self.match(CypherParser.SP)
 
-
                 self.state = 549
                 self.oC_Where()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -3477,7 +3659,9 @@ class CypherParser ( Parser ):
 
     class OC_ReturnContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3485,28 +3669,24 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.RETURN, 0)
 
         def oC_ProjectionBody(self):
-            return self.getTypedRuleContext(CypherParser.OC_ProjectionBodyContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ProjectionBodyContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Return
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Return" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Return"):
                 listener.enterOC_Return(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Return" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Return"):
                 listener.exitOC_Return(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Return" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Return"):
                 return visitor.visitOC_Return(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Return(self):
 
@@ -3528,77 +3708,70 @@ class CypherParser ( Parser ):
 
     class OC_ProjectionBodyContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_ProjectionItems(self):
-            return self.getTypedRuleContext(CypherParser.OC_ProjectionItemsContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ProjectionItemsContext, 0)
 
         def DISTINCT(self):
             return self.getToken(CypherParser.DISTINCT, 0)
 
         def oC_Order(self):
-            return self.getTypedRuleContext(CypherParser.OC_OrderContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_OrderContext, 0)
 
         def oC_Skip(self):
-            return self.getTypedRuleContext(CypherParser.OC_SkipContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SkipContext, 0)
 
         def oC_Limit(self):
-            return self.getTypedRuleContext(CypherParser.OC_LimitContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_LimitContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ProjectionBody
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ProjectionBody" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ProjectionBody"):
                 listener.enterOC_ProjectionBody(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ProjectionBody" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ProjectionBody"):
                 listener.exitOC_ProjectionBody(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ProjectionBody" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ProjectionBody"):
                 return visitor.visitOC_ProjectionBody(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ProjectionBody(self):
 
         localctx = CypherParser.OC_ProjectionBodyContext(self, self._ctx, self.state)
         self.enterRule(localctx, 52, self.RULE_oC_ProjectionBody)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 559
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,73,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 73, self._ctx)
             if la_ == 1:
                 self.state = 556
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 555
                     self.match(CypherParser.SP)
 
-
                 self.state = 558
                 self.match(CypherParser.DISTINCT)
-
 
             self.state = 561
             self.match(CypherParser.SP)
@@ -3606,33 +3779,30 @@ class CypherParser ( Parser ):
             self.oC_ProjectionItems()
             self.state = 565
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,74,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 74, self._ctx)
             if la_ == 1:
                 self.state = 563
                 self.match(CypherParser.SP)
                 self.state = 564
                 self.oC_Order()
 
-
             self.state = 569
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,75,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 75, self._ctx)
             if la_ == 1:
                 self.state = 567
                 self.match(CypherParser.SP)
                 self.state = 568
                 self.oC_Skip()
 
-
             self.state = 573
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,76,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 76, self._ctx)
             if la_ == 1:
                 self.state = 571
                 self.match(CypherParser.SP)
                 self.state = 572
                 self.oC_Limit()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -3644,18 +3814,21 @@ class CypherParser ( Parser ):
 
     class OC_ProjectionItemsContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_ProjectionItem(self, i:int=None):
+        def oC_ProjectionItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ProjectionItemContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ProjectionItemContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_ProjectionItemContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -3664,28 +3837,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ProjectionItems
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ProjectionItems" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ProjectionItems"):
                 listener.enterOC_ProjectionItems(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ProjectionItems" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ProjectionItems"):
                 listener.exitOC_ProjectionItems(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ProjectionItems" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ProjectionItems"):
                 return visitor.visitOC_ProjectionItems(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ProjectionItems(self):
 
         localctx = CypherParser.OC_ProjectionItemsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 54, self.RULE_oC_ProjectionItems)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 603
             self._errHandler.sync(self)
@@ -3696,66 +3866,91 @@ class CypherParser ( Parser ):
                 self.match(CypherParser.T__4)
                 self.state = 586
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,79,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 79, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 577
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 576
                             self.match(CypherParser.SP)
-
 
                         self.state = 579
                         self.match(CypherParser.T__1)
                         self.state = 581
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 580
                             self.match(CypherParser.SP)
 
-
                         self.state = 583
-                        self.oC_ProjectionItem() 
+                        self.oC_ProjectionItem()
                     self.state = 588
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,79,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 79, self._ctx)
 
                 pass
-            elif token in [CypherParser.T__5, CypherParser.T__7, CypherParser.T__17, CypherParser.T__18, CypherParser.T__23, CypherParser.T__25, CypherParser.ALL, CypherParser.NOT, CypherParser.NULL, CypherParser.COUNT, CypherParser.CASE, CypherParser.ANY, CypherParser.NONE, CypherParser.SINGLE, CypherParser.EXISTS, CypherParser.TRUE, CypherParser.FALSE, CypherParser.HexInteger, CypherParser.DecimalInteger, CypherParser.OctalInteger, CypherParser.HexLetter, CypherParser.ExponentDecimalReal, CypherParser.RegularDecimalReal, CypherParser.StringLiteral, CypherParser.FILTER, CypherParser.EXTRACT, CypherParser.UnescapedSymbolicName, CypherParser.EscapedSymbolicName]:
+            elif token in [
+                CypherParser.T__5,
+                CypherParser.T__7,
+                CypherParser.T__17,
+                CypherParser.T__18,
+                CypherParser.T__23,
+                CypherParser.T__25,
+                CypherParser.ALL,
+                CypherParser.NOT,
+                CypherParser.NULL,
+                CypherParser.COUNT,
+                CypherParser.CASE,
+                CypherParser.ANY,
+                CypherParser.NONE,
+                CypherParser.SINGLE,
+                CypherParser.EXISTS,
+                CypherParser.TRUE,
+                CypherParser.FALSE,
+                CypherParser.HexInteger,
+                CypherParser.DecimalInteger,
+                CypherParser.OctalInteger,
+                CypherParser.HexLetter,
+                CypherParser.ExponentDecimalReal,
+                CypherParser.RegularDecimalReal,
+                CypherParser.StringLiteral,
+                CypherParser.FILTER,
+                CypherParser.EXTRACT,
+                CypherParser.UnescapedSymbolicName,
+                CypherParser.EscapedSymbolicName,
+            ]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 589
                 self.oC_ProjectionItem()
                 self.state = 600
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,82,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 82, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 591
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 590
                             self.match(CypherParser.SP)
-
 
                         self.state = 593
                         self.match(CypherParser.T__1)
                         self.state = 595
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 594
                             self.match(CypherParser.SP)
 
-
                         self.state = 597
-                        self.oC_ProjectionItem() 
+                        self.oC_ProjectionItem()
                     self.state = 602
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,82,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 82, self._ctx)
 
                 pass
             else:
@@ -3771,15 +3966,16 @@ class CypherParser ( Parser ):
 
     class OC_ProjectionItemContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -3789,28 +3985,24 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.AS, 0)
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ProjectionItem
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ProjectionItem" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ProjectionItem"):
                 listener.enterOC_ProjectionItem(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ProjectionItem" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ProjectionItem"):
                 listener.exitOC_ProjectionItem(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ProjectionItem" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ProjectionItem"):
                 return visitor.visitOC_ProjectionItem(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ProjectionItem(self):
 
@@ -3819,7 +4011,7 @@ class CypherParser ( Parser ):
         try:
             self.state = 612
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,84,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 84, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 605
@@ -3840,7 +4032,6 @@ class CypherParser ( Parser ):
                 self.oC_Expression()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3851,14 +4042,16 @@ class CypherParser ( Parser ):
 
     class OC_OrderContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def ORDER(self):
             return self.getToken(CypherParser.ORDER, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -3867,38 +4060,34 @@ class CypherParser ( Parser ):
         def BY(self):
             return self.getToken(CypherParser.BY, 0)
 
-        def oC_SortItem(self, i:int=None):
+        def oC_SortItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_SortItemContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_SortItemContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_SortItemContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Order
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Order" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Order"):
                 listener.enterOC_Order(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Order" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Order"):
                 listener.exitOC_Order(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Order" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Order"):
                 return visitor.visitOC_Order(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Order(self):
 
         localctx = CypherParser.OC_OrderContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_oC_Order)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 614
@@ -3914,16 +4103,15 @@ class CypherParser ( Parser ):
             self.state = 626
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==CypherParser.T__1:
+            while _la == CypherParser.T__1:
                 self.state = 619
                 self.match(CypherParser.T__1)
                 self.state = 621
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 620
                     self.match(CypherParser.SP)
-
 
                 self.state = 623
                 self.oC_SortItem()
@@ -3941,7 +4129,9 @@ class CypherParser ( Parser ):
 
     class OC_SkipContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3952,28 +4142,24 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.SP, 0)
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Skip
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Skip" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Skip"):
                 listener.enterOC_Skip(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Skip" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Skip"):
                 listener.exitOC_Skip(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Skip" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Skip"):
                 return visitor.visitOC_Skip(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Skip(self):
 
@@ -3997,7 +4183,9 @@ class CypherParser ( Parser ):
 
     class OC_LimitContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4008,28 +4196,24 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.SP, 0)
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Limit
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Limit" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Limit"):
                 listener.enterOC_Limit(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Limit" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Limit"):
                 listener.exitOC_Limit(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Limit" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Limit"):
                 return visitor.visitOC_Limit(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Limit(self):
 
@@ -4053,13 +4237,14 @@ class CypherParser ( Parser ):
 
     class OC_SortItemContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
         def ASCENDING(self):
             return self.getToken(CypherParser.ASCENDING, 0)
@@ -4079,52 +4264,61 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_SortItem
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_SortItem" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_SortItem"):
                 listener.enterOC_SortItem(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_SortItem" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_SortItem"):
                 listener.exitOC_SortItem(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_SortItem" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_SortItem"):
                 return visitor.visitOC_SortItem(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_SortItem(self):
 
         localctx = CypherParser.OC_SortItemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 64, self.RULE_oC_SortItem)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 637
             self.oC_Expression()
             self.state = 642
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,88,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 88, self._ctx)
             if la_ == 1:
                 self.state = 639
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 638
                     self.match(CypherParser.SP)
 
-
                 self.state = 641
                 _la = self._input.LA(1)
-                if not(((((_la - 68)) & ~0x3f) == 0 and ((1 << (_la - 68)) & ((1 << (CypherParser.ASCENDING - 68)) | (1 << (CypherParser.ASC - 68)) | (1 << (CypherParser.DESCENDING - 68)) | (1 << (CypherParser.DESC - 68)))) != 0)):
+                if not (
+                    (
+                        (((_la - 68)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 68))
+                            & (
+                                (1 << (CypherParser.ASCENDING - 68))
+                                | (1 << (CypherParser.ASC - 68))
+                                | (1 << (CypherParser.DESCENDING - 68))
+                                | (1 << (CypherParser.DESC - 68))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -4136,7 +4330,9 @@ class CypherParser ( Parser ):
 
     class OC_WhereContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4147,28 +4343,24 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.SP, 0)
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Where
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Where" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Where"):
                 listener.enterOC_Where(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Where" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Where"):
                 listener.exitOC_Where(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Where" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Where"):
                 return visitor.visitOC_Where(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Where(self):
 
@@ -4192,18 +4384,19 @@ class CypherParser ( Parser ):
 
     class OC_PatternContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_PatternPart(self, i:int=None):
+        def oC_PatternPart(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_PatternPartContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PatternPartContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_PatternPartContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -4212,60 +4405,55 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Pattern
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Pattern" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Pattern"):
                 listener.enterOC_Pattern(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Pattern" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Pattern"):
                 listener.exitOC_Pattern(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Pattern" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Pattern"):
                 return visitor.visitOC_Pattern(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Pattern(self):
 
         localctx = CypherParser.OC_PatternContext(self, self._ctx, self.state)
         self.enterRule(localctx, 68, self.RULE_oC_Pattern)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 648
             self.oC_PatternPart()
             self.state = 659
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,91,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 91, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 650
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 649
                         self.match(CypherParser.SP)
-
 
                     self.state = 652
                     self.match(CypherParser.T__1)
                     self.state = 654
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 653
                         self.match(CypherParser.SP)
 
-
                     self.state = 656
-                    self.oC_PatternPart() 
+                    self.oC_PatternPart()
                 self.state = 661
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,91,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 91, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -4277,19 +4465,21 @@ class CypherParser ( Parser ):
 
     class OC_PatternPartContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def oC_AnonymousPatternPart(self):
-            return self.getTypedRuleContext(CypherParser.OC_AnonymousPatternPartContext,0)
+            return self.getTypedRuleContext(
+                CypherParser.OC_AnonymousPatternPartContext, 0
+            )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -4298,53 +4488,58 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PatternPart
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PatternPart" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PatternPart"):
                 listener.enterOC_PatternPart(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PatternPart" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PatternPart"):
                 listener.exitOC_PatternPart(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PatternPart" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PatternPart"):
                 return visitor.visitOC_PatternPart(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_PatternPart(self):
 
         localctx = CypherParser.OC_PatternPartContext(self, self._ctx, self.state)
         self.enterRule(localctx, 70, self.RULE_oC_PatternPart)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 673
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CypherParser.COUNT, CypherParser.ANY, CypherParser.NONE, CypherParser.SINGLE, CypherParser.HexLetter, CypherParser.FILTER, CypherParser.EXTRACT, CypherParser.UnescapedSymbolicName, CypherParser.EscapedSymbolicName]:
+            if token in [
+                CypherParser.COUNT,
+                CypherParser.ANY,
+                CypherParser.NONE,
+                CypherParser.SINGLE,
+                CypherParser.HexLetter,
+                CypherParser.FILTER,
+                CypherParser.EXTRACT,
+                CypherParser.UnescapedSymbolicName,
+                CypherParser.EscapedSymbolicName,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 662
                 self.oC_Variable()
                 self.state = 664
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 663
                     self.match(CypherParser.SP)
-
 
                 self.state = 666
                 self.match(CypherParser.T__2)
                 self.state = 668
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 667
                     self.match(CypherParser.SP)
-
 
                 self.state = 670
                 self.oC_AnonymousPatternPart()
@@ -4367,37 +4562,37 @@ class CypherParser ( Parser ):
 
     class OC_AnonymousPatternPartContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_PatternElement(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternElementContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PatternElementContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_AnonymousPatternPart
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_AnonymousPatternPart" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_AnonymousPatternPart"):
                 listener.enterOC_AnonymousPatternPart(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_AnonymousPatternPart" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_AnonymousPatternPart"):
                 listener.exitOC_AnonymousPatternPart(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_AnonymousPatternPart" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_AnonymousPatternPart"):
                 return visitor.visitOC_AnonymousPatternPart(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_AnonymousPatternPart(self):
 
-        localctx = CypherParser.OC_AnonymousPatternPartContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_AnonymousPatternPartContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 72, self.RULE_oC_AnonymousPatternPart)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4413,82 +4608,81 @@ class CypherParser ( Parser ):
 
     class OC_PatternElementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_NodePattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_NodePatternContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_NodePatternContext, 0)
 
-
-        def oC_PatternElementChain(self, i:int=None):
+        def oC_PatternElementChain(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_PatternElementChainContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_PatternElementChainContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PatternElementChainContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_PatternElementChainContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_PatternElement(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternElementContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PatternElementContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PatternElement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PatternElement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PatternElement"):
                 listener.enterOC_PatternElement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PatternElement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PatternElement"):
                 listener.exitOC_PatternElement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PatternElement" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PatternElement"):
                 return visitor.visitOC_PatternElement(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_PatternElement(self):
 
         localctx = CypherParser.OC_PatternElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 74, self.RULE_oC_PatternElement)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 691
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,97,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 97, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 677
                 self.oC_NodePattern()
                 self.state = 684
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,96,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 96, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 679
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 678
                             self.match(CypherParser.SP)
 
-
                         self.state = 681
-                        self.oC_PatternElementChain() 
+                        self.oC_PatternElementChain()
                     self.state = 686
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,96,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 96, self._ctx)
 
                 pass
 
@@ -4502,7 +4696,6 @@ class CypherParser ( Parser ):
                 self.match(CypherParser.T__6)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -4513,22 +4706,26 @@ class CypherParser ( Parser ):
 
     class OC_RelationshipsPatternContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_NodePattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_NodePatternContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_NodePatternContext, 0)
 
-
-        def oC_PatternElementChain(self, i:int=None):
+        def oC_PatternElementChain(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_PatternElementChainContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_PatternElementChainContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PatternElementChainContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_PatternElementChainContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -4537,53 +4734,51 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RelationshipsPattern
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RelationshipsPattern" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RelationshipsPattern"):
                 listener.enterOC_RelationshipsPattern(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RelationshipsPattern" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RelationshipsPattern"):
                 listener.exitOC_RelationshipsPattern(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RelationshipsPattern" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RelationshipsPattern"):
                 return visitor.visitOC_RelationshipsPattern(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_RelationshipsPattern(self):
 
-        localctx = CypherParser.OC_RelationshipsPatternContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_RelationshipsPatternContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 76, self.RULE_oC_RelationshipsPattern)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 693
             self.oC_NodePattern()
-            self.state = 698 
+            self.state = 698
             self._errHandler.sync(self)
             _alt = 1
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
                     self.state = 695
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 694
                         self.match(CypherParser.SP)
-
 
                     self.state = 697
                     self.oC_PatternElementChain()
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 700 
+                self.state = 700
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,99,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 99, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -4595,53 +4790,49 @@ class CypherParser ( Parser ):
 
     class OC_NodePatternContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def oC_NodeLabels(self):
-            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext, 0)
 
         def oC_Properties(self):
-            return self.getTypedRuleContext(CypherParser.OC_PropertiesContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PropertiesContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_NodePattern
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_NodePattern" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_NodePattern"):
                 listener.enterOC_NodePattern(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_NodePattern" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_NodePattern"):
                 listener.exitOC_NodePattern(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_NodePattern" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_NodePattern"):
                 return visitor.visitOC_NodePattern(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_NodePattern(self):
 
         localctx = CypherParser.OC_NodePatternContext(self, self._ctx, self.state)
         self.enterRule(localctx, 78, self.RULE_oC_NodePattern)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 702
@@ -4649,58 +4840,61 @@ class CypherParser ( Parser ):
             self.state = 704
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 703
                 self.match(CypherParser.SP)
-
 
             self.state = 710
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & ((1 << (CypherParser.COUNT - 83)) | (1 << (CypherParser.ANY - 83)) | (1 << (CypherParser.NONE - 83)) | (1 << (CypherParser.SINGLE - 83)) | (1 << (CypherParser.HexLetter - 83)) | (1 << (CypherParser.FILTER - 83)) | (1 << (CypherParser.EXTRACT - 83)) | (1 << (CypherParser.UnescapedSymbolicName - 83)) | (1 << (CypherParser.EscapedSymbolicName - 83)))) != 0):
+            if (((_la - 83)) & ~0x3F) == 0 and (
+                (1 << (_la - 83))
+                & (
+                    (1 << (CypherParser.COUNT - 83))
+                    | (1 << (CypherParser.ANY - 83))
+                    | (1 << (CypherParser.NONE - 83))
+                    | (1 << (CypherParser.SINGLE - 83))
+                    | (1 << (CypherParser.HexLetter - 83))
+                    | (1 << (CypherParser.FILTER - 83))
+                    | (1 << (CypherParser.EXTRACT - 83))
+                    | (1 << (CypherParser.UnescapedSymbolicName - 83))
+                    | (1 << (CypherParser.EscapedSymbolicName - 83))
+                )
+            ) != 0:
                 self.state = 706
                 self.oC_Variable()
                 self.state = 708
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 707
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 716
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.T__9:
+            if _la == CypherParser.T__9:
                 self.state = 712
                 self.oC_NodeLabels()
                 self.state = 714
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 713
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 722
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.T__23 or _la==CypherParser.T__25:
+            if _la == CypherParser.T__23 or _la == CypherParser.T__25:
                 self.state = 718
                 self.oC_Properties()
                 self.state = 720
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 719
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 724
             self.match(CypherParser.T__6)
@@ -4714,17 +4908,19 @@ class CypherParser ( Parser ):
 
     class OC_PatternElementChainContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_RelationshipPattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_RelationshipPatternContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_RelationshipPatternContext, 0
+            )
 
         def oC_NodePattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_NodePatternContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_NodePatternContext, 0)
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -4732,28 +4928,27 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PatternElementChain
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PatternElementChain" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PatternElementChain"):
                 listener.enterOC_PatternElementChain(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PatternElementChain" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PatternElementChain"):
                 listener.exitOC_PatternElementChain(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PatternElementChain" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PatternElementChain"):
                 return visitor.visitOC_PatternElementChain(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_PatternElementChain(self):
 
-        localctx = CypherParser.OC_PatternElementChainContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_PatternElementChainContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 80, self.RULE_oC_PatternElementChain)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 726
@@ -4761,10 +4956,9 @@ class CypherParser ( Parser ):
             self.state = 728
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 727
                 self.match(CypherParser.SP)
-
 
             self.state = 730
             self.oC_NodePattern()
@@ -4778,64 +4972,63 @@ class CypherParser ( Parser ):
 
     class OC_RelationshipPatternContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_LeftArrowHead(self):
-            return self.getTypedRuleContext(CypherParser.OC_LeftArrowHeadContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_LeftArrowHeadContext, 0)
 
-
-        def oC_Dash(self, i:int=None):
+        def oC_Dash(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_DashContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_DashContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_DashContext, i)
 
         def oC_RightArrowHead(self):
-            return self.getTypedRuleContext(CypherParser.OC_RightArrowHeadContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_RightArrowHeadContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_RelationshipDetail(self):
-            return self.getTypedRuleContext(CypherParser.OC_RelationshipDetailContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_RelationshipDetailContext, 0
+            )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RelationshipPattern
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RelationshipPattern" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RelationshipPattern"):
                 listener.enterOC_RelationshipPattern(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RelationshipPattern" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RelationshipPattern"):
                 listener.exitOC_RelationshipPattern(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RelationshipPattern" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RelationshipPattern"):
                 return visitor.visitOC_RelationshipPattern(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_RelationshipPattern(self):
 
-        localctx = CypherParser.OC_RelationshipPatternContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_RelationshipPatternContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 82, self.RULE_oC_RelationshipPattern)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 796
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,124,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 124, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 732
@@ -4843,46 +5036,41 @@ class CypherParser ( Parser ):
                 self.state = 734
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 733
                     self.match(CypherParser.SP)
-
 
                 self.state = 736
                 self.oC_Dash()
                 self.state = 738
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,109,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 109, self._ctx)
                 if la_ == 1:
                     self.state = 737
                     self.match(CypherParser.SP)
 
-
                 self.state = 741
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.T__7:
+                if _la == CypherParser.T__7:
                     self.state = 740
                     self.oC_RelationshipDetail()
-
 
                 self.state = 744
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 743
                     self.match(CypherParser.SP)
-
 
                 self.state = 746
                 self.oC_Dash()
                 self.state = 748
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 747
                     self.match(CypherParser.SP)
-
 
                 self.state = 750
                 self.oC_RightArrowHead()
@@ -4895,36 +5083,32 @@ class CypherParser ( Parser ):
                 self.state = 754
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 753
                     self.match(CypherParser.SP)
-
 
                 self.state = 756
                 self.oC_Dash()
                 self.state = 758
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,114,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 114, self._ctx)
                 if la_ == 1:
                     self.state = 757
                     self.match(CypherParser.SP)
 
-
                 self.state = 761
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.T__7:
+                if _la == CypherParser.T__7:
                     self.state = 760
                     self.oC_RelationshipDetail()
-
 
                 self.state = 764
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 763
                     self.match(CypherParser.SP)
-
 
                 self.state = 766
                 self.oC_Dash()
@@ -4936,37 +5120,33 @@ class CypherParser ( Parser ):
                 self.oC_Dash()
                 self.state = 770
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,117,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 117, self._ctx)
                 if la_ == 1:
                     self.state = 769
                     self.match(CypherParser.SP)
 
-
                 self.state = 773
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.T__7:
+                if _la == CypherParser.T__7:
                     self.state = 772
                     self.oC_RelationshipDetail()
-
 
                 self.state = 776
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 775
                     self.match(CypherParser.SP)
-
 
                 self.state = 778
                 self.oC_Dash()
                 self.state = 780
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 779
                     self.match(CypherParser.SP)
-
 
                 self.state = 782
                 self.oC_RightArrowHead()
@@ -4978,32 +5158,28 @@ class CypherParser ( Parser ):
                 self.oC_Dash()
                 self.state = 786
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,121,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 121, self._ctx)
                 if la_ == 1:
                     self.state = 785
                     self.match(CypherParser.SP)
 
-
                 self.state = 789
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.T__7:
+                if _la == CypherParser.T__7:
                     self.state = 788
                     self.oC_RelationshipDetail()
-
 
                 self.state = 792
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 791
                     self.match(CypherParser.SP)
-
 
                 self.state = 794
                 self.oC_Dash()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5015,57 +5191,54 @@ class CypherParser ( Parser ):
 
     class OC_RelationshipDetailContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def oC_RelationshipTypes(self):
-            return self.getTypedRuleContext(CypherParser.OC_RelationshipTypesContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_RelationshipTypesContext, 0)
 
         def oC_RangeLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_RangeLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_RangeLiteralContext, 0)
 
         def oC_Properties(self):
-            return self.getTypedRuleContext(CypherParser.OC_PropertiesContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PropertiesContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RelationshipDetail
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RelationshipDetail" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RelationshipDetail"):
                 listener.enterOC_RelationshipDetail(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RelationshipDetail" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RelationshipDetail"):
                 listener.exitOC_RelationshipDetail(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RelationshipDetail" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RelationshipDetail"):
                 return visitor.visitOC_RelationshipDetail(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_RelationshipDetail(self):
 
-        localctx = CypherParser.OC_RelationshipDetailContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_RelationshipDetailContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 84, self.RULE_oC_RelationshipDetail)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 798
@@ -5073,66 +5246,68 @@ class CypherParser ( Parser ):
             self.state = 800
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 799
                 self.match(CypherParser.SP)
-
 
             self.state = 806
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & ((1 << (CypherParser.COUNT - 83)) | (1 << (CypherParser.ANY - 83)) | (1 << (CypherParser.NONE - 83)) | (1 << (CypherParser.SINGLE - 83)) | (1 << (CypherParser.HexLetter - 83)) | (1 << (CypherParser.FILTER - 83)) | (1 << (CypherParser.EXTRACT - 83)) | (1 << (CypherParser.UnescapedSymbolicName - 83)) | (1 << (CypherParser.EscapedSymbolicName - 83)))) != 0):
+            if (((_la - 83)) & ~0x3F) == 0 and (
+                (1 << (_la - 83))
+                & (
+                    (1 << (CypherParser.COUNT - 83))
+                    | (1 << (CypherParser.ANY - 83))
+                    | (1 << (CypherParser.NONE - 83))
+                    | (1 << (CypherParser.SINGLE - 83))
+                    | (1 << (CypherParser.HexLetter - 83))
+                    | (1 << (CypherParser.FILTER - 83))
+                    | (1 << (CypherParser.EXTRACT - 83))
+                    | (1 << (CypherParser.UnescapedSymbolicName - 83))
+                    | (1 << (CypherParser.EscapedSymbolicName - 83))
+                )
+            ) != 0:
                 self.state = 802
                 self.oC_Variable()
                 self.state = 804
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 803
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 812
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.T__9:
+            if _la == CypherParser.T__9:
                 self.state = 808
                 self.oC_RelationshipTypes()
                 self.state = 810
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 809
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 815
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.T__4:
+            if _la == CypherParser.T__4:
                 self.state = 814
                 self.oC_RangeLiteral()
-
 
             self.state = 821
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.T__23 or _la==CypherParser.T__25:
+            if _la == CypherParser.T__23 or _la == CypherParser.T__25:
                 self.state = 817
                 self.oC_Properties()
                 self.state = 819
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 818
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 823
             self.match(CypherParser.T__8)
@@ -5146,37 +5321,34 @@ class CypherParser ( Parser ):
 
     class OC_PropertiesContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_MapLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_MapLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_MapLiteralContext, 0)
 
         def oC_Parameter(self):
-            return self.getTypedRuleContext(CypherParser.OC_ParameterContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ParameterContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Properties
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Properties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Properties"):
                 listener.enterOC_Properties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Properties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Properties"):
                 listener.exitOC_Properties(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Properties" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Properties"):
                 return visitor.visitOC_Properties(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Properties(self):
 
@@ -5209,18 +5381,19 @@ class CypherParser ( Parser ):
 
     class OC_RelationshipTypesContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_RelTypeName(self, i:int=None):
+        def oC_RelTypeName(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_RelTypeNameContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_RelTypeNameContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_RelTypeNameContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -5229,28 +5402,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RelationshipTypes
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RelationshipTypes" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RelationshipTypes"):
                 listener.enterOC_RelationshipTypes(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RelationshipTypes" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RelationshipTypes"):
                 listener.exitOC_RelationshipTypes(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RelationshipTypes" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RelationshipTypes"):
                 return visitor.visitOC_RelationshipTypes(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_RelationshipTypes(self):
 
         localctx = CypherParser.OC_RelationshipTypesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 88, self.RULE_oC_RelationshipTypes)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 829
@@ -5258,49 +5428,45 @@ class CypherParser ( Parser ):
             self.state = 831
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 830
                 self.match(CypherParser.SP)
-
 
             self.state = 833
             self.oC_RelTypeName()
             self.state = 847
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,138,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 138, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 835
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 834
                         self.match(CypherParser.SP)
-
 
                     self.state = 837
                     self.match(CypherParser.T__10)
                     self.state = 839
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.T__9:
+                    if _la == CypherParser.T__9:
                         self.state = 838
                         self.match(CypherParser.T__9)
-
 
                     self.state = 842
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 841
                         self.match(CypherParser.SP)
 
-
                     self.state = 844
-                    self.oC_RelTypeName() 
+                    self.oC_RelTypeName()
                 self.state = 849
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,138,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 138, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5312,18 +5478,19 @@ class CypherParser ( Parser ):
 
     class OC_NodeLabelsContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_NodeLabel(self, i:int=None):
+        def oC_NodeLabel(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_NodeLabelContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_NodeLabelContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_NodeLabelContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -5332,50 +5499,46 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_NodeLabels
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_NodeLabels" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_NodeLabels"):
                 listener.enterOC_NodeLabels(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_NodeLabels" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_NodeLabels"):
                 listener.exitOC_NodeLabels(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_NodeLabels" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_NodeLabels"):
                 return visitor.visitOC_NodeLabels(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_NodeLabels(self):
 
         localctx = CypherParser.OC_NodeLabelsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 90, self.RULE_oC_NodeLabels)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 850
             self.oC_NodeLabel()
             self.state = 857
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,140,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 140, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 852
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 851
                         self.match(CypherParser.SP)
 
-
                     self.state = 854
-                    self.oC_NodeLabel() 
+                    self.oC_NodeLabel()
                 self.state = 859
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,140,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 140, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5387,13 +5550,14 @@ class CypherParser ( Parser ):
 
     class OC_NodeLabelContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_LabelName(self):
-            return self.getTypedRuleContext(CypherParser.OC_LabelNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_LabelNameContext, 0)
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -5401,28 +5565,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_NodeLabel
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_NodeLabel" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_NodeLabel"):
                 listener.enterOC_NodeLabel(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_NodeLabel" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_NodeLabel"):
                 listener.exitOC_NodeLabel(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_NodeLabel" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_NodeLabel"):
                 return visitor.visitOC_NodeLabel(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_NodeLabel(self):
 
         localctx = CypherParser.OC_NodeLabelContext(self, self._ctx, self.state)
         self.enterRule(localctx, 92, self.RULE_oC_NodeLabel)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 860
@@ -5430,10 +5591,9 @@ class CypherParser ( Parser ):
             self.state = 862
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 861
                 self.match(CypherParser.SP)
-
 
             self.state = 864
             self.oC_LabelName()
@@ -5447,48 +5607,48 @@ class CypherParser ( Parser ):
 
     class OC_RangeLiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def oC_IntegerLiteral(self, i:int=None):
+        def oC_IntegerLiteral(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_IntegerLiteralContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_IntegerLiteralContext,i)
-
+                return self.getTypedRuleContext(
+                    CypherParser.OC_IntegerLiteralContext, i
+                )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RangeLiteral
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RangeLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RangeLiteral"):
                 listener.enterOC_RangeLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RangeLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RangeLiteral"):
                 listener.exitOC_RangeLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RangeLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RangeLiteral"):
                 return visitor.visitOC_RangeLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_RangeLiteral(self):
 
         localctx = CypherParser.OC_RangeLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 94, self.RULE_oC_RangeLiteral)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 866
@@ -5496,58 +5656,62 @@ class CypherParser ( Parser ):
             self.state = 868
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 867
                 self.match(CypherParser.SP)
-
 
             self.state = 874
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((((_la - 95)) & ~0x3f) == 0 and ((1 << (_la - 95)) & ((1 << (CypherParser.HexInteger - 95)) | (1 << (CypherParser.DecimalInteger - 95)) | (1 << (CypherParser.OctalInteger - 95)))) != 0):
+            if (((_la - 95)) & ~0x3F) == 0 and (
+                (1 << (_la - 95))
+                & (
+                    (1 << (CypherParser.HexInteger - 95))
+                    | (1 << (CypherParser.DecimalInteger - 95))
+                    | (1 << (CypherParser.OctalInteger - 95))
+                )
+            ) != 0:
                 self.state = 870
                 self.oC_IntegerLiteral()
                 self.state = 872
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 871
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 886
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.T__11:
+            if _la == CypherParser.T__11:
                 self.state = 876
                 self.match(CypherParser.T__11)
                 self.state = 878
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 877
                     self.match(CypherParser.SP)
-
 
                 self.state = 884
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((((_la - 95)) & ~0x3f) == 0 and ((1 << (_la - 95)) & ((1 << (CypherParser.HexInteger - 95)) | (1 << (CypherParser.DecimalInteger - 95)) | (1 << (CypherParser.OctalInteger - 95)))) != 0):
+                if (((_la - 95)) & ~0x3F) == 0 and (
+                    (1 << (_la - 95))
+                    & (
+                        (1 << (CypherParser.HexInteger - 95))
+                        | (1 << (CypherParser.DecimalInteger - 95))
+                        | (1 << (CypherParser.OctalInteger - 95))
+                    )
+                ) != 0:
                     self.state = 880
                     self.oC_IntegerLiteral()
                     self.state = 882
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 881
                         self.match(CypherParser.SP)
-
-
-
-
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5559,33 +5723,31 @@ class CypherParser ( Parser ):
 
     class OC_LabelNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SchemaName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SchemaNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SchemaNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_LabelName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_LabelName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_LabelName"):
                 listener.enterOC_LabelName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_LabelName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_LabelName"):
                 listener.exitOC_LabelName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_LabelName" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_LabelName"):
                 return visitor.visitOC_LabelName(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_LabelName(self):
 
@@ -5605,33 +5767,31 @@ class CypherParser ( Parser ):
 
     class OC_RelTypeNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SchemaName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SchemaNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SchemaNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RelTypeName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RelTypeName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RelTypeName"):
                 listener.enterOC_RelTypeName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RelTypeName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RelTypeName"):
                 listener.exitOC_RelTypeName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RelTypeName" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RelTypeName"):
                 return visitor.visitOC_RelTypeName(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_RelTypeName(self):
 
@@ -5651,22 +5811,24 @@ class CypherParser ( Parser ):
 
     class OC_PropertyExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Atom(self):
-            return self.getTypedRuleContext(CypherParser.OC_AtomContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_AtomContext, 0)
 
-
-        def oC_PropertyLookup(self, i:int=None):
+        def oC_PropertyLookup(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_PropertyLookupContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PropertyLookupContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_PropertyLookupContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -5675,53 +5837,51 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PropertyExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PropertyExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PropertyExpression"):
                 listener.enterOC_PropertyExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PropertyExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PropertyExpression"):
                 listener.exitOC_PropertyExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PropertyExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PropertyExpression"):
                 return visitor.visitOC_PropertyExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_PropertyExpression(self):
 
-        localctx = CypherParser.OC_PropertyExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_PropertyExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 100, self.RULE_oC_PropertyExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 892
             self.oC_Atom()
-            self.state = 897 
+            self.state = 897
             self._errHandler.sync(self)
             _alt = 1
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
                     self.state = 894
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 893
                         self.match(CypherParser.SP)
-
 
                     self.state = 896
                     self.oC_PropertyLookup()
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 899 
+                self.state = 899
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,150,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 150, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5733,33 +5893,31 @@ class CypherParser ( Parser ):
 
     class OC_ExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_OrExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_OrExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_OrExpressionContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Expression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Expression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Expression"):
                 listener.enterOC_Expression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Expression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Expression"):
                 listener.exitOC_Expression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Expression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Expression"):
                 return visitor.visitOC_Expression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Expression(self):
 
@@ -5779,24 +5937,25 @@ class CypherParser ( Parser ):
 
     class OC_OrExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_XorExpression(self, i:int=None):
+        def oC_XorExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_XorExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_XorExpressionContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_XorExpressionContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def OR(self, i:int=None):
+        def OR(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.OR)
             else:
@@ -5805,22 +5964,19 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_OrExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_OrExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_OrExpression"):
                 listener.enterOC_OrExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_OrExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_OrExpression"):
                 listener.exitOC_OrExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_OrExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_OrExpression"):
                 return visitor.visitOC_OrExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_OrExpression(self):
 
@@ -5832,9 +5988,9 @@ class CypherParser ( Parser ):
             self.oC_XorExpression()
             self.state = 910
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,151,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 151, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 904
                     self.match(CypherParser.SP)
                     self.state = 905
@@ -5842,10 +5998,10 @@ class CypherParser ( Parser ):
                     self.state = 906
                     self.match(CypherParser.SP)
                     self.state = 907
-                    self.oC_XorExpression() 
+                    self.oC_XorExpression()
                 self.state = 912
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,151,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 151, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5857,24 +6013,25 @@ class CypherParser ( Parser ):
 
     class OC_XorExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_AndExpression(self, i:int=None):
+        def oC_AndExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_AndExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_AndExpressionContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_AndExpressionContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def XOR(self, i:int=None):
+        def XOR(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.XOR)
             else:
@@ -5883,22 +6040,19 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_XorExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_XorExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_XorExpression"):
                 listener.enterOC_XorExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_XorExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_XorExpression"):
                 listener.exitOC_XorExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_XorExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_XorExpression"):
                 return visitor.visitOC_XorExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_XorExpression(self):
 
@@ -5910,9 +6064,9 @@ class CypherParser ( Parser ):
             self.oC_AndExpression()
             self.state = 920
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,152,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 152, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 914
                     self.match(CypherParser.SP)
                     self.state = 915
@@ -5920,10 +6074,10 @@ class CypherParser ( Parser ):
                     self.state = 916
                     self.match(CypherParser.SP)
                     self.state = 917
-                    self.oC_AndExpression() 
+                    self.oC_AndExpression()
                 self.state = 922
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,152,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 152, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5935,24 +6089,25 @@ class CypherParser ( Parser ):
 
     class OC_AndExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_NotExpression(self, i:int=None):
+        def oC_NotExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_NotExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_NotExpressionContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_NotExpressionContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def AND(self, i:int=None):
+        def AND(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.AND)
             else:
@@ -5961,22 +6116,19 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_AndExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_AndExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_AndExpression"):
                 listener.enterOC_AndExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_AndExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_AndExpression"):
                 listener.exitOC_AndExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_AndExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_AndExpression"):
                 return visitor.visitOC_AndExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_AndExpression(self):
 
@@ -5988,9 +6140,9 @@ class CypherParser ( Parser ):
             self.oC_NotExpression()
             self.state = 930
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,153,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 153, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 924
                     self.match(CypherParser.SP)
                     self.state = 925
@@ -5998,10 +6150,10 @@ class CypherParser ( Parser ):
                     self.state = 926
                     self.match(CypherParser.SP)
                     self.state = 927
-                    self.oC_NotExpression() 
+                    self.oC_NotExpression()
                 self.state = 932
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,153,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 153, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6013,21 +6165,24 @@ class CypherParser ( Parser ):
 
     class OC_NotExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_ComparisonExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ComparisonExpressionContext,0)
+            return self.getTypedRuleContext(
+                CypherParser.OC_ComparisonExpressionContext, 0
+            )
 
-
-        def NOT(self, i:int=None):
+        def NOT(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.NOT)
             else:
                 return self.getToken(CypherParser.NOT, i)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6036,43 +6191,39 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_NotExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_NotExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_NotExpression"):
                 listener.enterOC_NotExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_NotExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_NotExpression"):
                 listener.exitOC_NotExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_NotExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_NotExpression"):
                 return visitor.visitOC_NotExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_NotExpression(self):
 
         localctx = CypherParser.OC_NotExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 110, self.RULE_oC_NotExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 939
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==CypherParser.NOT:
+            while _la == CypherParser.NOT:
                 self.state = 933
                 self.match(CypherParser.NOT)
                 self.state = 935
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 934
                     self.match(CypherParser.SP)
-
 
                 self.state = 941
                 self._errHandler.sync(self)
@@ -6090,22 +6241,28 @@ class CypherParser ( Parser ):
 
     class OC_ComparisonExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_StringListNullPredicateExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_StringListNullPredicateExpressionContext,0)
+            return self.getTypedRuleContext(
+                CypherParser.OC_StringListNullPredicateExpressionContext, 0
+            )
 
-
-        def oC_PartialComparisonExpression(self, i:int=None):
+        def oC_PartialComparisonExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_PartialComparisonExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_PartialComparisonExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PartialComparisonExpressionContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_PartialComparisonExpressionContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6114,50 +6271,48 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ComparisonExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ComparisonExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ComparisonExpression"):
                 listener.enterOC_ComparisonExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ComparisonExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ComparisonExpression"):
                 listener.exitOC_ComparisonExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ComparisonExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ComparisonExpression"):
                 return visitor.visitOC_ComparisonExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ComparisonExpression(self):
 
-        localctx = CypherParser.OC_ComparisonExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ComparisonExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 112, self.RULE_oC_ComparisonExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 944
             self.oC_StringListNullPredicateExpression()
             self.state = 951
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,157,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 157, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 946
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 945
                         self.match(CypherParser.SP)
 
-
                     self.state = 948
-                    self.oC_PartialComparisonExpression() 
+                    self.oC_PartialComparisonExpression()
                 self.state = 953
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,157,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 157, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6169,13 +6324,16 @@ class CypherParser ( Parser ):
 
     class OC_PartialComparisonExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_StringListNullPredicateExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_StringListNullPredicateExpressionContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_StringListNullPredicateExpressionContext, 0
+            )
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -6183,28 +6341,27 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PartialComparisonExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PartialComparisonExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PartialComparisonExpression"):
                 listener.enterOC_PartialComparisonExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PartialComparisonExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PartialComparisonExpression"):
                 listener.exitOC_PartialComparisonExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PartialComparisonExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PartialComparisonExpression"):
                 return visitor.visitOC_PartialComparisonExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_PartialComparisonExpression(self):
 
-        localctx = CypherParser.OC_PartialComparisonExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_PartialComparisonExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 114, self.RULE_oC_PartialComparisonExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 984
             self._errHandler.sync(self)
@@ -6216,10 +6373,9 @@ class CypherParser ( Parser ):
                 self.state = 956
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 955
                     self.match(CypherParser.SP)
-
 
                 self.state = 958
                 self.oC_StringListNullPredicateExpression()
@@ -6231,10 +6387,9 @@ class CypherParser ( Parser ):
                 self.state = 961
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 960
                     self.match(CypherParser.SP)
-
 
                 self.state = 963
                 self.oC_StringListNullPredicateExpression()
@@ -6246,10 +6401,9 @@ class CypherParser ( Parser ):
                 self.state = 966
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 965
                     self.match(CypherParser.SP)
-
 
                 self.state = 968
                 self.oC_StringListNullPredicateExpression()
@@ -6261,10 +6415,9 @@ class CypherParser ( Parser ):
                 self.state = 971
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 970
                     self.match(CypherParser.SP)
-
 
                 self.state = 973
                 self.oC_StringListNullPredicateExpression()
@@ -6276,10 +6429,9 @@ class CypherParser ( Parser ):
                 self.state = 976
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 975
                     self.match(CypherParser.SP)
-
 
                 self.state = 978
                 self.oC_StringListNullPredicateExpression()
@@ -6291,10 +6443,9 @@ class CypherParser ( Parser ):
                 self.state = 981
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 980
                     self.match(CypherParser.SP)
-
 
                 self.state = 983
                 self.oC_StringListNullPredicateExpression()
@@ -6312,58 +6463,69 @@ class CypherParser ( Parser ):
 
     class OC_StringListNullPredicateExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_AddOrSubtractExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_AddOrSubtractExpressionContext,0)
+            return self.getTypedRuleContext(
+                CypherParser.OC_AddOrSubtractExpressionContext, 0
+            )
 
-
-        def oC_StringPredicateExpression(self, i:int=None):
+        def oC_StringPredicateExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_StringPredicateExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_StringPredicateExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_StringPredicateExpressionContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_StringPredicateExpressionContext, i
+                )
 
-
-        def oC_ListPredicateExpression(self, i:int=None):
+        def oC_ListPredicateExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_ListPredicateExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_ListPredicateExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ListPredicateExpressionContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_ListPredicateExpressionContext, i
+                )
 
-
-        def oC_NullPredicateExpression(self, i:int=None):
+        def oC_NullPredicateExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_NullPredicateExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_NullPredicateExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_NullPredicateExpressionContext,i)
-
+                return self.getTypedRuleContext(
+                    CypherParser.OC_NullPredicateExpressionContext, i
+                )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_StringListNullPredicateExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_StringListNullPredicateExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_StringListNullPredicateExpression"):
                 listener.enterOC_StringListNullPredicateExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_StringListNullPredicateExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_StringListNullPredicateExpression"):
                 listener.exitOC_StringListNullPredicateExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_StringListNullPredicateExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_StringListNullPredicateExpression"):
                 return visitor.visitOC_StringListNullPredicateExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_StringListNullPredicateExpression(self):
 
-        localctx = CypherParser.OC_StringListNullPredicateExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_StringListNullPredicateExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 116, self.RULE_oC_StringListNullPredicateExpression)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -6371,12 +6533,12 @@ class CypherParser ( Parser ):
             self.oC_AddOrSubtractExpression()
             self.state = 992
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,166,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 166, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 990
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,165,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 165, self._ctx)
                     if la_ == 1:
                         self.state = 987
                         self.oC_StringPredicateExpression()
@@ -6392,10 +6554,9 @@ class CypherParser ( Parser ):
                         self.oC_NullPredicateExpression()
                         pass
 
-             
                 self.state = 994
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,166,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 166, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6407,15 +6568,18 @@ class CypherParser ( Parser ):
 
     class OC_StringPredicateExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_AddOrSubtractExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_AddOrSubtractExpressionContext,0)
+            return self.getTypedRuleContext(
+                CypherParser.OC_AddOrSubtractExpressionContext, 0
+            )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6436,33 +6600,32 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_StringPredicateExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_StringPredicateExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_StringPredicateExpression"):
                 listener.enterOC_StringPredicateExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_StringPredicateExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_StringPredicateExpression"):
                 listener.exitOC_StringPredicateExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_StringPredicateExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_StringPredicateExpression"):
                 return visitor.visitOC_StringPredicateExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_StringPredicateExpression(self):
 
-        localctx = CypherParser.OC_StringPredicateExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_StringPredicateExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 118, self.RULE_oC_StringPredicateExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1005
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,167,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 167, self._ctx)
             if la_ == 1:
                 self.state = 995
                 self.match(CypherParser.SP)
@@ -6492,14 +6655,12 @@ class CypherParser ( Parser ):
                 self.match(CypherParser.CONTAINS)
                 pass
 
-
             self.state = 1008
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1007
                 self.match(CypherParser.SP)
-
 
             self.state = 1010
             self.oC_AddOrSubtractExpression()
@@ -6513,11 +6674,13 @@ class CypherParser ( Parser ):
 
     class OC_ListPredicateExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6527,34 +6690,34 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.IN, 0)
 
         def oC_AddOrSubtractExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_AddOrSubtractExpressionContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_AddOrSubtractExpressionContext, 0
+            )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ListPredicateExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ListPredicateExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ListPredicateExpression"):
                 listener.enterOC_ListPredicateExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ListPredicateExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ListPredicateExpression"):
                 listener.exitOC_ListPredicateExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ListPredicateExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ListPredicateExpression"):
                 return visitor.visitOC_ListPredicateExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ListPredicateExpression(self):
 
-        localctx = CypherParser.OC_ListPredicateExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ListPredicateExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 120, self.RULE_oC_ListPredicateExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1012
@@ -6564,10 +6727,9 @@ class CypherParser ( Parser ):
             self.state = 1015
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1014
                 self.match(CypherParser.SP)
-
 
             self.state = 1017
             self.oC_AddOrSubtractExpression()
@@ -6581,11 +6743,13 @@ class CypherParser ( Parser ):
 
     class OC_NullPredicateExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6603,31 +6767,30 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_NullPredicateExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_NullPredicateExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_NullPredicateExpression"):
                 listener.enterOC_NullPredicateExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_NullPredicateExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_NullPredicateExpression"):
                 listener.exitOC_NullPredicateExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_NullPredicateExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_NullPredicateExpression"):
                 return visitor.visitOC_NullPredicateExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_NullPredicateExpression(self):
 
-        localctx = CypherParser.OC_NullPredicateExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_NullPredicateExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 122, self.RULE_oC_NullPredicateExpression)
         try:
             self.state = 1029
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,170,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 170, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1019
@@ -6656,7 +6819,6 @@ class CypherParser ( Parser ):
                 self.match(CypherParser.NULL)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -6667,18 +6829,23 @@ class CypherParser ( Parser ):
 
     class OC_AddOrSubtractExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_MultiplyDivideModuloExpression(self, i:int=None):
+        def oC_MultiplyDivideModuloExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_MultiplyDivideModuloExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_MultiplyDivideModuloExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_MultiplyDivideModuloExpressionContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_MultiplyDivideModuloExpressionContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6687,58 +6854,55 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_AddOrSubtractExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_AddOrSubtractExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_AddOrSubtractExpression"):
                 listener.enterOC_AddOrSubtractExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_AddOrSubtractExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_AddOrSubtractExpression"):
                 listener.exitOC_AddOrSubtractExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_AddOrSubtractExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_AddOrSubtractExpression"):
                 return visitor.visitOC_AddOrSubtractExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_AddOrSubtractExpression(self):
 
-        localctx = CypherParser.OC_AddOrSubtractExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_AddOrSubtractExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 124, self.RULE_oC_AddOrSubtractExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1031
             self.oC_MultiplyDivideModuloExpression()
             self.state = 1050
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,176,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 176, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1048
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,175,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 175, self._ctx)
                     if la_ == 1:
                         self.state = 1033
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1032
                             self.match(CypherParser.SP)
-
 
                         self.state = 1035
                         self.match(CypherParser.T__17)
                         self.state = 1037
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1036
                             self.match(CypherParser.SP)
-
 
                         self.state = 1039
                         self.oC_MultiplyDivideModuloExpression()
@@ -6748,29 +6912,26 @@ class CypherParser ( Parser ):
                         self.state = 1041
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1040
                             self.match(CypherParser.SP)
-
 
                         self.state = 1043
                         self.match(CypherParser.T__18)
                         self.state = 1045
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1044
                             self.match(CypherParser.SP)
-
 
                         self.state = 1047
                         self.oC_MultiplyDivideModuloExpression()
                         pass
 
-             
                 self.state = 1052
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,176,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 176, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6782,18 +6943,23 @@ class CypherParser ( Parser ):
 
     class OC_MultiplyDivideModuloExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_PowerOfExpression(self, i:int=None):
+        def oC_PowerOfExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_PowerOfExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_PowerOfExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PowerOfExpressionContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_PowerOfExpressionContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6802,58 +6968,55 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_MultiplyDivideModuloExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_MultiplyDivideModuloExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_MultiplyDivideModuloExpression"):
                 listener.enterOC_MultiplyDivideModuloExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_MultiplyDivideModuloExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_MultiplyDivideModuloExpression"):
                 listener.exitOC_MultiplyDivideModuloExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_MultiplyDivideModuloExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_MultiplyDivideModuloExpression"):
                 return visitor.visitOC_MultiplyDivideModuloExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_MultiplyDivideModuloExpression(self):
 
-        localctx = CypherParser.OC_MultiplyDivideModuloExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_MultiplyDivideModuloExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 126, self.RULE_oC_MultiplyDivideModuloExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1053
             self.oC_PowerOfExpression()
             self.state = 1080
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,184,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 184, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1078
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,183,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 183, self._ctx)
                     if la_ == 1:
                         self.state = 1055
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1054
                             self.match(CypherParser.SP)
-
 
                         self.state = 1057
                         self.match(CypherParser.T__4)
                         self.state = 1059
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1058
                             self.match(CypherParser.SP)
-
 
                         self.state = 1061
                         self.oC_PowerOfExpression()
@@ -6863,20 +7026,18 @@ class CypherParser ( Parser ):
                         self.state = 1063
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1062
                             self.match(CypherParser.SP)
-
 
                         self.state = 1065
                         self.match(CypherParser.T__19)
                         self.state = 1067
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1066
                             self.match(CypherParser.SP)
-
 
                         self.state = 1069
                         self.oC_PowerOfExpression()
@@ -6886,29 +7047,26 @@ class CypherParser ( Parser ):
                         self.state = 1071
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1070
                             self.match(CypherParser.SP)
-
 
                         self.state = 1073
                         self.match(CypherParser.T__20)
                         self.state = 1075
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1074
                             self.match(CypherParser.SP)
-
 
                         self.state = 1077
                         self.oC_PowerOfExpression()
                         pass
 
-             
                 self.state = 1082
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,184,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 184, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6920,18 +7078,23 @@ class CypherParser ( Parser ):
 
     class OC_PowerOfExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_UnaryAddOrSubtractExpression(self, i:int=None):
+        def oC_UnaryAddOrSubtractExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_UnaryAddOrSubtractExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_UnaryAddOrSubtractExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_UnaryAddOrSubtractExpressionContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_UnaryAddOrSubtractExpressionContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -6940,60 +7103,55 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PowerOfExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PowerOfExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PowerOfExpression"):
                 listener.enterOC_PowerOfExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PowerOfExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PowerOfExpression"):
                 listener.exitOC_PowerOfExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PowerOfExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PowerOfExpression"):
                 return visitor.visitOC_PowerOfExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_PowerOfExpression(self):
 
         localctx = CypherParser.OC_PowerOfExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 128, self.RULE_oC_PowerOfExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1083
             self.oC_UnaryAddOrSubtractExpression()
             self.state = 1094
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,187,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 187, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1085
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1084
                         self.match(CypherParser.SP)
-
 
                     self.state = 1087
                     self.match(CypherParser.T__21)
                     self.state = 1089
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1088
                         self.match(CypherParser.SP)
 
-
                     self.state = 1091
-                    self.oC_UnaryAddOrSubtractExpression() 
+                    self.oC_UnaryAddOrSubtractExpression()
                 self.state = 1096
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,187,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 187, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7005,13 +7163,16 @@ class CypherParser ( Parser ):
 
     class OC_UnaryAddOrSubtractExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_NonArithmeticOperatorExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_NonArithmeticOperatorExpressionContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_NonArithmeticOperatorExpressionContext, 0
+            )
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -7019,33 +7180,58 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_UnaryAddOrSubtractExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_UnaryAddOrSubtractExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_UnaryAddOrSubtractExpression"):
                 listener.enterOC_UnaryAddOrSubtractExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_UnaryAddOrSubtractExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_UnaryAddOrSubtractExpression"):
                 listener.exitOC_UnaryAddOrSubtractExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_UnaryAddOrSubtractExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_UnaryAddOrSubtractExpression"):
                 return visitor.visitOC_UnaryAddOrSubtractExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_UnaryAddOrSubtractExpression(self):
 
-        localctx = CypherParser.OC_UnaryAddOrSubtractExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_UnaryAddOrSubtractExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 130, self.RULE_oC_UnaryAddOrSubtractExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1103
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CypherParser.T__5, CypherParser.T__7, CypherParser.T__23, CypherParser.T__25, CypherParser.ALL, CypherParser.NULL, CypherParser.COUNT, CypherParser.CASE, CypherParser.ANY, CypherParser.NONE, CypherParser.SINGLE, CypherParser.EXISTS, CypherParser.TRUE, CypherParser.FALSE, CypherParser.HexInteger, CypherParser.DecimalInteger, CypherParser.OctalInteger, CypherParser.HexLetter, CypherParser.ExponentDecimalReal, CypherParser.RegularDecimalReal, CypherParser.StringLiteral, CypherParser.FILTER, CypherParser.EXTRACT, CypherParser.UnescapedSymbolicName, CypherParser.EscapedSymbolicName]:
+            if token in [
+                CypherParser.T__5,
+                CypherParser.T__7,
+                CypherParser.T__23,
+                CypherParser.T__25,
+                CypherParser.ALL,
+                CypherParser.NULL,
+                CypherParser.COUNT,
+                CypherParser.CASE,
+                CypherParser.ANY,
+                CypherParser.NONE,
+                CypherParser.SINGLE,
+                CypherParser.EXISTS,
+                CypherParser.TRUE,
+                CypherParser.FALSE,
+                CypherParser.HexInteger,
+                CypherParser.DecimalInteger,
+                CypherParser.OctalInteger,
+                CypherParser.HexLetter,
+                CypherParser.ExponentDecimalReal,
+                CypherParser.RegularDecimalReal,
+                CypherParser.StringLiteral,
+                CypherParser.FILTER,
+                CypherParser.EXTRACT,
+                CypherParser.UnescapedSymbolicName,
+                CypherParser.EscapedSymbolicName,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1097
                 self.oC_NonArithmeticOperatorExpression()
@@ -7054,7 +7240,7 @@ class CypherParser ( Parser ):
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1098
                 _la = self._input.LA(1)
-                if not(_la==CypherParser.T__17 or _la==CypherParser.T__18):
+                if not (_la == CypherParser.T__17 or _la == CypherParser.T__18):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -7062,10 +7248,9 @@ class CypherParser ( Parser ):
                 self.state = 1100
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1099
                     self.match(CypherParser.SP)
-
 
                 self.state = 1102
                 self.oC_NonArithmeticOperatorExpression()
@@ -7083,33 +7268,37 @@ class CypherParser ( Parser ):
 
     class OC_NonArithmeticOperatorExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Atom(self):
-            return self.getTypedRuleContext(CypherParser.OC_AtomContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_AtomContext, 0)
 
         def oC_NodeLabels(self):
-            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_NodeLabelsContext, 0)
 
-
-        def oC_ListOperatorExpression(self, i:int=None):
+        def oC_ListOperatorExpression(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(CypherParser.OC_ListOperatorExpressionContext)
+                return self.getTypedRuleContexts(
+                    CypherParser.OC_ListOperatorExpressionContext
+                )
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ListOperatorExpressionContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_ListOperatorExpressionContext, i
+                )
 
-
-        def oC_PropertyLookup(self, i:int=None):
+        def oC_PropertyLookup(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_PropertyLookupContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PropertyLookupContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_PropertyLookupContext, i
+                )
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -7118,48 +7307,46 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_NonArithmeticOperatorExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_NonArithmeticOperatorExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_NonArithmeticOperatorExpression"):
                 listener.enterOC_NonArithmeticOperatorExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_NonArithmeticOperatorExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_NonArithmeticOperatorExpression"):
                 listener.exitOC_NonArithmeticOperatorExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_NonArithmeticOperatorExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_NonArithmeticOperatorExpression"):
                 return visitor.visitOC_NonArithmeticOperatorExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_NonArithmeticOperatorExpression(self):
 
-        localctx = CypherParser.OC_NonArithmeticOperatorExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_NonArithmeticOperatorExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 132, self.RULE_oC_NonArithmeticOperatorExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1105
             self.oC_Atom()
             self.state = 1116
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,193,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 193, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1114
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,192,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 192, self._ctx)
                     if la_ == 1:
                         self.state = 1107
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1106
                             self.match(CypherParser.SP)
-
 
                         self.state = 1109
                         self.oC_ListOperatorExpression()
@@ -7169,35 +7356,31 @@ class CypherParser ( Parser ):
                         self.state = 1111
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1110
                             self.match(CypherParser.SP)
-
 
                         self.state = 1113
                         self.oC_PropertyLookup()
                         pass
 
-             
                 self.state = 1118
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,193,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 193, self._ctx)
 
             self.state = 1123
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,195,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 195, self._ctx)
             if la_ == 1:
                 self.state = 1120
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1119
                     self.match(CypherParser.SP)
 
-
                 self.state = 1122
                 self.oC_NodeLabels()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7209,46 +7392,46 @@ class CypherParser ( Parser ):
 
     class OC_ListOperatorExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ListOperatorExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ListOperatorExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ListOperatorExpression"):
                 listener.enterOC_ListOperatorExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ListOperatorExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ListOperatorExpression"):
                 listener.exitOC_ListOperatorExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ListOperatorExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ListOperatorExpression"):
                 return visitor.visitOC_ListOperatorExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ListOperatorExpression(self):
 
-        localctx = CypherParser.OC_ListOperatorExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ListOperatorExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 134, self.RULE_oC_ListOperatorExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1138
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,198,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 198, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1125
@@ -7266,25 +7449,110 @@ class CypherParser ( Parser ):
                 self.state = 1131
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__5) | (1 << CypherParser.T__7) | (1 << CypherParser.T__17) | (1 << CypherParser.T__18) | (1 << CypherParser.T__23) | (1 << CypherParser.T__25) | (1 << CypherParser.ALL))) != 0) or ((((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & ((1 << (CypherParser.NOT - 76)) | (1 << (CypherParser.NULL - 76)) | (1 << (CypherParser.COUNT - 76)) | (1 << (CypherParser.CASE - 76)) | (1 << (CypherParser.ANY - 76)) | (1 << (CypherParser.NONE - 76)) | (1 << (CypherParser.SINGLE - 76)) | (1 << (CypherParser.EXISTS - 76)) | (1 << (CypherParser.TRUE - 76)) | (1 << (CypherParser.FALSE - 76)) | (1 << (CypherParser.HexInteger - 76)) | (1 << (CypherParser.DecimalInteger - 76)) | (1 << (CypherParser.OctalInteger - 76)) | (1 << (CypherParser.HexLetter - 76)) | (1 << (CypherParser.ExponentDecimalReal - 76)) | (1 << (CypherParser.RegularDecimalReal - 76)) | (1 << (CypherParser.StringLiteral - 76)) | (1 << (CypherParser.FILTER - 76)) | (1 << (CypherParser.EXTRACT - 76)) | (1 << (CypherParser.UnescapedSymbolicName - 76)) | (1 << (CypherParser.EscapedSymbolicName - 76)))) != 0):
+                if (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.T__5)
+                            | (1 << CypherParser.T__7)
+                            | (1 << CypherParser.T__17)
+                            | (1 << CypherParser.T__18)
+                            | (1 << CypherParser.T__23)
+                            | (1 << CypherParser.T__25)
+                            | (1 << CypherParser.ALL)
+                        )
+                    )
+                    != 0
+                ) or (
+                    (((_la - 76)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 76))
+                        & (
+                            (1 << (CypherParser.NOT - 76))
+                            | (1 << (CypherParser.NULL - 76))
+                            | (1 << (CypherParser.COUNT - 76))
+                            | (1 << (CypherParser.CASE - 76))
+                            | (1 << (CypherParser.ANY - 76))
+                            | (1 << (CypherParser.NONE - 76))
+                            | (1 << (CypherParser.SINGLE - 76))
+                            | (1 << (CypherParser.EXISTS - 76))
+                            | (1 << (CypherParser.TRUE - 76))
+                            | (1 << (CypherParser.FALSE - 76))
+                            | (1 << (CypherParser.HexInteger - 76))
+                            | (1 << (CypherParser.DecimalInteger - 76))
+                            | (1 << (CypherParser.OctalInteger - 76))
+                            | (1 << (CypherParser.HexLetter - 76))
+                            | (1 << (CypherParser.ExponentDecimalReal - 76))
+                            | (1 << (CypherParser.RegularDecimalReal - 76))
+                            | (1 << (CypherParser.StringLiteral - 76))
+                            | (1 << (CypherParser.FILTER - 76))
+                            | (1 << (CypherParser.EXTRACT - 76))
+                            | (1 << (CypherParser.UnescapedSymbolicName - 76))
+                            | (1 << (CypherParser.EscapedSymbolicName - 76))
+                        )
+                    )
+                    != 0
+                ):
                     self.state = 1130
                     self.oC_Expression()
-
 
                 self.state = 1133
                 self.match(CypherParser.T__11)
                 self.state = 1135
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__5) | (1 << CypherParser.T__7) | (1 << CypherParser.T__17) | (1 << CypherParser.T__18) | (1 << CypherParser.T__23) | (1 << CypherParser.T__25) | (1 << CypherParser.ALL))) != 0) or ((((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & ((1 << (CypherParser.NOT - 76)) | (1 << (CypherParser.NULL - 76)) | (1 << (CypherParser.COUNT - 76)) | (1 << (CypherParser.CASE - 76)) | (1 << (CypherParser.ANY - 76)) | (1 << (CypherParser.NONE - 76)) | (1 << (CypherParser.SINGLE - 76)) | (1 << (CypherParser.EXISTS - 76)) | (1 << (CypherParser.TRUE - 76)) | (1 << (CypherParser.FALSE - 76)) | (1 << (CypherParser.HexInteger - 76)) | (1 << (CypherParser.DecimalInteger - 76)) | (1 << (CypherParser.OctalInteger - 76)) | (1 << (CypherParser.HexLetter - 76)) | (1 << (CypherParser.ExponentDecimalReal - 76)) | (1 << (CypherParser.RegularDecimalReal - 76)) | (1 << (CypherParser.StringLiteral - 76)) | (1 << (CypherParser.FILTER - 76)) | (1 << (CypherParser.EXTRACT - 76)) | (1 << (CypherParser.UnescapedSymbolicName - 76)) | (1 << (CypherParser.EscapedSymbolicName - 76)))) != 0):
+                if (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.T__5)
+                            | (1 << CypherParser.T__7)
+                            | (1 << CypherParser.T__17)
+                            | (1 << CypherParser.T__18)
+                            | (1 << CypherParser.T__23)
+                            | (1 << CypherParser.T__25)
+                            | (1 << CypherParser.ALL)
+                        )
+                    )
+                    != 0
+                ) or (
+                    (((_la - 76)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 76))
+                        & (
+                            (1 << (CypherParser.NOT - 76))
+                            | (1 << (CypherParser.NULL - 76))
+                            | (1 << (CypherParser.COUNT - 76))
+                            | (1 << (CypherParser.CASE - 76))
+                            | (1 << (CypherParser.ANY - 76))
+                            | (1 << (CypherParser.NONE - 76))
+                            | (1 << (CypherParser.SINGLE - 76))
+                            | (1 << (CypherParser.EXISTS - 76))
+                            | (1 << (CypherParser.TRUE - 76))
+                            | (1 << (CypherParser.FALSE - 76))
+                            | (1 << (CypherParser.HexInteger - 76))
+                            | (1 << (CypherParser.DecimalInteger - 76))
+                            | (1 << (CypherParser.OctalInteger - 76))
+                            | (1 << (CypherParser.HexLetter - 76))
+                            | (1 << (CypherParser.ExponentDecimalReal - 76))
+                            | (1 << (CypherParser.RegularDecimalReal - 76))
+                            | (1 << (CypherParser.StringLiteral - 76))
+                            | (1 << (CypherParser.FILTER - 76))
+                            | (1 << (CypherParser.EXTRACT - 76))
+                            | (1 << (CypherParser.UnescapedSymbolicName - 76))
+                            | (1 << (CypherParser.EscapedSymbolicName - 76))
+                        )
+                    )
+                    != 0
+                ):
                     self.state = 1134
                     self.oC_Expression()
-
 
                 self.state = 1137
                 self.match(CypherParser.T__8)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7296,13 +7564,14 @@ class CypherParser ( Parser ):
 
     class OC_PropertyLookupContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_PropertyKeyName(self):
-            return self.getTypedRuleContext(CypherParser.OC_PropertyKeyNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PropertyKeyNameContext, 0)
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -7310,28 +7579,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PropertyLookup
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PropertyLookup" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PropertyLookup"):
                 listener.enterOC_PropertyLookup(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PropertyLookup" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PropertyLookup"):
                 listener.exitOC_PropertyLookup(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PropertyLookup" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PropertyLookup"):
                 return visitor.visitOC_PropertyLookup(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_PropertyLookup(self):
 
         localctx = CypherParser.OC_PropertyLookupContext(self, self._ctx, self.state)
         self.enterRule(localctx, 136, self.RULE_oC_PropertyLookup)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1140
@@ -7339,10 +7605,9 @@ class CypherParser ( Parser ):
             self.state = 1142
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1141
                 self.match(CypherParser.SP)
-
 
             self.state = 1144
             self.oC_PropertyKeyName()
@@ -7356,92 +7621,88 @@ class CypherParser ( Parser ):
 
     class OC_AtomContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Literal(self):
-            return self.getTypedRuleContext(CypherParser.OC_LiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_LiteralContext, 0)
 
         def oC_Parameter(self):
-            return self.getTypedRuleContext(CypherParser.OC_ParameterContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ParameterContext, 0)
 
         def oC_CaseExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_CaseExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_CaseExpressionContext, 0)
 
         def COUNT(self):
             return self.getToken(CypherParser.COUNT, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_ListComprehension(self):
-            return self.getTypedRuleContext(CypherParser.OC_ListComprehensionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ListComprehensionContext, 0)
 
         def oC_PatternComprehension(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternComprehensionContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_PatternComprehensionContext, 0
+            )
 
         def oC_Quantifier(self):
-            return self.getTypedRuleContext(CypherParser.OC_QuantifierContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_QuantifierContext, 0)
 
         def oC_PatternPredicate(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternPredicateContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PatternPredicateContext, 0)
 
         def oC_ParenthesizedExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ParenthesizedExpressionContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_ParenthesizedExpressionContext, 0
+            )
 
         def oC_FunctionInvocation(self):
-            return self.getTypedRuleContext(CypherParser.OC_FunctionInvocationContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_FunctionInvocationContext, 0
+            )
 
         def oC_ExistentialSubquery(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExistentialSubqueryContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_ExistentialSubqueryContext, 0
+            )
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Atom
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Atom" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Atom"):
                 listener.enterOC_Atom(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Atom" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Atom"):
                 listener.exitOC_Atom(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Atom" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Atom"):
                 return visitor.visitOC_Atom(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Atom(self):
 
         localctx = CypherParser.OC_AtomContext(self, self._ctx, self.state)
         self.enterRule(localctx, 138, self.RULE_oC_Atom)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1170
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,203,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 203, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1146
@@ -7467,30 +7728,27 @@ class CypherParser ( Parser ):
                 self.state = 1151
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1150
                     self.match(CypherParser.SP)
-
 
                 self.state = 1153
                 self.match(CypherParser.T__5)
                 self.state = 1155
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1154
                     self.match(CypherParser.SP)
-
 
                 self.state = 1157
                 self.match(CypherParser.T__4)
                 self.state = 1159
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1158
                     self.match(CypherParser.SP)
-
 
                 self.state = 1161
                 self.match(CypherParser.T__6)
@@ -7544,7 +7802,6 @@ class CypherParser ( Parser ):
                 self.oC_Variable()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -7555,7 +7812,9 @@ class CypherParser ( Parser ):
 
     class OC_CaseExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7565,14 +7824,13 @@ class CypherParser ( Parser ):
         def ELSE(self):
             return self.getToken(CypherParser.ELSE, 0)
 
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -7581,67 +7839,64 @@ class CypherParser ( Parser ):
         def CASE(self):
             return self.getToken(CypherParser.CASE, 0)
 
-        def oC_CaseAlternative(self, i:int=None):
+        def oC_CaseAlternative(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_CaseAlternativeContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_CaseAlternativeContext,i)
-
+                return self.getTypedRuleContext(
+                    CypherParser.OC_CaseAlternativeContext, i
+                )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_CaseExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_CaseExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_CaseExpression"):
                 listener.enterOC_CaseExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_CaseExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_CaseExpression"):
                 listener.exitOC_CaseExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_CaseExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_CaseExpression"):
                 return visitor.visitOC_CaseExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_CaseExpression(self):
 
         localctx = CypherParser.OC_CaseExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 140, self.RULE_oC_CaseExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1194
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,209,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 209, self._ctx)
             if la_ == 1:
                 self.state = 1172
                 self.match(CypherParser.CASE)
-                self.state = 1177 
+                self.state = 1177
                 self._errHandler.sync(self)
                 _alt = 1
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 1174
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1173
                             self.match(CypherParser.SP)
-
 
                         self.state = 1176
                         self.oC_CaseAlternative()
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 1179 
+                    self.state = 1179
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,205,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 205, self._ctx)
 
                 pass
 
@@ -7651,71 +7906,64 @@ class CypherParser ( Parser ):
                 self.state = 1183
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1182
                     self.match(CypherParser.SP)
 
-
                 self.state = 1185
                 self.oC_Expression()
-                self.state = 1190 
+                self.state = 1190
                 self._errHandler.sync(self)
                 _alt = 1
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 1187
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==CypherParser.SP:
+                        if _la == CypherParser.SP:
                             self.state = 1186
                             self.match(CypherParser.SP)
-
 
                         self.state = 1189
                         self.oC_CaseAlternative()
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 1192 
+                    self.state = 1192
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,208,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 208, self._ctx)
 
                 pass
 
-
             self.state = 1204
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,212,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 212, self._ctx)
             if la_ == 1:
                 self.state = 1197
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1196
                     self.match(CypherParser.SP)
-
 
                 self.state = 1199
                 self.match(CypherParser.ELSE)
                 self.state = 1201
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1200
                     self.match(CypherParser.SP)
-
 
                 self.state = 1203
                 self.oC_Expression()
 
-
             self.state = 1207
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1206
                 self.match(CypherParser.SP)
-
 
             self.state = 1209
             self.match(CypherParser.END)
@@ -7729,24 +7977,25 @@ class CypherParser ( Parser ):
 
     class OC_CaseAlternativeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def WHEN(self):
             return self.getToken(CypherParser.WHEN, 0)
 
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
         def THEN(self):
             return self.getToken(CypherParser.THEN, 0)
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -7755,28 +8004,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_CaseAlternative
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_CaseAlternative" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_CaseAlternative"):
                 listener.enterOC_CaseAlternative(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_CaseAlternative" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_CaseAlternative"):
                 listener.exitOC_CaseAlternative(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_CaseAlternative" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_CaseAlternative"):
                 return visitor.visitOC_CaseAlternative(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_CaseAlternative(self):
 
         localctx = CypherParser.OC_CaseAlternativeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 142, self.RULE_oC_CaseAlternative)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1211
@@ -7784,30 +8030,27 @@ class CypherParser ( Parser ):
             self.state = 1213
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1212
                 self.match(CypherParser.SP)
-
 
             self.state = 1215
             self.oC_Expression()
             self.state = 1217
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1216
                 self.match(CypherParser.SP)
-
 
             self.state = 1219
             self.match(CypherParser.THEN)
             self.state = 1221
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1220
                 self.match(CypherParser.SP)
-
 
             self.state = 1223
             self.oC_Expression()
@@ -7821,49 +8064,46 @@ class CypherParser ( Parser ):
 
     class OC_ListComprehensionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_FilterExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_FilterExpressionContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_FilterExpressionContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ListComprehension
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ListComprehension" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ListComprehension"):
                 listener.enterOC_ListComprehension(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ListComprehension" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ListComprehension"):
                 listener.exitOC_ListComprehension(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ListComprehension" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ListComprehension"):
                 return visitor.visitOC_ListComprehension(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ListComprehension(self):
 
         localctx = CypherParser.OC_ListComprehensionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 144, self.RULE_oC_ListComprehension)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1225
@@ -7871,46 +8111,41 @@ class CypherParser ( Parser ):
             self.state = 1227
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1226
                 self.match(CypherParser.SP)
-
 
             self.state = 1229
             self.oC_FilterExpression()
             self.state = 1238
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,220,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 220, self._ctx)
             if la_ == 1:
                 self.state = 1231
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1230
                     self.match(CypherParser.SP)
-
 
                 self.state = 1233
                 self.match(CypherParser.T__10)
                 self.state = 1235
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1234
                     self.match(CypherParser.SP)
-
 
                 self.state = 1237
                 self.oC_Expression()
 
-
             self.state = 1241
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1240
                 self.match(CypherParser.SP)
-
 
             self.state = 1243
             self.match(CypherParser.T__8)
@@ -7924,57 +8159,56 @@ class CypherParser ( Parser ):
 
     class OC_PatternComprehensionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_RelationshipsPattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_RelationshipsPatternContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_RelationshipsPatternContext, 0
+            )
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
         def oC_Where(self):
-            return self.getTypedRuleContext(CypherParser.OC_WhereContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_WhereContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PatternComprehension
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PatternComprehension" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PatternComprehension"):
                 listener.enterOC_PatternComprehension(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PatternComprehension" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PatternComprehension"):
                 listener.exitOC_PatternComprehension(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PatternComprehension" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PatternComprehension"):
                 return visitor.visitOC_PatternComprehension(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_PatternComprehension(self):
 
-        localctx = CypherParser.OC_PatternComprehensionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_PatternComprehensionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 146, self.RULE_oC_PatternComprehension)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1245
@@ -7982,82 +8216,84 @@ class CypherParser ( Parser ):
             self.state = 1247
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1246
                 self.match(CypherParser.SP)
-
 
             self.state = 1257
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & ((1 << (CypherParser.COUNT - 83)) | (1 << (CypherParser.ANY - 83)) | (1 << (CypherParser.NONE - 83)) | (1 << (CypherParser.SINGLE - 83)) | (1 << (CypherParser.HexLetter - 83)) | (1 << (CypherParser.FILTER - 83)) | (1 << (CypherParser.EXTRACT - 83)) | (1 << (CypherParser.UnescapedSymbolicName - 83)) | (1 << (CypherParser.EscapedSymbolicName - 83)))) != 0):
+            if (((_la - 83)) & ~0x3F) == 0 and (
+                (1 << (_la - 83))
+                & (
+                    (1 << (CypherParser.COUNT - 83))
+                    | (1 << (CypherParser.ANY - 83))
+                    | (1 << (CypherParser.NONE - 83))
+                    | (1 << (CypherParser.SINGLE - 83))
+                    | (1 << (CypherParser.HexLetter - 83))
+                    | (1 << (CypherParser.FILTER - 83))
+                    | (1 << (CypherParser.EXTRACT - 83))
+                    | (1 << (CypherParser.UnescapedSymbolicName - 83))
+                    | (1 << (CypherParser.EscapedSymbolicName - 83))
+                )
+            ) != 0:
                 self.state = 1249
                 self.oC_Variable()
                 self.state = 1251
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1250
                     self.match(CypherParser.SP)
-
 
                 self.state = 1253
                 self.match(CypherParser.T__2)
                 self.state = 1255
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1254
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 1259
             self.oC_RelationshipsPattern()
             self.state = 1261
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1260
                 self.match(CypherParser.SP)
-
 
             self.state = 1267
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.WHERE:
+            if _la == CypherParser.WHERE:
                 self.state = 1263
                 self.oC_Where()
                 self.state = 1265
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1264
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 1269
             self.match(CypherParser.T__10)
             self.state = 1271
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1270
                 self.match(CypherParser.SP)
-
 
             self.state = 1273
             self.oC_Expression()
             self.state = 1275
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1274
                 self.match(CypherParser.SP)
-
 
             self.state = 1277
             self.match(CypherParser.T__8)
@@ -8071,7 +8307,9 @@ class CypherParser ( Parser ):
 
     class OC_QuantifierContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8079,10 +8317,9 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.ALL, 0)
 
         def oC_FilterExpression(self):
-            return self.getTypedRuleContext(CypherParser.OC_FilterExpressionContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_FilterExpressionContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -8100,28 +8337,25 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Quantifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Quantifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Quantifier"):
                 listener.enterOC_Quantifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Quantifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Quantifier"):
                 listener.exitOC_Quantifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Quantifier" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Quantifier"):
                 return visitor.visitOC_Quantifier(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Quantifier(self):
 
         localctx = CypherParser.OC_QuantifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 148, self.RULE_oC_Quantifier)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1335
             self._errHandler.sync(self)
@@ -8133,30 +8367,27 @@ class CypherParser ( Parser ):
                 self.state = 1281
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1280
                     self.match(CypherParser.SP)
-
 
                 self.state = 1283
                 self.match(CypherParser.T__5)
                 self.state = 1285
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1284
                     self.match(CypherParser.SP)
-
 
                 self.state = 1287
                 self.oC_FilterExpression()
                 self.state = 1289
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1288
                     self.match(CypherParser.SP)
-
 
                 self.state = 1291
                 self.match(CypherParser.T__6)
@@ -8168,30 +8399,27 @@ class CypherParser ( Parser ):
                 self.state = 1295
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1294
                     self.match(CypherParser.SP)
-
 
                 self.state = 1297
                 self.match(CypherParser.T__5)
                 self.state = 1299
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1298
                     self.match(CypherParser.SP)
-
 
                 self.state = 1301
                 self.oC_FilterExpression()
                 self.state = 1303
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1302
                     self.match(CypherParser.SP)
-
 
                 self.state = 1305
                 self.match(CypherParser.T__6)
@@ -8203,30 +8431,27 @@ class CypherParser ( Parser ):
                 self.state = 1309
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1308
                     self.match(CypherParser.SP)
-
 
                 self.state = 1311
                 self.match(CypherParser.T__5)
                 self.state = 1313
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1312
                     self.match(CypherParser.SP)
-
 
                 self.state = 1315
                 self.oC_FilterExpression()
                 self.state = 1317
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1316
                     self.match(CypherParser.SP)
-
 
                 self.state = 1319
                 self.match(CypherParser.T__6)
@@ -8238,30 +8463,27 @@ class CypherParser ( Parser ):
                 self.state = 1323
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1322
                     self.match(CypherParser.SP)
-
 
                 self.state = 1325
                 self.match(CypherParser.T__5)
                 self.state = 1327
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1326
                     self.match(CypherParser.SP)
-
 
                 self.state = 1329
                 self.oC_FilterExpression()
                 self.state = 1331
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1330
                     self.match(CypherParser.SP)
-
 
                 self.state = 1333
                 self.match(CypherParser.T__6)
@@ -8279,17 +8501,17 @@ class CypherParser ( Parser ):
 
     class OC_FilterExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_IdInColl(self):
-            return self.getTypedRuleContext(CypherParser.OC_IdInCollContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_IdInCollContext, 0)
 
         def oC_Where(self):
-            return self.getTypedRuleContext(CypherParser.OC_WhereContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_WhereContext, 0)
 
         def SP(self):
             return self.getToken(CypherParser.SP, 0)
@@ -8297,47 +8519,42 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_FilterExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_FilterExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_FilterExpression"):
                 listener.enterOC_FilterExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_FilterExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_FilterExpression"):
                 listener.exitOC_FilterExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_FilterExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_FilterExpression"):
                 return visitor.visitOC_FilterExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_FilterExpression(self):
 
         localctx = CypherParser.OC_FilterExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 150, self.RULE_oC_FilterExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1337
             self.oC_IdInColl()
             self.state = 1342
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,245,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 245, self._ctx)
             if la_ == 1:
                 self.state = 1339
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1338
                     self.match(CypherParser.SP)
 
-
                 self.state = 1341
                 self.oC_Where()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8349,33 +8566,33 @@ class CypherParser ( Parser ):
 
     class OC_PatternPredicateContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_RelationshipsPattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_RelationshipsPatternContext,0)
-
+            return self.getTypedRuleContext(
+                CypherParser.OC_RelationshipsPatternContext, 0
+            )
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PatternPredicate
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PatternPredicate" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PatternPredicate"):
                 listener.enterOC_PatternPredicate(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PatternPredicate" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PatternPredicate"):
                 listener.exitOC_PatternPredicate(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PatternPredicate" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PatternPredicate"):
                 return visitor.visitOC_PatternPredicate(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_PatternPredicate(self):
 
@@ -8395,15 +8612,16 @@ class CypherParser ( Parser ):
 
     class OC_ParenthesizedExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -8412,28 +8630,27 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ParenthesizedExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ParenthesizedExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ParenthesizedExpression"):
                 listener.enterOC_ParenthesizedExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ParenthesizedExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ParenthesizedExpression"):
                 listener.exitOC_ParenthesizedExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ParenthesizedExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ParenthesizedExpression"):
                 return visitor.visitOC_ParenthesizedExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ParenthesizedExpression(self):
 
-        localctx = CypherParser.OC_ParenthesizedExpressionContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ParenthesizedExpressionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 154, self.RULE_oC_ParenthesizedExpression)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1346
@@ -8441,20 +8658,18 @@ class CypherParser ( Parser ):
             self.state = 1348
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1347
                 self.match(CypherParser.SP)
-
 
             self.state = 1350
             self.oC_Expression()
             self.state = 1352
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1351
                 self.match(CypherParser.SP)
-
 
             self.state = 1354
             self.match(CypherParser.T__6)
@@ -8468,15 +8683,16 @@ class CypherParser ( Parser ):
 
     class OC_IdInCollContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Variable(self):
-            return self.getTypedRuleContext(CypherParser.OC_VariableContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_VariableContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -8486,28 +8702,24 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.IN, 0)
 
         def oC_Expression(self):
-            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_IdInColl
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_IdInColl" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_IdInColl"):
                 listener.enterOC_IdInColl(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_IdInColl" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_IdInColl"):
                 listener.exitOC_IdInColl(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_IdInColl" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_IdInColl"):
                 return visitor.visitOC_IdInColl(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_IdInColl(self):
 
@@ -8535,15 +8747,16 @@ class CypherParser ( Parser ):
 
     class OC_FunctionInvocationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_FunctionName(self):
-            return self.getTypedRuleContext(CypherParser.OC_FunctionNameContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_FunctionNameContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
@@ -8552,38 +8765,36 @@ class CypherParser ( Parser ):
         def DISTINCT(self):
             return self.getToken(CypherParser.DISTINCT, 0)
 
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_FunctionInvocation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_FunctionInvocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_FunctionInvocation"):
                 listener.enterOC_FunctionInvocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_FunctionInvocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_FunctionInvocation"):
                 listener.exitOC_FunctionInvocation(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_FunctionInvocation" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_FunctionInvocation"):
                 return visitor.visitOC_FunctionInvocation(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_FunctionInvocation(self):
 
-        localctx = CypherParser.OC_FunctionInvocationContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_FunctionInvocationContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 158, self.RULE_oC_FunctionInvocation)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1362
@@ -8591,80 +8802,114 @@ class CypherParser ( Parser ):
             self.state = 1364
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1363
                 self.match(CypherParser.SP)
-
 
             self.state = 1366
             self.match(CypherParser.T__5)
             self.state = 1368
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1367
                 self.match(CypherParser.SP)
-
 
             self.state = 1374
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.DISTINCT:
+            if _la == CypherParser.DISTINCT:
                 self.state = 1370
                 self.match(CypherParser.DISTINCT)
                 self.state = 1372
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1371
                     self.match(CypherParser.SP)
-
-
-
 
             self.state = 1393
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__5) | (1 << CypherParser.T__7) | (1 << CypherParser.T__17) | (1 << CypherParser.T__18) | (1 << CypherParser.T__23) | (1 << CypherParser.T__25) | (1 << CypherParser.ALL))) != 0) or ((((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & ((1 << (CypherParser.NOT - 76)) | (1 << (CypherParser.NULL - 76)) | (1 << (CypherParser.COUNT - 76)) | (1 << (CypherParser.CASE - 76)) | (1 << (CypherParser.ANY - 76)) | (1 << (CypherParser.NONE - 76)) | (1 << (CypherParser.SINGLE - 76)) | (1 << (CypherParser.EXISTS - 76)) | (1 << (CypherParser.TRUE - 76)) | (1 << (CypherParser.FALSE - 76)) | (1 << (CypherParser.HexInteger - 76)) | (1 << (CypherParser.DecimalInteger - 76)) | (1 << (CypherParser.OctalInteger - 76)) | (1 << (CypherParser.HexLetter - 76)) | (1 << (CypherParser.ExponentDecimalReal - 76)) | (1 << (CypherParser.RegularDecimalReal - 76)) | (1 << (CypherParser.StringLiteral - 76)) | (1 << (CypherParser.FILTER - 76)) | (1 << (CypherParser.EXTRACT - 76)) | (1 << (CypherParser.UnescapedSymbolicName - 76)) | (1 << (CypherParser.EscapedSymbolicName - 76)))) != 0):
+            if (
+                ((_la) & ~0x3F) == 0
+                and (
+                    (1 << _la)
+                    & (
+                        (1 << CypherParser.T__5)
+                        | (1 << CypherParser.T__7)
+                        | (1 << CypherParser.T__17)
+                        | (1 << CypherParser.T__18)
+                        | (1 << CypherParser.T__23)
+                        | (1 << CypherParser.T__25)
+                        | (1 << CypherParser.ALL)
+                    )
+                )
+                != 0
+            ) or (
+                (((_la - 76)) & ~0x3F) == 0
+                and (
+                    (1 << (_la - 76))
+                    & (
+                        (1 << (CypherParser.NOT - 76))
+                        | (1 << (CypherParser.NULL - 76))
+                        | (1 << (CypherParser.COUNT - 76))
+                        | (1 << (CypherParser.CASE - 76))
+                        | (1 << (CypherParser.ANY - 76))
+                        | (1 << (CypherParser.NONE - 76))
+                        | (1 << (CypherParser.SINGLE - 76))
+                        | (1 << (CypherParser.EXISTS - 76))
+                        | (1 << (CypherParser.TRUE - 76))
+                        | (1 << (CypherParser.FALSE - 76))
+                        | (1 << (CypherParser.HexInteger - 76))
+                        | (1 << (CypherParser.DecimalInteger - 76))
+                        | (1 << (CypherParser.OctalInteger - 76))
+                        | (1 << (CypherParser.HexLetter - 76))
+                        | (1 << (CypherParser.ExponentDecimalReal - 76))
+                        | (1 << (CypherParser.RegularDecimalReal - 76))
+                        | (1 << (CypherParser.StringLiteral - 76))
+                        | (1 << (CypherParser.FILTER - 76))
+                        | (1 << (CypherParser.EXTRACT - 76))
+                        | (1 << (CypherParser.UnescapedSymbolicName - 76))
+                        | (1 << (CypherParser.EscapedSymbolicName - 76))
+                    )
+                )
+                != 0
+            ):
                 self.state = 1376
                 self.oC_Expression()
                 self.state = 1378
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1377
                     self.match(CypherParser.SP)
-
 
                 self.state = 1390
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==CypherParser.T__1:
+                while _la == CypherParser.T__1:
                     self.state = 1380
                     self.match(CypherParser.T__1)
                     self.state = 1382
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1381
                         self.match(CypherParser.SP)
-
 
                     self.state = 1384
                     self.oC_Expression()
                     self.state = 1386
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1385
                         self.match(CypherParser.SP)
-
 
                     self.state = 1392
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-
-
 
             self.state = 1395
             self.match(CypherParser.T__6)
@@ -8678,37 +8923,34 @@ class CypherParser ( Parser ):
 
     class OC_FunctionNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Namespace(self):
-            return self.getTypedRuleContext(CypherParser.OC_NamespaceContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_NamespaceContext, 0)
 
         def oC_SymbolicName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_FunctionName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_FunctionName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_FunctionName"):
                 listener.enterOC_FunctionName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_FunctionName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_FunctionName"):
                 listener.exitOC_FunctionName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_FunctionName" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_FunctionName"):
                 return visitor.visitOC_FunctionName(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_FunctionName(self):
 
@@ -8730,7 +8972,9 @@ class CypherParser ( Parser ):
 
     class OC_ExistentialSubqueryContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8738,48 +8982,44 @@ class CypherParser ( Parser ):
             return self.getToken(CypherParser.EXISTS, 0)
 
         def oC_RegularQuery(self):
-            return self.getTypedRuleContext(CypherParser.OC_RegularQueryContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_RegularQueryContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
         def oC_Pattern(self):
-            return self.getTypedRuleContext(CypherParser.OC_PatternContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_PatternContext, 0)
 
         def oC_Where(self):
-            return self.getTypedRuleContext(CypherParser.OC_WhereContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_WhereContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ExistentialSubquery
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ExistentialSubquery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ExistentialSubquery"):
                 listener.enterOC_ExistentialSubquery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ExistentialSubquery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ExistentialSubquery"):
                 listener.exitOC_ExistentialSubquery(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ExistentialSubquery" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ExistentialSubquery"):
                 return visitor.visitOC_ExistentialSubquery(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ExistentialSubquery(self):
 
-        localctx = CypherParser.OC_ExistentialSubqueryContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ExistentialSubqueryContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 162, self.RULE_oC_ExistentialSubquery)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1400
@@ -8787,46 +9027,66 @@ class CypherParser ( Parser ):
             self.state = 1402
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1401
                 self.match(CypherParser.SP)
-
 
             self.state = 1404
             self.match(CypherParser.T__23)
             self.state = 1406
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1405
                 self.match(CypherParser.SP)
-
 
             self.state = 1416
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CypherParser.OPTIONAL, CypherParser.MATCH, CypherParser.UNWIND, CypherParser.MERGE, CypherParser.CREATE, CypherParser.SET, CypherParser.DETACH, CypherParser.DELETE, CypherParser.REMOVE, CypherParser.CALL, CypherParser.WITH, CypherParser.RETURN]:
+            if token in [
+                CypherParser.OPTIONAL,
+                CypherParser.MATCH,
+                CypherParser.UNWIND,
+                CypherParser.MERGE,
+                CypherParser.CREATE,
+                CypherParser.SET,
+                CypherParser.DETACH,
+                CypherParser.DELETE,
+                CypherParser.REMOVE,
+                CypherParser.CALL,
+                CypherParser.WITH,
+                CypherParser.RETURN,
+            ]:
                 self.state = 1408
                 self.oC_RegularQuery()
                 pass
-            elif token in [CypherParser.T__5, CypherParser.COUNT, CypherParser.ANY, CypherParser.NONE, CypherParser.SINGLE, CypherParser.HexLetter, CypherParser.FILTER, CypherParser.EXTRACT, CypherParser.UnescapedSymbolicName, CypherParser.EscapedSymbolicName]:
+            elif token in [
+                CypherParser.T__5,
+                CypherParser.COUNT,
+                CypherParser.ANY,
+                CypherParser.NONE,
+                CypherParser.SINGLE,
+                CypherParser.HexLetter,
+                CypherParser.FILTER,
+                CypherParser.EXTRACT,
+                CypherParser.UnescapedSymbolicName,
+                CypherParser.EscapedSymbolicName,
+            ]:
                 self.state = 1409
                 self.oC_Pattern()
                 self.state = 1414
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,260,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 260, self._ctx)
                 if la_ == 1:
                     self.state = 1411
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1410
                         self.match(CypherParser.SP)
 
-
                     self.state = 1413
                     self.oC_Where()
-
 
                 pass
             else:
@@ -8835,10 +9095,9 @@ class CypherParser ( Parser ):
             self.state = 1419
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1418
                 self.match(CypherParser.SP)
-
 
             self.state = 1421
             self.match(CypherParser.T__24)
@@ -8852,52 +9111,51 @@ class CypherParser ( Parser ):
 
     class OC_ExplicitProcedureInvocationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_ProcedureName(self):
-            return self.getTypedRuleContext(CypherParser.OC_ProcedureNameContext,0)
+            return self.getTypedRuleContext(CypherParser.OC_ProcedureNameContext, 0)
 
-
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ExplicitProcedureInvocation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ExplicitProcedureInvocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ExplicitProcedureInvocation"):
                 listener.enterOC_ExplicitProcedureInvocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ExplicitProcedureInvocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ExplicitProcedureInvocation"):
                 listener.exitOC_ExplicitProcedureInvocation(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ExplicitProcedureInvocation" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ExplicitProcedureInvocation"):
                 return visitor.visitOC_ExplicitProcedureInvocation(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ExplicitProcedureInvocation(self):
 
-        localctx = CypherParser.OC_ExplicitProcedureInvocationContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ExplicitProcedureInvocationContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 164, self.RULE_oC_ExplicitProcedureInvocation)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1423
@@ -8905,64 +9163,101 @@ class CypherParser ( Parser ):
             self.state = 1425
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1424
                 self.match(CypherParser.SP)
-
 
             self.state = 1427
             self.match(CypherParser.T__5)
             self.state = 1429
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1428
                 self.match(CypherParser.SP)
-
 
             self.state = 1448
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__5) | (1 << CypherParser.T__7) | (1 << CypherParser.T__17) | (1 << CypherParser.T__18) | (1 << CypherParser.T__23) | (1 << CypherParser.T__25) | (1 << CypherParser.ALL))) != 0) or ((((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & ((1 << (CypherParser.NOT - 76)) | (1 << (CypherParser.NULL - 76)) | (1 << (CypherParser.COUNT - 76)) | (1 << (CypherParser.CASE - 76)) | (1 << (CypherParser.ANY - 76)) | (1 << (CypherParser.NONE - 76)) | (1 << (CypherParser.SINGLE - 76)) | (1 << (CypherParser.EXISTS - 76)) | (1 << (CypherParser.TRUE - 76)) | (1 << (CypherParser.FALSE - 76)) | (1 << (CypherParser.HexInteger - 76)) | (1 << (CypherParser.DecimalInteger - 76)) | (1 << (CypherParser.OctalInteger - 76)) | (1 << (CypherParser.HexLetter - 76)) | (1 << (CypherParser.ExponentDecimalReal - 76)) | (1 << (CypherParser.RegularDecimalReal - 76)) | (1 << (CypherParser.StringLiteral - 76)) | (1 << (CypherParser.FILTER - 76)) | (1 << (CypherParser.EXTRACT - 76)) | (1 << (CypherParser.UnescapedSymbolicName - 76)) | (1 << (CypherParser.EscapedSymbolicName - 76)))) != 0):
+            if (
+                ((_la) & ~0x3F) == 0
+                and (
+                    (1 << _la)
+                    & (
+                        (1 << CypherParser.T__5)
+                        | (1 << CypherParser.T__7)
+                        | (1 << CypherParser.T__17)
+                        | (1 << CypherParser.T__18)
+                        | (1 << CypherParser.T__23)
+                        | (1 << CypherParser.T__25)
+                        | (1 << CypherParser.ALL)
+                    )
+                )
+                != 0
+            ) or (
+                (((_la - 76)) & ~0x3F) == 0
+                and (
+                    (1 << (_la - 76))
+                    & (
+                        (1 << (CypherParser.NOT - 76))
+                        | (1 << (CypherParser.NULL - 76))
+                        | (1 << (CypherParser.COUNT - 76))
+                        | (1 << (CypherParser.CASE - 76))
+                        | (1 << (CypherParser.ANY - 76))
+                        | (1 << (CypherParser.NONE - 76))
+                        | (1 << (CypherParser.SINGLE - 76))
+                        | (1 << (CypherParser.EXISTS - 76))
+                        | (1 << (CypherParser.TRUE - 76))
+                        | (1 << (CypherParser.FALSE - 76))
+                        | (1 << (CypherParser.HexInteger - 76))
+                        | (1 << (CypherParser.DecimalInteger - 76))
+                        | (1 << (CypherParser.OctalInteger - 76))
+                        | (1 << (CypherParser.HexLetter - 76))
+                        | (1 << (CypherParser.ExponentDecimalReal - 76))
+                        | (1 << (CypherParser.RegularDecimalReal - 76))
+                        | (1 << (CypherParser.StringLiteral - 76))
+                        | (1 << (CypherParser.FILTER - 76))
+                        | (1 << (CypherParser.EXTRACT - 76))
+                        | (1 << (CypherParser.UnescapedSymbolicName - 76))
+                        | (1 << (CypherParser.EscapedSymbolicName - 76))
+                    )
+                )
+                != 0
+            ):
                 self.state = 1431
                 self.oC_Expression()
                 self.state = 1433
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1432
                     self.match(CypherParser.SP)
-
 
                 self.state = 1445
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==CypherParser.T__1:
+                while _la == CypherParser.T__1:
                     self.state = 1435
                     self.match(CypherParser.T__1)
                     self.state = 1437
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1436
                         self.match(CypherParser.SP)
-
 
                     self.state = 1439
                     self.oC_Expression()
                     self.state = 1441
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1440
                         self.match(CypherParser.SP)
-
 
                     self.state = 1447
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-
-
 
             self.state = 1450
             self.match(CypherParser.T__6)
@@ -8976,37 +9271,37 @@ class CypherParser ( Parser ):
 
     class OC_ImplicitProcedureInvocationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_ProcedureName(self):
-            return self.getTypedRuleContext(CypherParser.OC_ProcedureNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ProcedureNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ImplicitProcedureInvocation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ImplicitProcedureInvocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ImplicitProcedureInvocation"):
                 listener.enterOC_ImplicitProcedureInvocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ImplicitProcedureInvocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ImplicitProcedureInvocation"):
                 listener.exitOC_ImplicitProcedureInvocation(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ImplicitProcedureInvocation" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ImplicitProcedureInvocation"):
                 return visitor.visitOC_ImplicitProcedureInvocation(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ImplicitProcedureInvocation(self):
 
-        localctx = CypherParser.OC_ImplicitProcedureInvocationContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ImplicitProcedureInvocationContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 166, self.RULE_oC_ImplicitProcedureInvocation)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -9022,37 +9317,37 @@ class CypherParser ( Parser ):
 
     class OC_ProcedureResultFieldContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SymbolicName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ProcedureResultField
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ProcedureResultField" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ProcedureResultField"):
                 listener.enterOC_ProcedureResultField(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ProcedureResultField" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ProcedureResultField"):
                 listener.exitOC_ProcedureResultField(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ProcedureResultField" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ProcedureResultField"):
                 return visitor.visitOC_ProcedureResultField(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-
     def oC_ProcedureResultField(self):
 
-        localctx = CypherParser.OC_ProcedureResultFieldContext(self, self._ctx, self.state)
+        localctx = CypherParser.OC_ProcedureResultFieldContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 168, self.RULE_oC_ProcedureResultField)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -9068,37 +9363,34 @@ class CypherParser ( Parser ):
 
     class OC_ProcedureNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_Namespace(self):
-            return self.getTypedRuleContext(CypherParser.OC_NamespaceContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_NamespaceContext, 0)
 
         def oC_SymbolicName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ProcedureName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ProcedureName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ProcedureName"):
                 listener.enterOC_ProcedureName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ProcedureName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ProcedureName"):
                 listener.exitOC_ProcedureName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ProcedureName" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ProcedureName"):
                 return visitor.visitOC_ProcedureName(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ProcedureName(self):
 
@@ -9120,36 +9412,34 @@ class CypherParser ( Parser ):
 
     class OC_NamespaceContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def oC_SymbolicName(self, i:int=None):
+        def oC_SymbolicName(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_SymbolicNameContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Namespace
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Namespace" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Namespace"):
                 listener.enterOC_Namespace(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Namespace" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Namespace"):
                 listener.exitOC_Namespace(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Namespace" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Namespace"):
                 return visitor.visitOC_Namespace(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Namespace(self):
 
@@ -9159,16 +9449,16 @@ class CypherParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1464
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,270,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 270, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1459
                     self.oC_SymbolicName()
                     self.state = 1460
-                    self.match(CypherParser.T__22) 
+                    self.match(CypherParser.T__22)
                 self.state = 1466
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,270,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 270, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -9180,33 +9470,31 @@ class CypherParser ( Parser ):
 
     class OC_VariableContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SymbolicName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Variable
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Variable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Variable"):
                 listener.enterOC_Variable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Variable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Variable"):
                 listener.exitOC_Variable(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Variable" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Variable"):
                 return visitor.visitOC_Variable(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Variable(self):
 
@@ -9226,51 +9514,46 @@ class CypherParser ( Parser ):
 
     class OC_LiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_BooleanLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_BooleanLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_BooleanLiteralContext, 0)
 
         def NULL(self):
             return self.getToken(CypherParser.NULL, 0)
 
         def oC_NumberLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_NumberLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_NumberLiteralContext, 0)
 
         def StringLiteral(self):
             return self.getToken(CypherParser.StringLiteral, 0)
 
         def oC_ListLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_ListLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ListLiteralContext, 0)
 
         def oC_MapLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_MapLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_MapLiteralContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Literal
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Literal" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Literal"):
                 listener.enterOC_Literal(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Literal" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Literal"):
                 listener.exitOC_Literal(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Literal" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Literal"):
                 return visitor.visitOC_Literal(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Literal(self):
 
@@ -9290,7 +9573,13 @@ class CypherParser ( Parser ):
                 self.state = 1470
                 self.match(CypherParser.NULL)
                 pass
-            elif token in [CypherParser.HexInteger, CypherParser.DecimalInteger, CypherParser.OctalInteger, CypherParser.ExponentDecimalReal, CypherParser.RegularDecimalReal]:
+            elif token in [
+                CypherParser.HexInteger,
+                CypherParser.DecimalInteger,
+                CypherParser.OctalInteger,
+                CypherParser.ExponentDecimalReal,
+                CypherParser.RegularDecimalReal,
+            ]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1471
                 self.oC_NumberLiteral()
@@ -9323,7 +9612,9 @@ class CypherParser ( Parser ):
 
     class OC_BooleanLiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9336,33 +9627,30 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_BooleanLiteral
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_BooleanLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_BooleanLiteral"):
                 listener.enterOC_BooleanLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_BooleanLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_BooleanLiteral"):
                 listener.exitOC_BooleanLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_BooleanLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_BooleanLiteral"):
                 return visitor.visitOC_BooleanLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_BooleanLiteral(self):
 
         localctx = CypherParser.OC_BooleanLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 178, self.RULE_oC_BooleanLiteral)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1477
             _la = self._input.LA(1)
-            if not(_la==CypherParser.TRUE or _la==CypherParser.FALSE):
+            if not (_la == CypherParser.TRUE or _la == CypherParser.FALSE):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -9377,37 +9665,34 @@ class CypherParser ( Parser ):
 
     class OC_NumberLiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_DoubleLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_DoubleLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_DoubleLiteralContext, 0)
 
         def oC_IntegerLiteral(self):
-            return self.getTypedRuleContext(CypherParser.OC_IntegerLiteralContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_IntegerLiteralContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_NumberLiteral
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_NumberLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_NumberLiteral"):
                 listener.enterOC_NumberLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_NumberLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_NumberLiteral"):
                 listener.exitOC_NumberLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_NumberLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_NumberLiteral"):
                 return visitor.visitOC_NumberLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_NumberLiteral(self):
 
@@ -9417,12 +9702,19 @@ class CypherParser ( Parser ):
             self.state = 1481
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CypherParser.ExponentDecimalReal, CypherParser.RegularDecimalReal]:
+            if token in [
+                CypherParser.ExponentDecimalReal,
+                CypherParser.RegularDecimalReal,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1479
                 self.oC_DoubleLiteral()
                 pass
-            elif token in [CypherParser.HexInteger, CypherParser.DecimalInteger, CypherParser.OctalInteger]:
+            elif token in [
+                CypherParser.HexInteger,
+                CypherParser.DecimalInteger,
+                CypherParser.OctalInteger,
+            ]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1480
                 self.oC_IntegerLiteral()
@@ -9440,7 +9732,9 @@ class CypherParser ( Parser ):
 
     class OC_IntegerLiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9456,33 +9750,43 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_IntegerLiteral
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_IntegerLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_IntegerLiteral"):
                 listener.enterOC_IntegerLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_IntegerLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_IntegerLiteral"):
                 listener.exitOC_IntegerLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_IntegerLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_IntegerLiteral"):
                 return visitor.visitOC_IntegerLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_IntegerLiteral(self):
 
         localctx = CypherParser.OC_IntegerLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 182, self.RULE_oC_IntegerLiteral)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1483
             _la = self._input.LA(1)
-            if not(((((_la - 95)) & ~0x3f) == 0 and ((1 << (_la - 95)) & ((1 << (CypherParser.HexInteger - 95)) | (1 << (CypherParser.DecimalInteger - 95)) | (1 << (CypherParser.OctalInteger - 95)))) != 0)):
+            if not (
+                (
+                    (((_la - 95)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 95))
+                        & (
+                            (1 << (CypherParser.HexInteger - 95))
+                            | (1 << (CypherParser.DecimalInteger - 95))
+                            | (1 << (CypherParser.OctalInteger - 95))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -9497,7 +9801,9 @@ class CypherParser ( Parser ):
 
     class OC_DoubleLiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9510,33 +9816,33 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_DoubleLiteral
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_DoubleLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_DoubleLiteral"):
                 listener.enterOC_DoubleLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_DoubleLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_DoubleLiteral"):
                 listener.exitOC_DoubleLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_DoubleLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_DoubleLiteral"):
                 return visitor.visitOC_DoubleLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_DoubleLiteral(self):
 
         localctx = CypherParser.OC_DoubleLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 184, self.RULE_oC_DoubleLiteral)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1485
             _la = self._input.LA(1)
-            if not(_la==CypherParser.ExponentDecimalReal or _la==CypherParser.RegularDecimalReal):
+            if not (
+                _la == CypherParser.ExponentDecimalReal
+                or _la == CypherParser.RegularDecimalReal
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -9551,48 +9857,46 @@ class CypherParser ( Parser ):
 
     class OC_ListLiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ListLiteral
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ListLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ListLiteral"):
                 listener.enterOC_ListLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ListLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ListLiteral"):
                 listener.exitOC_ListLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ListLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ListLiteral"):
                 return visitor.visitOC_ListLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ListLiteral(self):
 
         localctx = CypherParser.OC_ListLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 186, self.RULE_oC_ListLiteral)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1487
@@ -9600,54 +9904,92 @@ class CypherParser ( Parser ):
             self.state = 1489
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1488
                 self.match(CypherParser.SP)
-
 
             self.state = 1508
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__5) | (1 << CypherParser.T__7) | (1 << CypherParser.T__17) | (1 << CypherParser.T__18) | (1 << CypherParser.T__23) | (1 << CypherParser.T__25) | (1 << CypherParser.ALL))) != 0) or ((((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & ((1 << (CypherParser.NOT - 76)) | (1 << (CypherParser.NULL - 76)) | (1 << (CypherParser.COUNT - 76)) | (1 << (CypherParser.CASE - 76)) | (1 << (CypherParser.ANY - 76)) | (1 << (CypherParser.NONE - 76)) | (1 << (CypherParser.SINGLE - 76)) | (1 << (CypherParser.EXISTS - 76)) | (1 << (CypherParser.TRUE - 76)) | (1 << (CypherParser.FALSE - 76)) | (1 << (CypherParser.HexInteger - 76)) | (1 << (CypherParser.DecimalInteger - 76)) | (1 << (CypherParser.OctalInteger - 76)) | (1 << (CypherParser.HexLetter - 76)) | (1 << (CypherParser.ExponentDecimalReal - 76)) | (1 << (CypherParser.RegularDecimalReal - 76)) | (1 << (CypherParser.StringLiteral - 76)) | (1 << (CypherParser.FILTER - 76)) | (1 << (CypherParser.EXTRACT - 76)) | (1 << (CypherParser.UnescapedSymbolicName - 76)) | (1 << (CypherParser.EscapedSymbolicName - 76)))) != 0):
+            if (
+                ((_la) & ~0x3F) == 0
+                and (
+                    (1 << _la)
+                    & (
+                        (1 << CypherParser.T__5)
+                        | (1 << CypherParser.T__7)
+                        | (1 << CypherParser.T__17)
+                        | (1 << CypherParser.T__18)
+                        | (1 << CypherParser.T__23)
+                        | (1 << CypherParser.T__25)
+                        | (1 << CypherParser.ALL)
+                    )
+                )
+                != 0
+            ) or (
+                (((_la - 76)) & ~0x3F) == 0
+                and (
+                    (1 << (_la - 76))
+                    & (
+                        (1 << (CypherParser.NOT - 76))
+                        | (1 << (CypherParser.NULL - 76))
+                        | (1 << (CypherParser.COUNT - 76))
+                        | (1 << (CypherParser.CASE - 76))
+                        | (1 << (CypherParser.ANY - 76))
+                        | (1 << (CypherParser.NONE - 76))
+                        | (1 << (CypherParser.SINGLE - 76))
+                        | (1 << (CypherParser.EXISTS - 76))
+                        | (1 << (CypherParser.TRUE - 76))
+                        | (1 << (CypherParser.FALSE - 76))
+                        | (1 << (CypherParser.HexInteger - 76))
+                        | (1 << (CypherParser.DecimalInteger - 76))
+                        | (1 << (CypherParser.OctalInteger - 76))
+                        | (1 << (CypherParser.HexLetter - 76))
+                        | (1 << (CypherParser.ExponentDecimalReal - 76))
+                        | (1 << (CypherParser.RegularDecimalReal - 76))
+                        | (1 << (CypherParser.StringLiteral - 76))
+                        | (1 << (CypherParser.FILTER - 76))
+                        | (1 << (CypherParser.EXTRACT - 76))
+                        | (1 << (CypherParser.UnescapedSymbolicName - 76))
+                        | (1 << (CypherParser.EscapedSymbolicName - 76))
+                    )
+                )
+                != 0
+            ):
                 self.state = 1491
                 self.oC_Expression()
                 self.state = 1493
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1492
                     self.match(CypherParser.SP)
-
 
                 self.state = 1505
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==CypherParser.T__1:
+                while _la == CypherParser.T__1:
                     self.state = 1495
                     self.match(CypherParser.T__1)
                     self.state = 1497
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1496
                         self.match(CypherParser.SP)
-
 
                     self.state = 1499
                     self.oC_Expression()
                     self.state = 1501
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1500
                         self.match(CypherParser.SP)
-
 
                     self.state = 1507
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-
-
 
             self.state = 1510
             self.match(CypherParser.T__8)
@@ -9661,55 +10003,54 @@ class CypherParser ( Parser ):
 
     class OC_MapLiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SP(self, i:int=None):
+        def SP(self, i: int = None):
             if i is None:
                 return self.getTokens(CypherParser.SP)
             else:
                 return self.getToken(CypherParser.SP, i)
 
-        def oC_PropertyKeyName(self, i:int=None):
+        def oC_PropertyKeyName(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_PropertyKeyNameContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_PropertyKeyNameContext,i)
+                return self.getTypedRuleContext(
+                    CypherParser.OC_PropertyKeyNameContext, i
+                )
 
-
-        def oC_Expression(self, i:int=None):
+        def oC_Expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(CypherParser.OC_ExpressionContext)
             else:
-                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext,i)
-
+                return self.getTypedRuleContext(CypherParser.OC_ExpressionContext, i)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_MapLiteral
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_MapLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_MapLiteral"):
                 listener.enterOC_MapLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_MapLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_MapLiteral"):
                 listener.exitOC_MapLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_MapLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_MapLiteral"):
                 return visitor.visitOC_MapLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_MapLiteral(self):
 
         localctx = CypherParser.OC_MapLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 188, self.RULE_oC_MapLiteral)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1512
@@ -9717,94 +10058,162 @@ class CypherParser ( Parser ):
             self.state = 1514
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==CypherParser.SP:
+            if _la == CypherParser.SP:
                 self.state = 1513
                 self.match(CypherParser.SP)
-
 
             self.state = 1549
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.UNION) | (1 << CypherParser.ALL) | (1 << CypherParser.OPTIONAL) | (1 << CypherParser.MATCH) | (1 << CypherParser.UNWIND) | (1 << CypherParser.AS) | (1 << CypherParser.MERGE) | (1 << CypherParser.ON) | (1 << CypherParser.CREATE) | (1 << CypherParser.SET) | (1 << CypherParser.DETACH) | (1 << CypherParser.DELETE) | (1 << CypherParser.REMOVE) | (1 << CypherParser.WITH) | (1 << CypherParser.RETURN) | (1 << CypherParser.DISTINCT))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (CypherParser.ORDER - 64)) | (1 << (CypherParser.BY - 64)) | (1 << (CypherParser.L_SKIP - 64)) | (1 << (CypherParser.LIMIT - 64)) | (1 << (CypherParser.ASCENDING - 64)) | (1 << (CypherParser.ASC - 64)) | (1 << (CypherParser.DESCENDING - 64)) | (1 << (CypherParser.DESC - 64)) | (1 << (CypherParser.WHERE - 64)) | (1 << (CypherParser.OR - 64)) | (1 << (CypherParser.XOR - 64)) | (1 << (CypherParser.AND - 64)) | (1 << (CypherParser.NOT - 64)) | (1 << (CypherParser.STARTS - 64)) | (1 << (CypherParser.ENDS - 64)) | (1 << (CypherParser.CONTAINS - 64)) | (1 << (CypherParser.IN - 64)) | (1 << (CypherParser.IS - 64)) | (1 << (CypherParser.NULL - 64)) | (1 << (CypherParser.COUNT - 64)) | (1 << (CypherParser.CASE - 64)) | (1 << (CypherParser.ELSE - 64)) | (1 << (CypherParser.END - 64)) | (1 << (CypherParser.WHEN - 64)) | (1 << (CypherParser.THEN - 64)) | (1 << (CypherParser.ANY - 64)) | (1 << (CypherParser.NONE - 64)) | (1 << (CypherParser.SINGLE - 64)) | (1 << (CypherParser.EXISTS - 64)) | (1 << (CypherParser.TRUE - 64)) | (1 << (CypherParser.FALSE - 64)) | (1 << (CypherParser.HexLetter - 64)) | (1 << (CypherParser.CONSTRAINT - 64)) | (1 << (CypherParser.DO - 64)) | (1 << (CypherParser.FOR - 64)) | (1 << (CypherParser.REQUIRE - 64)) | (1 << (CypherParser.UNIQUE - 64)) | (1 << (CypherParser.MANDATORY - 64)) | (1 << (CypherParser.SCALAR - 64)) | (1 << (CypherParser.OF - 64)) | (1 << (CypherParser.ADD - 64)) | (1 << (CypherParser.DROP - 64)) | (1 << (CypherParser.FILTER - 64)) | (1 << (CypherParser.EXTRACT - 64)) | (1 << (CypherParser.UnescapedSymbolicName - 64)) | (1 << (CypherParser.EscapedSymbolicName - 64)))) != 0):
+            if (
+                ((_la) & ~0x3F) == 0
+                and (
+                    (1 << _la)
+                    & (
+                        (1 << CypherParser.UNION)
+                        | (1 << CypherParser.ALL)
+                        | (1 << CypherParser.OPTIONAL)
+                        | (1 << CypherParser.MATCH)
+                        | (1 << CypherParser.UNWIND)
+                        | (1 << CypherParser.AS)
+                        | (1 << CypherParser.MERGE)
+                        | (1 << CypherParser.ON)
+                        | (1 << CypherParser.CREATE)
+                        | (1 << CypherParser.SET)
+                        | (1 << CypherParser.DETACH)
+                        | (1 << CypherParser.DELETE)
+                        | (1 << CypherParser.REMOVE)
+                        | (1 << CypherParser.WITH)
+                        | (1 << CypherParser.RETURN)
+                        | (1 << CypherParser.DISTINCT)
+                    )
+                )
+                != 0
+            ) or (
+                (((_la - 64)) & ~0x3F) == 0
+                and (
+                    (1 << (_la - 64))
+                    & (
+                        (1 << (CypherParser.ORDER - 64))
+                        | (1 << (CypherParser.BY - 64))
+                        | (1 << (CypherParser.L_SKIP - 64))
+                        | (1 << (CypherParser.LIMIT - 64))
+                        | (1 << (CypherParser.ASCENDING - 64))
+                        | (1 << (CypherParser.ASC - 64))
+                        | (1 << (CypherParser.DESCENDING - 64))
+                        | (1 << (CypherParser.DESC - 64))
+                        | (1 << (CypherParser.WHERE - 64))
+                        | (1 << (CypherParser.OR - 64))
+                        | (1 << (CypherParser.XOR - 64))
+                        | (1 << (CypherParser.AND - 64))
+                        | (1 << (CypherParser.NOT - 64))
+                        | (1 << (CypherParser.STARTS - 64))
+                        | (1 << (CypherParser.ENDS - 64))
+                        | (1 << (CypherParser.CONTAINS - 64))
+                        | (1 << (CypherParser.IN - 64))
+                        | (1 << (CypherParser.IS - 64))
+                        | (1 << (CypherParser.NULL - 64))
+                        | (1 << (CypherParser.COUNT - 64))
+                        | (1 << (CypherParser.CASE - 64))
+                        | (1 << (CypherParser.ELSE - 64))
+                        | (1 << (CypherParser.END - 64))
+                        | (1 << (CypherParser.WHEN - 64))
+                        | (1 << (CypherParser.THEN - 64))
+                        | (1 << (CypherParser.ANY - 64))
+                        | (1 << (CypherParser.NONE - 64))
+                        | (1 << (CypherParser.SINGLE - 64))
+                        | (1 << (CypherParser.EXISTS - 64))
+                        | (1 << (CypherParser.TRUE - 64))
+                        | (1 << (CypherParser.FALSE - 64))
+                        | (1 << (CypherParser.HexLetter - 64))
+                        | (1 << (CypherParser.CONSTRAINT - 64))
+                        | (1 << (CypherParser.DO - 64))
+                        | (1 << (CypherParser.FOR - 64))
+                        | (1 << (CypherParser.REQUIRE - 64))
+                        | (1 << (CypherParser.UNIQUE - 64))
+                        | (1 << (CypherParser.MANDATORY - 64))
+                        | (1 << (CypherParser.SCALAR - 64))
+                        | (1 << (CypherParser.OF - 64))
+                        | (1 << (CypherParser.ADD - 64))
+                        | (1 << (CypherParser.DROP - 64))
+                        | (1 << (CypherParser.FILTER - 64))
+                        | (1 << (CypherParser.EXTRACT - 64))
+                        | (1 << (CypherParser.UnescapedSymbolicName - 64))
+                        | (1 << (CypherParser.EscapedSymbolicName - 64))
+                    )
+                )
+                != 0
+            ):
                 self.state = 1516
                 self.oC_PropertyKeyName()
                 self.state = 1518
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1517
                     self.match(CypherParser.SP)
-
 
                 self.state = 1520
                 self.match(CypherParser.T__9)
                 self.state = 1522
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1521
                     self.match(CypherParser.SP)
-
 
                 self.state = 1524
                 self.oC_Expression()
                 self.state = 1526
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==CypherParser.SP:
+                if _la == CypherParser.SP:
                     self.state = 1525
                     self.match(CypherParser.SP)
-
 
                 self.state = 1546
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==CypherParser.T__1:
+                while _la == CypherParser.T__1:
                     self.state = 1528
                     self.match(CypherParser.T__1)
                     self.state = 1530
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1529
                         self.match(CypherParser.SP)
-
 
                     self.state = 1532
                     self.oC_PropertyKeyName()
                     self.state = 1534
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1533
                         self.match(CypherParser.SP)
-
 
                     self.state = 1536
                     self.match(CypherParser.T__9)
                     self.state = 1538
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1537
                         self.match(CypherParser.SP)
-
 
                     self.state = 1540
                     self.oC_Expression()
                     self.state = 1542
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==CypherParser.SP:
+                    if _la == CypherParser.SP:
                         self.state = 1541
                         self.match(CypherParser.SP)
-
 
                     self.state = 1548
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-
-
 
             self.state = 1551
             self.match(CypherParser.T__24)
@@ -9818,33 +10227,31 @@ class CypherParser ( Parser ):
 
     class OC_PropertyKeyNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SchemaName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SchemaNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SchemaNameContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_PropertyKeyName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_PropertyKeyName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_PropertyKeyName"):
                 listener.enterOC_PropertyKeyName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_PropertyKeyName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_PropertyKeyName"):
                 listener.exitOC_PropertyKeyName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_PropertyKeyName" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_PropertyKeyName"):
                 return visitor.visitOC_PropertyKeyName(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_PropertyKeyName(self):
 
@@ -9864,13 +10271,14 @@ class CypherParser ( Parser ):
 
     class OC_ParameterContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SymbolicName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext, 0)
 
         def DecimalInteger(self):
             return self.getToken(CypherParser.DecimalInteger, 0)
@@ -9878,22 +10286,19 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Parameter
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Parameter" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Parameter"):
                 listener.enterOC_Parameter(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Parameter" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Parameter"):
                 listener.exitOC_Parameter(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Parameter" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Parameter"):
                 return visitor.visitOC_Parameter(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Parameter(self):
 
@@ -9906,7 +10311,17 @@ class CypherParser ( Parser ):
             self.state = 1558
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CypherParser.COUNT, CypherParser.ANY, CypherParser.NONE, CypherParser.SINGLE, CypherParser.HexLetter, CypherParser.FILTER, CypherParser.EXTRACT, CypherParser.UnescapedSymbolicName, CypherParser.EscapedSymbolicName]:
+            if token in [
+                CypherParser.COUNT,
+                CypherParser.ANY,
+                CypherParser.NONE,
+                CypherParser.SINGLE,
+                CypherParser.HexLetter,
+                CypherParser.FILTER,
+                CypherParser.EXTRACT,
+                CypherParser.UnescapedSymbolicName,
+                CypherParser.EscapedSymbolicName,
+            ]:
                 self.state = 1556
                 self.oC_SymbolicName()
                 pass
@@ -9927,37 +10342,34 @@ class CypherParser ( Parser ):
 
     class OC_SchemaNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def oC_SymbolicName(self):
-            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_SymbolicNameContext, 0)
 
         def oC_ReservedWord(self):
-            return self.getTypedRuleContext(CypherParser.OC_ReservedWordContext,0)
-
+            return self.getTypedRuleContext(CypherParser.OC_ReservedWordContext, 0)
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_SchemaName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_SchemaName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_SchemaName"):
                 listener.enterOC_SchemaName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_SchemaName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_SchemaName"):
                 listener.exitOC_SchemaName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_SchemaName" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_SchemaName"):
                 return visitor.visitOC_SchemaName(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_SchemaName(self):
 
@@ -9967,12 +10379,76 @@ class CypherParser ( Parser ):
             self.state = 1562
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CypherParser.COUNT, CypherParser.ANY, CypherParser.NONE, CypherParser.SINGLE, CypherParser.HexLetter, CypherParser.FILTER, CypherParser.EXTRACT, CypherParser.UnescapedSymbolicName, CypherParser.EscapedSymbolicName]:
+            if token in [
+                CypherParser.COUNT,
+                CypherParser.ANY,
+                CypherParser.NONE,
+                CypherParser.SINGLE,
+                CypherParser.HexLetter,
+                CypherParser.FILTER,
+                CypherParser.EXTRACT,
+                CypherParser.UnescapedSymbolicName,
+                CypherParser.EscapedSymbolicName,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1560
                 self.oC_SymbolicName()
                 pass
-            elif token in [CypherParser.UNION, CypherParser.ALL, CypherParser.OPTIONAL, CypherParser.MATCH, CypherParser.UNWIND, CypherParser.AS, CypherParser.MERGE, CypherParser.ON, CypherParser.CREATE, CypherParser.SET, CypherParser.DETACH, CypherParser.DELETE, CypherParser.REMOVE, CypherParser.WITH, CypherParser.RETURN, CypherParser.DISTINCT, CypherParser.ORDER, CypherParser.BY, CypherParser.L_SKIP, CypherParser.LIMIT, CypherParser.ASCENDING, CypherParser.ASC, CypherParser.DESCENDING, CypherParser.DESC, CypherParser.WHERE, CypherParser.OR, CypherParser.XOR, CypherParser.AND, CypherParser.NOT, CypherParser.STARTS, CypherParser.ENDS, CypherParser.CONTAINS, CypherParser.IN, CypherParser.IS, CypherParser.NULL, CypherParser.CASE, CypherParser.ELSE, CypherParser.END, CypherParser.WHEN, CypherParser.THEN, CypherParser.EXISTS, CypherParser.TRUE, CypherParser.FALSE, CypherParser.CONSTRAINT, CypherParser.DO, CypherParser.FOR, CypherParser.REQUIRE, CypherParser.UNIQUE, CypherParser.MANDATORY, CypherParser.SCALAR, CypherParser.OF, CypherParser.ADD, CypherParser.DROP]:
+            elif token in [
+                CypherParser.UNION,
+                CypherParser.ALL,
+                CypherParser.OPTIONAL,
+                CypherParser.MATCH,
+                CypherParser.UNWIND,
+                CypherParser.AS,
+                CypherParser.MERGE,
+                CypherParser.ON,
+                CypherParser.CREATE,
+                CypherParser.SET,
+                CypherParser.DETACH,
+                CypherParser.DELETE,
+                CypherParser.REMOVE,
+                CypherParser.WITH,
+                CypherParser.RETURN,
+                CypherParser.DISTINCT,
+                CypherParser.ORDER,
+                CypherParser.BY,
+                CypherParser.L_SKIP,
+                CypherParser.LIMIT,
+                CypherParser.ASCENDING,
+                CypherParser.ASC,
+                CypherParser.DESCENDING,
+                CypherParser.DESC,
+                CypherParser.WHERE,
+                CypherParser.OR,
+                CypherParser.XOR,
+                CypherParser.AND,
+                CypherParser.NOT,
+                CypherParser.STARTS,
+                CypherParser.ENDS,
+                CypherParser.CONTAINS,
+                CypherParser.IN,
+                CypherParser.IS,
+                CypherParser.NULL,
+                CypherParser.CASE,
+                CypherParser.ELSE,
+                CypherParser.END,
+                CypherParser.WHEN,
+                CypherParser.THEN,
+                CypherParser.EXISTS,
+                CypherParser.TRUE,
+                CypherParser.FALSE,
+                CypherParser.CONSTRAINT,
+                CypherParser.DO,
+                CypherParser.FOR,
+                CypherParser.REQUIRE,
+                CypherParser.UNIQUE,
+                CypherParser.MANDATORY,
+                CypherParser.SCALAR,
+                CypherParser.OF,
+                CypherParser.ADD,
+                CypherParser.DROP,
+            ]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1561
                 self.oC_ReservedWord()
@@ -9990,7 +10466,9 @@ class CypherParser ( Parser ):
 
     class OC_ReservedWordContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -10156,33 +10634,102 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_ReservedWord
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_ReservedWord" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_ReservedWord"):
                 listener.enterOC_ReservedWord(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_ReservedWord" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_ReservedWord"):
                 listener.exitOC_ReservedWord(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_ReservedWord" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_ReservedWord"):
                 return visitor.visitOC_ReservedWord(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_ReservedWord(self):
 
         localctx = CypherParser.OC_ReservedWordContext(self, self._ctx, self.state)
         self.enterRule(localctx, 196, self.RULE_oC_ReservedWord)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1564
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.UNION) | (1 << CypherParser.ALL) | (1 << CypherParser.OPTIONAL) | (1 << CypherParser.MATCH) | (1 << CypherParser.UNWIND) | (1 << CypherParser.AS) | (1 << CypherParser.MERGE) | (1 << CypherParser.ON) | (1 << CypherParser.CREATE) | (1 << CypherParser.SET) | (1 << CypherParser.DETACH) | (1 << CypherParser.DELETE) | (1 << CypherParser.REMOVE) | (1 << CypherParser.WITH) | (1 << CypherParser.RETURN) | (1 << CypherParser.DISTINCT))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (CypherParser.ORDER - 64)) | (1 << (CypherParser.BY - 64)) | (1 << (CypherParser.L_SKIP - 64)) | (1 << (CypherParser.LIMIT - 64)) | (1 << (CypherParser.ASCENDING - 64)) | (1 << (CypherParser.ASC - 64)) | (1 << (CypherParser.DESCENDING - 64)) | (1 << (CypherParser.DESC - 64)) | (1 << (CypherParser.WHERE - 64)) | (1 << (CypherParser.OR - 64)) | (1 << (CypherParser.XOR - 64)) | (1 << (CypherParser.AND - 64)) | (1 << (CypherParser.NOT - 64)) | (1 << (CypherParser.STARTS - 64)) | (1 << (CypherParser.ENDS - 64)) | (1 << (CypherParser.CONTAINS - 64)) | (1 << (CypherParser.IN - 64)) | (1 << (CypherParser.IS - 64)) | (1 << (CypherParser.NULL - 64)) | (1 << (CypherParser.CASE - 64)) | (1 << (CypherParser.ELSE - 64)) | (1 << (CypherParser.END - 64)) | (1 << (CypherParser.WHEN - 64)) | (1 << (CypherParser.THEN - 64)) | (1 << (CypherParser.EXISTS - 64)) | (1 << (CypherParser.TRUE - 64)) | (1 << (CypherParser.FALSE - 64)) | (1 << (CypherParser.CONSTRAINT - 64)) | (1 << (CypherParser.DO - 64)) | (1 << (CypherParser.FOR - 64)) | (1 << (CypherParser.REQUIRE - 64)) | (1 << (CypherParser.UNIQUE - 64)) | (1 << (CypherParser.MANDATORY - 64)) | (1 << (CypherParser.SCALAR - 64)) | (1 << (CypherParser.OF - 64)) | (1 << (CypherParser.ADD - 64)) | (1 << (CypherParser.DROP - 64)))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.UNION)
+                            | (1 << CypherParser.ALL)
+                            | (1 << CypherParser.OPTIONAL)
+                            | (1 << CypherParser.MATCH)
+                            | (1 << CypherParser.UNWIND)
+                            | (1 << CypherParser.AS)
+                            | (1 << CypherParser.MERGE)
+                            | (1 << CypherParser.ON)
+                            | (1 << CypherParser.CREATE)
+                            | (1 << CypherParser.SET)
+                            | (1 << CypherParser.DETACH)
+                            | (1 << CypherParser.DELETE)
+                            | (1 << CypherParser.REMOVE)
+                            | (1 << CypherParser.WITH)
+                            | (1 << CypherParser.RETURN)
+                            | (1 << CypherParser.DISTINCT)
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 64)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 64))
+                        & (
+                            (1 << (CypherParser.ORDER - 64))
+                            | (1 << (CypherParser.BY - 64))
+                            | (1 << (CypherParser.L_SKIP - 64))
+                            | (1 << (CypherParser.LIMIT - 64))
+                            | (1 << (CypherParser.ASCENDING - 64))
+                            | (1 << (CypherParser.ASC - 64))
+                            | (1 << (CypherParser.DESCENDING - 64))
+                            | (1 << (CypherParser.DESC - 64))
+                            | (1 << (CypherParser.WHERE - 64))
+                            | (1 << (CypherParser.OR - 64))
+                            | (1 << (CypherParser.XOR - 64))
+                            | (1 << (CypherParser.AND - 64))
+                            | (1 << (CypherParser.NOT - 64))
+                            | (1 << (CypherParser.STARTS - 64))
+                            | (1 << (CypherParser.ENDS - 64))
+                            | (1 << (CypherParser.CONTAINS - 64))
+                            | (1 << (CypherParser.IN - 64))
+                            | (1 << (CypherParser.IS - 64))
+                            | (1 << (CypherParser.NULL - 64))
+                            | (1 << (CypherParser.CASE - 64))
+                            | (1 << (CypherParser.ELSE - 64))
+                            | (1 << (CypherParser.END - 64))
+                            | (1 << (CypherParser.WHEN - 64))
+                            | (1 << (CypherParser.THEN - 64))
+                            | (1 << (CypherParser.EXISTS - 64))
+                            | (1 << (CypherParser.TRUE - 64))
+                            | (1 << (CypherParser.FALSE - 64))
+                            | (1 << (CypherParser.CONSTRAINT - 64))
+                            | (1 << (CypherParser.DO - 64))
+                            | (1 << (CypherParser.FOR - 64))
+                            | (1 << (CypherParser.REQUIRE - 64))
+                            | (1 << (CypherParser.UNIQUE - 64))
+                            | (1 << (CypherParser.MANDATORY - 64))
+                            | (1 << (CypherParser.SCALAR - 64))
+                            | (1 << (CypherParser.OF - 64))
+                            | (1 << (CypherParser.ADD - 64))
+                            | (1 << (CypherParser.DROP - 64))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -10197,7 +10744,9 @@ class CypherParser ( Parser ):
 
     class OC_SymbolicNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -10231,33 +10780,49 @@ class CypherParser ( Parser ):
         def getRuleIndex(self):
             return CypherParser.RULE_oC_SymbolicName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_SymbolicName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_SymbolicName"):
                 listener.enterOC_SymbolicName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_SymbolicName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_SymbolicName"):
                 listener.exitOC_SymbolicName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_SymbolicName" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_SymbolicName"):
                 return visitor.visitOC_SymbolicName(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_SymbolicName(self):
 
         localctx = CypherParser.OC_SymbolicNameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 198, self.RULE_oC_SymbolicName)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1566
             _la = self._input.LA(1)
-            if not(((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & ((1 << (CypherParser.COUNT - 83)) | (1 << (CypherParser.ANY - 83)) | (1 << (CypherParser.NONE - 83)) | (1 << (CypherParser.SINGLE - 83)) | (1 << (CypherParser.HexLetter - 83)) | (1 << (CypherParser.FILTER - 83)) | (1 << (CypherParser.EXTRACT - 83)) | (1 << (CypherParser.UnescapedSymbolicName - 83)) | (1 << (CypherParser.EscapedSymbolicName - 83)))) != 0)):
+            if not (
+                (
+                    (((_la - 83)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 83))
+                        & (
+                            (1 << (CypherParser.COUNT - 83))
+                            | (1 << (CypherParser.ANY - 83))
+                            | (1 << (CypherParser.NONE - 83))
+                            | (1 << (CypherParser.SINGLE - 83))
+                            | (1 << (CypherParser.HexLetter - 83))
+                            | (1 << (CypherParser.FILTER - 83))
+                            | (1 << (CypherParser.EXTRACT - 83))
+                            | (1 << (CypherParser.UnescapedSymbolicName - 83))
+                            | (1 << (CypherParser.EscapedSymbolicName - 83))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -10272,41 +10837,54 @@ class CypherParser ( Parser ):
 
     class OC_LeftArrowHeadContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_LeftArrowHead
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_LeftArrowHead" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_LeftArrowHead"):
                 listener.enterOC_LeftArrowHead(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_LeftArrowHead" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_LeftArrowHead"):
                 listener.exitOC_LeftArrowHead(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_LeftArrowHead" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_LeftArrowHead"):
                 return visitor.visitOC_LeftArrowHead(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_LeftArrowHead(self):
 
         localctx = CypherParser.OC_LeftArrowHeadContext(self, self._ctx, self.state)
         self.enterRule(localctx, 200, self.RULE_oC_LeftArrowHead)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1568
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__13) | (1 << CypherParser.T__26) | (1 << CypherParser.T__27) | (1 << CypherParser.T__28) | (1 << CypherParser.T__29))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.T__13)
+                            | (1 << CypherParser.T__26)
+                            | (1 << CypherParser.T__27)
+                            | (1 << CypherParser.T__28)
+                            | (1 << CypherParser.T__29)
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -10321,41 +10899,54 @@ class CypherParser ( Parser ):
 
     class OC_RightArrowHeadContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_RightArrowHead
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_RightArrowHead" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_RightArrowHead"):
                 listener.enterOC_RightArrowHead(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_RightArrowHead" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_RightArrowHead"):
                 listener.exitOC_RightArrowHead(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_RightArrowHead" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_RightArrowHead"):
                 return visitor.visitOC_RightArrowHead(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_RightArrowHead(self):
 
         localctx = CypherParser.OC_RightArrowHeadContext(self, self._ctx, self.state)
         self.enterRule(localctx, 202, self.RULE_oC_RightArrowHead)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1570
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__14) | (1 << CypherParser.T__30) | (1 << CypherParser.T__31) | (1 << CypherParser.T__32) | (1 << CypherParser.T__33))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.T__14)
+                            | (1 << CypherParser.T__30)
+                            | (1 << CypherParser.T__31)
+                            | (1 << CypherParser.T__32)
+                            | (1 << CypherParser.T__33)
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -10370,41 +10961,61 @@ class CypherParser ( Parser ):
 
     class OC_DashContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return CypherParser.RULE_oC_Dash
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOC_Dash" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOC_Dash"):
                 listener.enterOC_Dash(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOC_Dash" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOC_Dash"):
                 listener.exitOC_Dash(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOC_Dash" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitOC_Dash"):
                 return visitor.visitOC_Dash(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def oC_Dash(self):
 
         localctx = CypherParser.OC_DashContext(self, self._ctx, self.state)
         self.enterRule(localctx, 204, self.RULE_oC_Dash)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1572
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CypherParser.T__18) | (1 << CypherParser.T__34) | (1 << CypherParser.T__35) | (1 << CypherParser.T__36) | (1 << CypherParser.T__37) | (1 << CypherParser.T__38) | (1 << CypherParser.T__39) | (1 << CypherParser.T__40) | (1 << CypherParser.T__41) | (1 << CypherParser.T__42) | (1 << CypherParser.T__43) | (1 << CypherParser.T__44))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << CypherParser.T__18)
+                            | (1 << CypherParser.T__34)
+                            | (1 << CypherParser.T__35)
+                            | (1 << CypherParser.T__36)
+                            | (1 << CypherParser.T__37)
+                            | (1 << CypherParser.T__38)
+                            | (1 << CypherParser.T__39)
+                            | (1 << CypherParser.T__40)
+                            | (1 << CypherParser.T__41)
+                            | (1 << CypherParser.T__42)
+                            | (1 << CypherParser.T__43)
+                            | (1 << CypherParser.T__44)
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -10416,8 +11027,3 @@ class CypherParser ( Parser ):
         finally:
             self.exitRule()
         return localctx
-
-
-
-
-

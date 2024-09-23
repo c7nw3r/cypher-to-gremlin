@@ -5,14 +5,18 @@ from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.oc_node_label import OCNodeLabel
 from cypher_to_gremlin.element.relationship.oc_left_arrow_head import OCLeftArrowHead
 from cypher_to_gremlin.element.relationship.oc_rel_type_name import OCRelTypeName
-from cypher_to_gremlin.element.relationship.oc_relationship_detail import OCRelationshipDetail
+from cypher_to_gremlin.element.relationship.oc_relationship_detail import (
+    OCRelationshipDetail,
+)
 from cypher_to_gremlin.element.relationship.oc_right_arrow_head import OCRightArrowHead
 
 
 class OCRelationshipPattern(CypherElement):
 
     def __init__(self, elements: List[CypherElement]):
-        self.rel_details = [e for e in elements if isinstance(e, OCRelationshipDetail)][0]
+        self.rel_details = [e for e in elements if isinstance(e, OCRelationshipDetail)][
+            0
+        ]
         self.is_outgoing = any([isinstance(e, OCRightArrowHead) for e in elements])
         self.is_incoming = any([isinstance(e, OCLeftArrowHead) for e in elements])
 

@@ -1,8 +1,9 @@
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context
 from cypher_to_gremlin.__spi__.types import Operator
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
-from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expression import \
-    OCStringListNullPredicateExpression
+from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expression import (
+    OCStringListNullPredicateExpression,
+)
 
 
 class OCPartialComparisonExpression(CypherElement):
@@ -18,7 +19,9 @@ class OCPartialComparisonExpression(CypherElement):
         _property = self._resolve_property(context)
 
         # FIXME:
-        value = context.value_resolver(context.labels[_variable], _property, value[1:-1])
+        value = context.value_resolver(
+            context.labels[_variable], _property, value[1:-1]
+        )
 
         if isinstance(value, list):
             values = ", ".join([f'"{e}"' for e in value])

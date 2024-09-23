@@ -13,8 +13,8 @@ def serializedATN():
         buf.write("\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23")
         buf.write("\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30")
         buf.write("\4\31\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36")
-        buf.write("\t\36\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$\t$\4%\t%")
-        buf.write("\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.")
+        buf.write('\t\36\4\37\t\37\4 \t \4!\t!\4"\t"\4#\t#\4$\t$\4%\t%')
+        buf.write("\4&\t&\4'\t'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.")
         buf.write("\t.\4/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64")
         buf.write("\t\64\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:")
         buf.write("\4;\t;\4<\t<\4=\t=\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\t")
@@ -36,8 +36,8 @@ def serializedATN():
         buf.write("\16\3\16\3\17\3\17\3\20\3\20\3\21\3\21\3\21\3\22\3\22")
         buf.write("\3\22\3\23\3\23\3\24\3\24\3\25\3\25\3\26\3\26\3\27\3\27")
         buf.write("\3\30\3\30\3\31\3\31\3\32\3\32\3\33\3\33\3\34\3\34\3\35")
-        buf.write("\3\35\3\36\3\36\3\37\3\37\3 \3 \3!\3!\3\"\3\"\3#\3#\3")
-        buf.write("$\3$\3%\3%\3&\3&\3\'\3\'\3(\3(\3)\3)\3*\3*\3+\3+\3,\3")
+        buf.write('\3\35\3\36\3\36\3\37\3\37\3 \3 \3!\3!\3"\3"\3#\3#\3')
+        buf.write("$\3$\3%\3%\3&\3&\3'\3'\3(\3(\3)\3)\3*\3*\3+\3+\3,\3")
         buf.write(",\3-\3-\3.\3.\3/\3/\3/\3/\3/\3/\3\60\3\60\3\60\3\60\3")
         buf.write("\61\3\61\3\61\3\61\3\61\3\61\3\61\3\61\3\61\3\62\3\62")
         buf.write("\3\62\3\62\3\62\3\62\3\63\3\63\3\63\3\63\3\63\3\63\3\63")
@@ -88,9 +88,9 @@ def serializedATN():
         buf.write("\3\u008e\3\u008e\3\u008f\3\u008f\3\u0090\3\u0090\3\u0091")
         buf.write("\3\u0091\3\u0092\3\u0092\3\u0093\3\u0093\3\u0094\3\u0094")
         buf.write("\2\2\u0095\3\3\5\4\7\5\t\6\13\7\r\b\17\t\21\n\23\13\25")
-        buf.write("\f\27\r\31\16\33\17\35\20\37\21!\22#\23%\24\'\25)\26+")
-        buf.write("\27-\30/\31\61\32\63\33\65\34\67\359\36;\37= ?!A\"C#E")
-        buf.write("$G%I&K\'M(O)Q*S+U,W-Y.[/]\60_\61a\62c\63e\64g\65i\66k")
+        buf.write("\f\27\r\31\16\33\17\35\20\37\21!\22#\23%\24'\25)\26+")
+        buf.write('\27-\30/\31\61\32\63\33\65\34\67\359\36;\37= ?!A"C#E')
+        buf.write("$G%I&K'M(O)Q*S+U,W-Y.[/]\60_\61a\62c\63e\64g\65i\66k")
         buf.write("\67m8o9q:s;u<w=y>{?}@\177A\u0081B\u0083C\u0085D\u0087")
         buf.write("E\u0089F\u008bG\u008dH\u008fI\u0091J\u0093K\u0095L\u0097")
         buf.write("M\u0099N\u009bO\u009dP\u009fQ\u00a1R\u00a3S\u00a5T\u00a7")
@@ -110,7 +110,7 @@ def serializedATN():
         buf.write("Sss\n\2\u00a2\u00a2\u1682\u1682\u1810\u1810\u2002\u200c")
         buf.write("\u202a\u202b\u2031\u2031\u2061\u2061\u3002\u3002\3\2\16")
         buf.write("\16\3\2bb\3\2  \3\2,,\4\2))^^\4\2\f\f\17\17\3\2\61\61")
-        buf.write("\3\2\37\37\3\2\36\36\3\2\17\17\3\2\"\"\b\2aa\u2041\u2042")
+        buf.write('\3\2\37\37\3\2\36\36\3\2\17\17\3\2""\b\2aa\u2041\u2042')
         buf.write("\u2056\u2056\ufe35\ufe36\ufe4f\ufe51\uff41\uff41\3\2\13")
         buf.write("\13\4\2$$^^\3\2\f\f\3\2\r\r\3\2!!\5\u02c5\2\62\2;\2C\2")
         buf.write("\\\2a\2a\2c\2|\2\u00ac\2\u00ac\2\u00b7\2\u00b7\2\u00b9")
@@ -493,7 +493,7 @@ def serializedATN():
         buf.write("\2\r\3\2\2\2\2\17\3\2\2\2\2\21\3\2\2\2\2\23\3\2\2\2\2")
         buf.write("\25\3\2\2\2\2\27\3\2\2\2\2\31\3\2\2\2\2\33\3\2\2\2\2\35")
         buf.write("\3\2\2\2\2\37\3\2\2\2\2!\3\2\2\2\2#\3\2\2\2\2%\3\2\2\2")
-        buf.write("\2\'\3\2\2\2\2)\3\2\2\2\2+\3\2\2\2\2-\3\2\2\2\2/\3\2\2")
+        buf.write("\2'\3\2\2\2\2)\3\2\2\2\2+\3\2\2\2\2-\3\2\2\2\2/\3\2\2")
         buf.write("\2\2\61\3\2\2\2\2\63\3\2\2\2\2\65\3\2\2\2\2\67\3\2\2\2")
         buf.write("\29\3\2\2\2\2;\3\2\2\2\2=\3\2\2\2\2?\3\2\2\2\2A\3\2\2")
         buf.write("\2\2C\3\2\2\2\2E\3\2\2\2\2G\3\2\2\2\2I\3\2\2\2\2K\3\2")
@@ -526,7 +526,7 @@ def serializedATN():
         buf.write("\u0138\3\2\2\2\23\u013a\3\2\2\2\25\u013c\3\2\2\2\27\u013e")
         buf.write("\3\2\2\2\31\u0140\3\2\2\2\33\u0143\3\2\2\2\35\u0146\3")
         buf.write("\2\2\2\37\u0148\3\2\2\2!\u014a\3\2\2\2#\u014d\3\2\2\2")
-        buf.write("%\u0150\3\2\2\2\'\u0152\3\2\2\2)\u0154\3\2\2\2+\u0156")
+        buf.write("%\u0150\3\2\2\2'\u0152\3\2\2\2)\u0154\3\2\2\2+\u0156")
         buf.write("\3\2\2\2-\u0158\3\2\2\2/\u015a\3\2\2\2\61\u015c\3\2\2")
         buf.write("\2\63\u015e\3\2\2\2\65\u0160\3\2\2\2\67\u0162\3\2\2\2")
         buf.write("9\u0164\3\2\2\2;\u0166\3\2\2\2=\u0168\3\2\2\2?\u016a\3")
@@ -581,10 +581,10 @@ def serializedATN():
         buf.write("\3\2\2\2\u0143\u0144\7>\2\2\u0144\u0145\7@\2\2\u0145\34")
         buf.write("\3\2\2\2\u0146\u0147\7>\2\2\u0147\36\3\2\2\2\u0148\u0149")
         buf.write("\7@\2\2\u0149 \3\2\2\2\u014a\u014b\7>\2\2\u014b\u014c")
-        buf.write("\7?\2\2\u014c\"\3\2\2\2\u014d\u014e\7@\2\2\u014e\u014f")
+        buf.write('\7?\2\2\u014c"\3\2\2\2\u014d\u014e\7@\2\2\u014e\u014f')
         buf.write("\7?\2\2\u014f$\3\2\2\2\u0150\u0151\7-\2\2\u0151&\3\2\2")
         buf.write("\2\u0152\u0153\7/\2\2\u0153(\3\2\2\2\u0154\u0155\7\61")
-        buf.write("\2\2\u0155*\3\2\2\2\u0156\u0157\7\'\2\2\u0157,\3\2\2\2")
+        buf.write("\2\2\u0155*\3\2\2\2\u0156\u0157\7'\2\2\u0157,\3\2\2\2")
         buf.write("\u0158\u0159\7`\2\2\u0159.\3\2\2\2\u015a\u015b\7\60\2")
         buf.write("\2\u015b\60\3\2\2\2\u015c\u015d\7}\2\2\u015d\62\3\2\2")
         buf.write("\2\u015e\u015f\7\177\2\2\u015f\64\3\2\2\2\u0160\u0161")
@@ -836,12 +836,12 @@ def serializedATN():
         buf.write("\u03be\n\36\2\2\u03be\u0104\3\2\2\2\u03bf\u03c0\t\37\2")
         buf.write("\2\u03c0\u0106\3\2\2\2\u03c1\u03c2\t.\2\2\u03c2\u0108")
         buf.write("\3\2\2\2\u03c3\u03c4\n \2\2\u03c4\u010a\3\2\2\2\u03c5")
-        buf.write("\u03c6\n!\2\2\u03c6\u010c\3\2\2\2\u03c7\u03c8\n\"\2\2")
+        buf.write('\u03c6\n!\2\2\u03c6\u010c\3\2\2\2\u03c7\u03c8\n"\2\2')
         buf.write("\u03c8\u010e\3\2\2\2\u03c9\u03ca\n#\2\2\u03ca\u0110\3")
         buf.write("\2\2\2\u03cb\u03cc\t$\2\2\u03cc\u0112\3\2\2\2\u03cd\u03ce")
         buf.write("\t%\2\2\u03ce\u0114\3\2\2\2\u03cf\u03d0\t&\2\2\u03d0\u0116")
         buf.write("\3\2\2\2\u03d1\u03d2\t/\2\2\u03d2\u0118\3\2\2\2\u03d3")
-        buf.write("\u03d4\t\'\2\2\u03d4\u011a\3\2\2\2\u03d5\u03d6\t(\2\2")
+        buf.write("\u03d4\t'\2\2\u03d4\u011a\3\2\2\2\u03d5\u03d6\t(\2\2")
         buf.write("\u03d6\u011c\3\2\2\2\u03d7\u03d8\t)\2\2\u03d8\u011e\3")
         buf.write("\2\2\2\u03d9\u03da\n*\2\2\u03da\u0120\3\2\2\2\u03db\u03dc")
         buf.write("\t+\2\2\u03dc\u0122\3\2\2\2\u03dd\u03de\t,\2\2\u03de\u0124")
@@ -858,7 +858,7 @@ class CypherLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
     T__0 = 1
     T__1 = 2
@@ -988,68 +988,303 @@ class CypherLexer(Lexer):
     WHITESPACE = 126
     Comment = 127
 
-    channelNames = [ u"DEFAULT_TOKEN_CHANNEL", u"HIDDEN" ]
+    channelNames = ["DEFAULT_TOKEN_CHANNEL", "HIDDEN"]
 
-    modeNames = [ "DEFAULT_MODE" ]
+    modeNames = ["DEFAULT_MODE"]
 
-    literalNames = [ "<INVALID>",
-            "';'", "','", "'='", "'+='", "'*'", "'('", "')'", "'['", "']'", 
-            "':'", "'|'", "'..'", "'<>'", "'<'", "'>'", "'<='", "'>='", 
-            "'+'", "'-'", "'/'", "'%'", "'^'", "'.'", "'{'", "'}'", "'$'", 
-            "'\u27E8'", "'\u3008'", "'\uFE64'", "'\uFF1C'", "'\u27E9'", 
-            "'\u3009'", "'\uFE65'", "'\uFF1E'", "'\u00AD'", "'\u2010'", 
-            "'\u2011'", "'\u2012'", "'\u2013'", "'\u2014'", "'\u2015'", 
-            "'\u2212'", "'\uFE58'", "'\uFE63'", "'\uFF0D'", "'0'" ]
+    literalNames = [
+        "<INVALID>",
+        "';'",
+        "','",
+        "'='",
+        "'+='",
+        "'*'",
+        "'('",
+        "')'",
+        "'['",
+        "']'",
+        "':'",
+        "'|'",
+        "'..'",
+        "'<>'",
+        "'<'",
+        "'>'",
+        "'<='",
+        "'>='",
+        "'+'",
+        "'-'",
+        "'/'",
+        "'%'",
+        "'^'",
+        "'.'",
+        "'{'",
+        "'}'",
+        "'$'",
+        "'\u27E8'",
+        "'\u3008'",
+        "'\uFE64'",
+        "'\uFF1C'",
+        "'\u27E9'",
+        "'\u3009'",
+        "'\uFE65'",
+        "'\uFF1E'",
+        "'\u00AD'",
+        "'\u2010'",
+        "'\u2011'",
+        "'\u2012'",
+        "'\u2013'",
+        "'\u2014'",
+        "'\u2015'",
+        "'\u2212'",
+        "'\uFE58'",
+        "'\uFE63'",
+        "'\uFF0D'",
+        "'0'",
+    ]
 
-    symbolicNames = [ "<INVALID>",
-            "UNION", "ALL", "OPTIONAL", "MATCH", "UNWIND", "AS", "MERGE", 
-            "ON", "CREATE", "SET", "DETACH", "DELETE", "REMOVE", "CALL", 
-            "YIELD", "WITH", "RETURN", "DISTINCT", "ORDER", "BY", "L_SKIP", 
-            "LIMIT", "ASCENDING", "ASC", "DESCENDING", "DESC", "WHERE", 
-            "OR", "XOR", "AND", "NOT", "STARTS", "ENDS", "CONTAINS", "IN", 
-            "IS", "NULL", "COUNT", "CASE", "ELSE", "END", "WHEN", "THEN", 
-            "ANY", "NONE", "SINGLE", "EXISTS", "TRUE", "FALSE", "HexInteger", 
-            "DecimalInteger", "OctalInteger", "HexLetter", "HexDigit", "Digit", 
-            "NonZeroDigit", "NonZeroOctDigit", "OctDigit", "ZeroDigit", 
-            "ExponentDecimalReal", "RegularDecimalReal", "StringLiteral", 
-            "EscapedChar", "CONSTRAINT", "DO", "FOR", "REQUIRE", "UNIQUE", 
-            "MANDATORY", "SCALAR", "OF", "ADD", "DROP", "FILTER", "EXTRACT", 
-            "UnescapedSymbolicName", "IdentifierStart", "IdentifierPart", 
-            "EscapedSymbolicName", "SP", "WHITESPACE", "Comment" ]
+    symbolicNames = [
+        "<INVALID>",
+        "UNION",
+        "ALL",
+        "OPTIONAL",
+        "MATCH",
+        "UNWIND",
+        "AS",
+        "MERGE",
+        "ON",
+        "CREATE",
+        "SET",
+        "DETACH",
+        "DELETE",
+        "REMOVE",
+        "CALL",
+        "YIELD",
+        "WITH",
+        "RETURN",
+        "DISTINCT",
+        "ORDER",
+        "BY",
+        "L_SKIP",
+        "LIMIT",
+        "ASCENDING",
+        "ASC",
+        "DESCENDING",
+        "DESC",
+        "WHERE",
+        "OR",
+        "XOR",
+        "AND",
+        "NOT",
+        "STARTS",
+        "ENDS",
+        "CONTAINS",
+        "IN",
+        "IS",
+        "NULL",
+        "COUNT",
+        "CASE",
+        "ELSE",
+        "END",
+        "WHEN",
+        "THEN",
+        "ANY",
+        "NONE",
+        "SINGLE",
+        "EXISTS",
+        "TRUE",
+        "FALSE",
+        "HexInteger",
+        "DecimalInteger",
+        "OctalInteger",
+        "HexLetter",
+        "HexDigit",
+        "Digit",
+        "NonZeroDigit",
+        "NonZeroOctDigit",
+        "OctDigit",
+        "ZeroDigit",
+        "ExponentDecimalReal",
+        "RegularDecimalReal",
+        "StringLiteral",
+        "EscapedChar",
+        "CONSTRAINT",
+        "DO",
+        "FOR",
+        "REQUIRE",
+        "UNIQUE",
+        "MANDATORY",
+        "SCALAR",
+        "OF",
+        "ADD",
+        "DROP",
+        "FILTER",
+        "EXTRACT",
+        "UnescapedSymbolicName",
+        "IdentifierStart",
+        "IdentifierPart",
+        "EscapedSymbolicName",
+        "SP",
+        "WHITESPACE",
+        "Comment",
+    ]
 
-    ruleNames = [ "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", 
-                  "T__7", "T__8", "T__9", "T__10", "T__11", "T__12", "T__13", 
-                  "T__14", "T__15", "T__16", "T__17", "T__18", "T__19", 
-                  "T__20", "T__21", "T__22", "T__23", "T__24", "T__25", 
-                  "T__26", "T__27", "T__28", "T__29", "T__30", "T__31", 
-                  "T__32", "T__33", "T__34", "T__35", "T__36", "T__37", 
-                  "T__38", "T__39", "T__40", "T__41", "T__42", "T__43", 
-                  "T__44", "UNION", "ALL", "OPTIONAL", "MATCH", "UNWIND", 
-                  "AS", "MERGE", "ON", "CREATE", "SET", "DETACH", "DELETE", 
-                  "REMOVE", "CALL", "YIELD", "WITH", "RETURN", "DISTINCT", 
-                  "ORDER", "BY", "L_SKIP", "LIMIT", "ASCENDING", "ASC", 
-                  "DESCENDING", "DESC", "WHERE", "OR", "XOR", "AND", "NOT", 
-                  "STARTS", "ENDS", "CONTAINS", "IN", "IS", "NULL", "COUNT", 
-                  "CASE", "ELSE", "END", "WHEN", "THEN", "ANY", "NONE", 
-                  "SINGLE", "EXISTS", "TRUE", "FALSE", "HexInteger", "DecimalInteger", 
-                  "OctalInteger", "HexLetter", "HexDigit", "Digit", "NonZeroDigit", 
-                  "NonZeroOctDigit", "OctDigit", "ZeroDigit", "ExponentDecimalReal", 
-                  "RegularDecimalReal", "StringLiteral", "EscapedChar", 
-                  "CONSTRAINT", "DO", "FOR", "REQUIRE", "UNIQUE", "MANDATORY", 
-                  "SCALAR", "OF", "ADD", "DROP", "FILTER", "EXTRACT", "UnescapedSymbolicName", 
-                  "IdentifierStart", "IdentifierPart", "EscapedSymbolicName", 
-                  "SP", "WHITESPACE", "Comment", "FF", "EscapedSymbolicName_0", 
-                  "RS", "ID_Continue", "Comment_1", "StringLiteral_1", "Comment_3", 
-                  "Comment_2", "GS", "FS", "CR", "Sc", "SPACE", "Pc", "TAB", 
-                  "StringLiteral_0", "LF", "VT", "US", "ID_Start" ]
+    ruleNames = [
+        "T__0",
+        "T__1",
+        "T__2",
+        "T__3",
+        "T__4",
+        "T__5",
+        "T__6",
+        "T__7",
+        "T__8",
+        "T__9",
+        "T__10",
+        "T__11",
+        "T__12",
+        "T__13",
+        "T__14",
+        "T__15",
+        "T__16",
+        "T__17",
+        "T__18",
+        "T__19",
+        "T__20",
+        "T__21",
+        "T__22",
+        "T__23",
+        "T__24",
+        "T__25",
+        "T__26",
+        "T__27",
+        "T__28",
+        "T__29",
+        "T__30",
+        "T__31",
+        "T__32",
+        "T__33",
+        "T__34",
+        "T__35",
+        "T__36",
+        "T__37",
+        "T__38",
+        "T__39",
+        "T__40",
+        "T__41",
+        "T__42",
+        "T__43",
+        "T__44",
+        "UNION",
+        "ALL",
+        "OPTIONAL",
+        "MATCH",
+        "UNWIND",
+        "AS",
+        "MERGE",
+        "ON",
+        "CREATE",
+        "SET",
+        "DETACH",
+        "DELETE",
+        "REMOVE",
+        "CALL",
+        "YIELD",
+        "WITH",
+        "RETURN",
+        "DISTINCT",
+        "ORDER",
+        "BY",
+        "L_SKIP",
+        "LIMIT",
+        "ASCENDING",
+        "ASC",
+        "DESCENDING",
+        "DESC",
+        "WHERE",
+        "OR",
+        "XOR",
+        "AND",
+        "NOT",
+        "STARTS",
+        "ENDS",
+        "CONTAINS",
+        "IN",
+        "IS",
+        "NULL",
+        "COUNT",
+        "CASE",
+        "ELSE",
+        "END",
+        "WHEN",
+        "THEN",
+        "ANY",
+        "NONE",
+        "SINGLE",
+        "EXISTS",
+        "TRUE",
+        "FALSE",
+        "HexInteger",
+        "DecimalInteger",
+        "OctalInteger",
+        "HexLetter",
+        "HexDigit",
+        "Digit",
+        "NonZeroDigit",
+        "NonZeroOctDigit",
+        "OctDigit",
+        "ZeroDigit",
+        "ExponentDecimalReal",
+        "RegularDecimalReal",
+        "StringLiteral",
+        "EscapedChar",
+        "CONSTRAINT",
+        "DO",
+        "FOR",
+        "REQUIRE",
+        "UNIQUE",
+        "MANDATORY",
+        "SCALAR",
+        "OF",
+        "ADD",
+        "DROP",
+        "FILTER",
+        "EXTRACT",
+        "UnescapedSymbolicName",
+        "IdentifierStart",
+        "IdentifierPart",
+        "EscapedSymbolicName",
+        "SP",
+        "WHITESPACE",
+        "Comment",
+        "FF",
+        "EscapedSymbolicName_0",
+        "RS",
+        "ID_Continue",
+        "Comment_1",
+        "StringLiteral_1",
+        "Comment_3",
+        "Comment_2",
+        "GS",
+        "FS",
+        "CR",
+        "Sc",
+        "SPACE",
+        "Pc",
+        "TAB",
+        "StringLiteral_0",
+        "LF",
+        "VT",
+        "US",
+        "ID_Start",
+    ]
 
     grammarFileName = "Cypher.g4"
 
-    def __init__(self, input=None, output:TextIO = sys.stdout):
+    def __init__(self, input=None, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.7.2")
-        self._interp = LexerATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
+        self._interp = LexerATNSimulator(
+            self, self.atn, self.decisionsToDFA, PredictionContextCache()
+        )
         self._actions = None
         self._predicates = None
-
-
