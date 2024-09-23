@@ -1,18 +1,19 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context
+from cypher_to_gremlin.__spi__.classes import Context, CypherElement
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.oc_node_label import OCNodeLabel
 
 
 class OCNodePattern(CypherElement):
-
     def __init__(self, elements: List[CypherElement]):
         self.elements = elements
 
     def execute(self, context: Context) -> str:
         var_name = self.elements[0].execute(context)
-        labels = [e.execute(context) for e in self.elements if isinstance(e, OCNodeLabel)]
+        labels = [
+            e.execute(context) for e in self.elements if isinstance(e, OCNodeLabel)
+        ]
 
         context.labels[var_name] = [e[1:-1] for e in labels]
 
@@ -23,6 +24,10 @@ class OCNodePattern(CypherElement):
         for _filter in filters:
             segments.append(_filter.execute(context))
             context.wheres.remove(_filter)
+
+        if segments:
+            segments.append(f'.as("{var_name}")')
+
         return "".join(segments)
 
     @staticmethod

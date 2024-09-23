@@ -1,10 +1,10 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import Context, CypherElement
-from cypher_to_gremlin.antlr.CypherParser import CypherParser
+from mygpt.graph.cypher_to_gremlin.__spi__.classes import Context, CypherElement
+from mygpt.graph.cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
-class OCComparisonExpression(CypherElement):
+class OCListPredicateExpression(CypherElement):
     def __init__(self, elements: List[CypherElement]):
         self.elements = elements
 
@@ -22,8 +22,8 @@ class OCComparisonExpression(CypherElement):
         )
 
     @staticmethod
-    def parse(ctx: CypherParser.OC_ComparisonExpressionContext, supplier):
-        return OCComparisonExpression(supplier(ctx))
+    def parse(ctx: CypherParser.OC_ListPredicateExpressionContext, supplier):
+        return OCListPredicateExpression(supplier(ctx))
 
     def is_sufficient(self, context: Context):
         try:
@@ -32,4 +32,4 @@ class OCComparisonExpression(CypherElement):
             return False
 
     def __repr__(self):
-        return " ".join([str(e) for e in self.elements])
+        return f"IN {"".join([str(e) for e in self.elements])}"

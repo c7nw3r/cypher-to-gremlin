@@ -1,15 +1,19 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context
+from cypher_to_gremlin.__spi__.classes import Context, CypherElement
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
 class OCReturn(CypherElement):
-
     def __init__(self, elements: List[CypherElement]):
         self.elements = elements
 
     def execute(self, context: Context) -> str:
+        segments = [f'"{elem.var_name}"' for elem in self.elements if elem.var_name]
+
+        if segments:
+            return f".select({", ".join(segments)})"
+
         return ""
 
     @staticmethod
