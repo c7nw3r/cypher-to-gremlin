@@ -4,17 +4,17 @@ from cypher_to_gremlin.__spi__.classes import CypherElement, CypherElementVisito
 from cypher_to_gremlin.element.oc_variable import OCVariable
 
 
-class VarNameVisitor(CypherElementVisitor, list):
+class VariableVisitor(CypherElementVisitor, list):
     def visit(self, element: CypherElement):
         if isinstance(element, OCVariable):
             self.append(element.var_name)
 
 
-class VarNameMixin(Visitable):
+class VariableMixin(Visitable):
 
     @property
     def var_name(self) -> Optional[str]:
-        visitor = VarNameVisitor()
+        visitor = VariableVisitor()
         self.accept(visitor)
         return visitor[0] if len(visitor) > 0 else None
 

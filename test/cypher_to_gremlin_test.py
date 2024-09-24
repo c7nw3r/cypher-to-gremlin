@@ -66,3 +66,30 @@ class CypherToGremlinTest(TestCase):
             gremlin
             == 'V().hasLabel("Document").as("document").out("HAS_TOPIC", "HAS_KEYWORD").has("text", "Stahl").as("n").select("document")'
         )
+
+    def test_in_list_operator(self):
+        gremlin = CypherToGremlin().to_gremlin("""
+        MATCH (document:Document) WHERE document.type IN ["A", "B", "C"] RETURN document
+        """)
+
+        assert (
+            gremlin
+            == 'V().hasLabel("Document").has("type", within("A", "B", "C")).as("document").select("document")'
+        )
+
+    def test_greater_equals_expression(self):
+        gremlin = CypherToGremlin().to_gremlin("""
+        MATCH (document:Document) WHERE document.page_num >= 10 RETURN document
+        """)
+
+        assert (
+            gremlin
+            == 'V().hasLabel("Document").has("page_num", ge(10)).as("document").select("document")'
+        )
+
+    def test_count(self):
+        gremlin = CypherToGremlin().to_gremlin("""
+        MATCH (document:Document) RETURN COUNT(*)
+        """)
+
+        print(gremlin)

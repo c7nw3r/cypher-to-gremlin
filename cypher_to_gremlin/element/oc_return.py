@@ -2,7 +2,7 @@ from typing import List
 
 from cypher_to_gremlin.__spi__.classes import Context, CypherElement, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
-from cypher_to_gremlin.mixin.var_name_mixin import VarNameVisitor
+from cypher_to_gremlin.mixin.var_name_mixin import VariableVisitor
 
 
 class OCReturn(CypherElement):
@@ -10,7 +10,7 @@ class OCReturn(CypherElement):
         self.elements = elements
 
     def execute(self, context: Context) -> str:
-        visitor = VarNameVisitor()
+        visitor = VariableVisitor()
         self.accept(visitor)
 
         var_names = [f'"{e}"' for e in visitor]

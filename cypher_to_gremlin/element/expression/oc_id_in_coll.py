@@ -5,7 +5,7 @@ from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.mixin.var_name_mixin import VariableMixin
 
 
-class OCListPredicateExpression(CypherElement, VariableMixin):
+class OCIdInColl(CypherElement, VariableMixin):
     def __init__(self, elements: List[CypherElement]):
         self.elements = elements
 
@@ -18,8 +18,8 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
         )
 
     @staticmethod
-    def parse(ctx: CypherParser.OC_ListPredicateExpressionContext, supplier):
-        return OCListPredicateExpression(supplier(ctx))
+    def parse(ctx: CypherParser.OC_IdInCollContext, supplier):
+        return OCIdInColl(supplier(ctx))
 
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)

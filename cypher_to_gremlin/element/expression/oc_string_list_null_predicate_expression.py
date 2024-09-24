@@ -1,8 +1,8 @@
 from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
-from cypher_to_gremlin.__spi__.types import Operator, Value
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
+from cypher_to_gremlin.element.oc_variable import OCVariable
 
 
 class OCStringListNullPredicateExpression(CypherElement):
@@ -11,7 +11,8 @@ class OCStringListNullPredicateExpression(CypherElement):
         self.elements = elements
 
     def execute(self, context: Context) -> str:
-        return self.elements[-1].execute(context)
+        elements = [e for e in self.elements if not isinstance(e, OCVariable)]
+        return "".join([e.execute(context) for e in elements])
 
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)

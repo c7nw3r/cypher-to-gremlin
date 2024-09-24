@@ -4,6 +4,8 @@ from cypher_to_gremlin.element.expression.oc_and_expression import OCAndExpressi
 from cypher_to_gremlin.element.expression.oc_comparison_expression import (
     OCComparisonExpression,
 )
+from cypher_to_gremlin.element.expression.oc_id_in_coll import OCIdInColl
+from cypher_to_gremlin.element.expression.oc_list_predicate_expression import OCListPredicateExpression
 from cypher_to_gremlin.element.expression.oc_partial_comparison_expression import (
     OCPartialComparisonExpression,
 )
@@ -111,6 +113,12 @@ class CypherVisitorImpl(CypherVisitor):
         self, ctx: CypherParser.OC_ComparisonExpressionContext
     ):
         return OCComparisonExpression.parse(ctx, super().visitOC_ComparisonExpression)
+
+    def visitOC_IdInColl(self, ctx: CypherParser.OC_IdInCollContext):
+        return OCIdInColl.parse(ctx, super().visitOC_IdInColl)
+
+    def visitOC_ListPredicateExpression(self, ctx: CypherParser.OC_ListPredicateExpressionContext):
+        return OCListPredicateExpression.parse(ctx, super().visitOC_ListPredicateExpression)
 
     def aggregateResult(self, aggregate, next_result):
         array = []
