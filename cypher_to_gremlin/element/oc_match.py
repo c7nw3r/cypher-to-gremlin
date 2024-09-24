@@ -4,7 +4,9 @@ from cypher_to_gremlin.__spi__.classes import CypherElement, Context
 from cypher_to_gremlin.__util__.list_util import find, opt_find
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.expression.oc_and_expression import OCAndExpression
-from cypher_to_gremlin.element.expression.oc_comparison_expression import OCComparisonExpression
+from cypher_to_gremlin.element.expression.oc_comparison_expression import (
+    OCComparisonExpression,
+)
 from cypher_to_gremlin.element.oc_pattern import OCPattern
 from cypher_to_gremlin.element.oc_where import OCWhere
 

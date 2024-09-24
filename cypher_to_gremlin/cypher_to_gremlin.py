@@ -1,7 +1,6 @@
-from abc import ABC
 from typing import Optional
 
-from antlr4 import InputStream, CommonTokenStream
+from antlr4 import CommonTokenStream, InputStream
 
 from cypher_to_gremlin.__spi__.classes import Context
 from cypher_to_gremlin.__spi__.types import CypherSource
@@ -11,9 +10,10 @@ from cypher_to_gremlin.cypher_visitor import CypherVisitorImpl
 from cypher_to_gremlin.listener.error_listener import CypherErrorListener
 
 
-class CypherToGremlin(ABC):
-
-    def __init__(self, context: Optional[Context] = Context()):
+class CypherToGremlin:
+    def __init__(self, context: Optional[Context] = None):
+        if context is None:
+            context = Context()
         self.context = context
 
     @staticmethod
@@ -40,7 +40,8 @@ class CypherToGremlin(ABC):
         lexer.addErrorListener(error_listener)
 
         visitor = CypherVisitorImpl()
-        tree = visitor.visit(parser.oC_Cypher())
+        cypher_ctx = parser.oC_Cypher()
+        tree = visitor.visit(cypher_ctx)
 
         if len(error_listener.errors) > 0:
             raise ValueError(str(error_listener.errors[0]))

@@ -18,4 +18,4 @@ class OCStringListNullPredicateExpression(CypherElement):
         return OCStringListNullPredicateExpression(supplier(ctx))
 
     def __repr__(self):
-        return ''.join([str(e) for e in self.elements])
+        return "".join([str(e) for e in self.elements])

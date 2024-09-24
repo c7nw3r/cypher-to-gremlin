@@ -1,10 +1,15 @@
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.antlr.CypherVisitor import CypherVisitor
 from cypher_to_gremlin.element.expression.oc_and_expression import OCAndExpression
-from cypher_to_gremlin.element.expression.oc_comparison_expression import OCComparisonExpression
-from cypher_to_gremlin.element.expression.oc_partial_comparison_expression import OCPartialComparisonExpression
-from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expression import \
-    OCStringListNullPredicateExpression
+from cypher_to_gremlin.element.expression.oc_comparison_expression import (
+    OCComparisonExpression,
+)
+from cypher_to_gremlin.element.expression.oc_partial_comparison_expression import (
+    OCPartialComparisonExpression,
+)
+from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expression import (
+    OCStringListNullPredicateExpression,
+)
 from cypher_to_gremlin.element.oc_literal import OCLiteral
 from cypher_to_gremlin.element.oc_match import OCMatch
 from cypher_to_gremlin.element.oc_node_label import OCNodeLabel
@@ -19,8 +24,12 @@ from cypher_to_gremlin.element.oc_where import OCWhere
 from cypher_to_gremlin.element.relationship.oc_dash import OCDash
 from cypher_to_gremlin.element.relationship.oc_left_arrow_head import OCLeftArrowHead
 from cypher_to_gremlin.element.relationship.oc_rel_type_name import OCRelTypeName
-from cypher_to_gremlin.element.relationship.oc_relationship_detail import OCRelationshipDetail
-from cypher_to_gremlin.element.relationship.oc_relationship_pattern import OCRelationshipPattern
+from cypher_to_gremlin.element.relationship.oc_relationship_detail import (
+    OCRelationshipDetail,
+)
+from cypher_to_gremlin.element.relationship.oc_relationship_pattern import (
+    OCRelationshipPattern,
+)
 from cypher_to_gremlin.element.relationship.oc_right_arrow_head import OCRightArrowHead
 
 
@@ -53,8 +62,12 @@ class CypherVisitorImpl(CypherVisitor):
     def visitOC_Where(self, ctx: CypherParser.OC_WhereContext):
         return OCWhere.parse(ctx, super().visitOC_Where)
 
-    def visitOC_PartialComparisonExpression(self, ctx: CypherParser.OC_PartialComparisonExpressionContext):
-        return OCPartialComparisonExpression.parse(ctx, super().visitOC_PartialComparisonExpression)
+    def visitOC_PartialComparisonExpression(
+        self, ctx: CypherParser.OC_PartialComparisonExpressionContext
+    ):
+        return OCPartialComparisonExpression.parse(
+            ctx, super().visitOC_PartialComparisonExpression
+        )
 
     def visitOC_Literal(self, ctx: CypherParser.OC_LiteralContext):
         return OCLiteral.parse(ctx, super().visitOC_Literal)
@@ -62,13 +75,21 @@ class CypherVisitorImpl(CypherVisitor):
     def visitOC_PropertyLookup(self, ctx: CypherParser.OC_PropertyLookupContext):
         return OCPropertyLookup.parse(ctx, super().visitOC_PropertyLookup)
 
-    def visitOC_StringListNullPredicateExpression(self, ctx: CypherParser.OC_StringListNullPredicateExpressionContext):
-        return OCStringListNullPredicateExpression.parse(ctx, super().visitOC_StringListNullPredicateExpression)
+    def visitOC_StringListNullPredicateExpression(
+        self, ctx: CypherParser.OC_StringListNullPredicateExpressionContext
+    ):
+        return OCStringListNullPredicateExpression.parse(
+            ctx, super().visitOC_StringListNullPredicateExpression
+        )
 
-    def visitOC_RelationshipPattern(self, ctx: CypherParser.OC_RelationshipPatternContext):
+    def visitOC_RelationshipPattern(
+        self, ctx: CypherParser.OC_RelationshipPatternContext
+    ):
         return OCRelationshipPattern.parse(ctx, super().visitOC_RelationshipPattern)
 
-    def visitOC_RelationshipDetail(self, ctx: CypherParser.OC_RelationshipDetailContext):
+    def visitOC_RelationshipDetail(
+        self, ctx: CypherParser.OC_RelationshipDetailContext
+    ):
         return OCRelationshipDetail.parse(ctx, super().visitOC_RelationshipDetail)
 
     def visitOC_RelTypeName(self, ctx: CypherParser.OC_RelTypeNameContext):
@@ -86,7 +107,9 @@ class CypherVisitorImpl(CypherVisitor):
     def visitOC_AndExpression(self, ctx: CypherParser.OC_AndExpressionContext):
         return OCAndExpression.parse(ctx, super().visitOC_AndExpression)
 
-    def visitOC_ComparisonExpression(self, ctx: CypherParser.OC_ComparisonExpressionContext):
+    def visitOC_ComparisonExpression(
+        self, ctx: CypherParser.OC_ComparisonExpressionContext
+    ):
         return OCComparisonExpression.parse(ctx, super().visitOC_ComparisonExpression)
 
     def aggregateResult(self, aggregate, next_result):

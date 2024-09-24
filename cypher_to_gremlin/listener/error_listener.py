@@ -6,22 +6,28 @@ from antlr4.error.ErrorListener import ErrorListener
 
 class CypherErrorListener(ErrorListener):
     def __init__(self):
-        self.errors: List['ScriptableError'] = []
+        self.errors: List["ScriptableError"] = []
 
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
         if "no viable alternative at input" in msg:
-            _msg = "compiler error: " + msg[len("no viable alternative at input"):]
+            _msg = "compiler error: " + msg[len("no viable alternative at input") :]
             self.errors.append(ScriptableError(_msg, line, column))
         else:
             self.errors.append(ScriptableError(msg, line, column))
 
-    def reportAmbiguity(self, recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs):
+    def reportAmbiguity(
+        self, recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs
+    ):
         pass
 
-    def reportAttemptingFullContext(self, recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs):
+    def reportAttemptingFullContext(
+        self, recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs
+    ):
         pass
 
-    def reportContextSensitivity(self, recognizer, dfa, startIndex, stopIndex, prediction, configs):
+    def reportContextSensitivity(
+        self, recognizer, dfa, startIndex, stopIndex, prediction, configs
+    ):
         pass
 
 
