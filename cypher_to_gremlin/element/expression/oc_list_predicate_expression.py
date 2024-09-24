@@ -2,7 +2,7 @@ from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
-from cypher_to_gremlin.mixin.var_name_mixin import VariableMixin
+from cypher_to_gremlin.mixin.variable_mixin import VariableMixin
 
 
 class OCListPredicateExpression(CypherElement, VariableMixin):

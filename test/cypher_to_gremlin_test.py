@@ -92,4 +92,7 @@ class CypherToGremlinTest(TestCase):
         MATCH (document:Document) RETURN COUNT(*)
         """)
 
-        print(gremlin)
+        assert (
+            gremlin
+            == 'V().hasLabel("Document").as("document").count()'
+        )

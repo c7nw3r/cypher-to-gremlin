@@ -6,7 +6,7 @@ from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.mixin.literals_mixin import LiteralsVisitor
 from cypher_to_gremlin.mixin.operator_mixin import OperatorVisitor
 from cypher_to_gremlin.mixin.property_mixin import PropertyVisitor
-from cypher_to_gremlin.mixin.var_name_mixin import VariableMixin, VariableVisitor
+from cypher_to_gremlin.mixin.variable_mixin import VariableMixin, VariableVisitor
 
 
 class OCComparisonExpression(CypherElement, VariableMixin):

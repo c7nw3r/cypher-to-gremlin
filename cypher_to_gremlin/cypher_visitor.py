@@ -4,14 +4,15 @@ from cypher_to_gremlin.element.expression.oc_and_expression import OCAndExpressi
 from cypher_to_gremlin.element.expression.oc_comparison_expression import (
     OCComparisonExpression,
 )
-from cypher_to_gremlin.element.expression.oc_id_in_coll import OCIdInColl
 from cypher_to_gremlin.element.expression.oc_list_predicate_expression import OCListPredicateExpression
+from cypher_to_gremlin.element.expression.oc_non_arithmetic_operator_expression import OCNonArithmeticOperatorExpression
 from cypher_to_gremlin.element.expression.oc_partial_comparison_expression import (
     OCPartialComparisonExpression,
 )
 from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expression import (
     OCStringListNullPredicateExpression,
 )
+from cypher_to_gremlin.element.oc_atom import OCAtom
 from cypher_to_gremlin.element.oc_literal import OCLiteral
 from cypher_to_gremlin.element.oc_match import OCMatch
 from cypher_to_gremlin.element.oc_node_label import OCNodeLabel
@@ -65,7 +66,7 @@ class CypherVisitorImpl(CypherVisitor):
         return OCWhere.parse(ctx, super().visitOC_Where)
 
     def visitOC_PartialComparisonExpression(
-        self, ctx: CypherParser.OC_PartialComparisonExpressionContext
+            self, ctx: CypherParser.OC_PartialComparisonExpressionContext
     ):
         return OCPartialComparisonExpression.parse(
             ctx, super().visitOC_PartialComparisonExpression
@@ -78,19 +79,19 @@ class CypherVisitorImpl(CypherVisitor):
         return OCPropertyLookup.parse(ctx, super().visitOC_PropertyLookup)
 
     def visitOC_StringListNullPredicateExpression(
-        self, ctx: CypherParser.OC_StringListNullPredicateExpressionContext
+            self, ctx: CypherParser.OC_StringListNullPredicateExpressionContext
     ):
         return OCStringListNullPredicateExpression.parse(
             ctx, super().visitOC_StringListNullPredicateExpression
         )
 
     def visitOC_RelationshipPattern(
-        self, ctx: CypherParser.OC_RelationshipPatternContext
+            self, ctx: CypherParser.OC_RelationshipPatternContext
     ):
         return OCRelationshipPattern.parse(ctx, super().visitOC_RelationshipPattern)
 
     def visitOC_RelationshipDetail(
-        self, ctx: CypherParser.OC_RelationshipDetailContext
+            self, ctx: CypherParser.OC_RelationshipDetailContext
     ):
         return OCRelationshipDetail.parse(ctx, super().visitOC_RelationshipDetail)
 
@@ -110,15 +111,18 @@ class CypherVisitorImpl(CypherVisitor):
         return OCAndExpression.parse(ctx, super().visitOC_AndExpression)
 
     def visitOC_ComparisonExpression(
-        self, ctx: CypherParser.OC_ComparisonExpressionContext
+            self, ctx: CypherParser.OC_ComparisonExpressionContext
     ):
         return OCComparisonExpression.parse(ctx, super().visitOC_ComparisonExpression)
 
-    def visitOC_IdInColl(self, ctx: CypherParser.OC_IdInCollContext):
-        return OCIdInColl.parse(ctx, super().visitOC_IdInColl)
-
     def visitOC_ListPredicateExpression(self, ctx: CypherParser.OC_ListPredicateExpressionContext):
         return OCListPredicateExpression.parse(ctx, super().visitOC_ListPredicateExpression)
+
+    def visitOC_NonArithmeticOperatorExpression(self, ctx: CypherParser.OC_NonArithmeticOperatorExpressionContext):
+        return OCNonArithmeticOperatorExpression.parse(ctx, super().visitOC_NonArithmeticOperatorExpression)
+
+    def visitOC_Atom(self, ctx: CypherParser.OC_AtomContext):
+        return OCAtom.parse(ctx, super().visitOC_Atom)
 
     def aggregateResult(self, aggregate, next_result):
         array = []
