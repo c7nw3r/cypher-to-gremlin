@@ -1,6 +1,6 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
@@ -15,6 +15,10 @@ class OCAndExpression(CypherElement):
     @staticmethod
     def parse(ctx: CypherParser.OC_AndExpressionContext, supplier):
         return OCAndExpression(supplier(ctx))
+
+    def accept(self, visitor: CypherElementVisitor):
+        visitor.visit(self)
+        [e.accept(visitor) for e in self.elements]
 
     def __repr__(self):
         return " AND ".join([str(e) for e in self.elements])

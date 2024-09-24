@@ -1,6 +1,6 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
@@ -11,6 +11,10 @@ class OCWhere(CypherElement):
 
     def execute(self, context: Context) -> str:
         return self.expression.execute(context)
+
+    def accept(self, visitor: CypherElementVisitor):
+        visitor.visit(self)
+        self.expression.accept(visitor)
 
     @staticmethod
     def parse(ctx: CypherParser.OC_WhereContext, supplier):

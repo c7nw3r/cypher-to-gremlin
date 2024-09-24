@@ -1,17 +1,13 @@
 from typing import List
 
-from mygpt.graph.cypher_to_gremlin.__spi__.classes import Context, CypherElement
-from mygpt.graph.cypher_to_gremlin.antlr.CypherParser import CypherParser
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.antlr.CypherParser import CypherParser
+from cypher_to_gremlin.mixin.var_name_mixin import VarNameMixin
 
 
-class OCListPredicateExpression(CypherElement):
+class OCListPredicateExpression(CypherElement, VarNameMixin):
     def __init__(self, elements: List[CypherElement]):
         self.elements = elements
-
-    @property
-    def var_name(self):
-        # FIXME
-        return self.elements[0].elements[0].name
 
     def execute(self, context: Context) -> str:
         return "".join(
@@ -25,11 +21,9 @@ class OCListPredicateExpression(CypherElement):
     def parse(ctx: CypherParser.OC_ListPredicateExpressionContext, supplier):
         return OCListPredicateExpression(supplier(ctx))
 
-    def is_sufficient(self, context: Context):
-        try:
-            return self.var_name in context.labels
-        except Exception:
-            return False
+    def accept(self, visitor: CypherElementVisitor):
+        visitor.visit(self)
+        [e.accept(visitor) for e in self.elements]
 
     def __repr__(self):
-        return f"IN {"".join([str(e) for e in self.elements])}"
+        return f"IN {''.join([str(e) for e in self.elements])}"

@@ -1,6 +1,6 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import Context, CypherElement
+from cypher_to_gremlin.__spi__.classes import Context, CypherElement, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.oc_node_label import OCNodeLabel
 
@@ -29,6 +29,10 @@ class OCNodePattern(CypherElement):
             segments.append(f'.as("{var_name}")')
 
         return "".join(segments)
+
+    def accept(self, visitor: CypherElementVisitor):
+        visitor.visit(self)
+        [e.accept(visitor) for e in self.elements]
 
     @staticmethod
     def parse(ctx: CypherParser.OC_NodePatternContext, supplier):

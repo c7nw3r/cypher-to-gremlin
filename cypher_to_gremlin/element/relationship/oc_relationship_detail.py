@@ -1,6 +1,6 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.relationship.oc_rel_type_name import OCRelTypeName
 
@@ -12,6 +12,9 @@ class OCRelationshipDetail(CypherElement):
 
     def execute(self, context: Context) -> str:
         return self.repr
+
+    def accept(self, visitor: CypherElementVisitor):
+        visitor.visit(self)
 
     @staticmethod
     def parse(ctx: CypherParser.OC_RelationshipDetailContext, supplier):

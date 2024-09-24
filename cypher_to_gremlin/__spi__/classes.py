@@ -26,16 +26,19 @@ class Context:
         )
 
 
-class CypherElement(ABC):
+class CypherElementVisitor:
+
+    def visit(self, element: "CypherElement"):
+        pass
+
+
+class Visitable:
+
+    def accept(self, visitor: CypherElementVisitor):
+        pass
+
+
+class CypherElement(ABC, Visitable):
     @abstractmethod
     def execute(self, context: Context) -> str:
         pass
-
-    # TODO: find better / correct solution
-    # recursive evaluation of var name for first element
-    @property
-    def var_name(self) -> str:
-        try:
-            return self.elements[0].var_name
-        except Exception:
-            return ""

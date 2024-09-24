@@ -1,4 +1,4 @@
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
 from cypher_to_gremlin.__spi__.types import Operator
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expression import (
@@ -18,7 +18,7 @@ class OCPartialComparisonExpression(CypherElement):
         _variable = self._resolve_variable(context)
         _property = self._resolve_property(context)
 
-        # FIXME:
+        # FIXME: magic numbers
         value = context.value_resolver(
             context.labels[_variable], _property, value[1:-1]
         )
@@ -45,6 +45,10 @@ class OCPartialComparisonExpression(CypherElement):
         if isinstance(context.source, OCStringListNullPredicateExpression):
             return context.source.elements[1].execute(context)
         raise ValueError("cannot resolve property")
+
+    def accept(self, visitor: CypherElementVisitor):
+        visitor.visit(self)
+        self.value.accept(visitor)
 
     @staticmethod
     def parse(ctx: CypherParser.OC_PartialComparisonExpressionContext, supplier):
