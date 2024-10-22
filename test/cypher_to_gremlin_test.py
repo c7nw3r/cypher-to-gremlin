@@ -92,7 +92,33 @@ class CypherToGremlinTest(TestCase):
         MATCH (document:Document) RETURN COUNT(*)
         """)
 
-        assert (
-            gremlin
-            == 'V().hasLabel("Document").as("document").count()'
-        )
+        assert gremlin == 'V().hasLabel("Document").as("document").count()'
+
+    # TODO: implement
+    # def test_and_where(self):
+    #     cypher = "MATCH (n:label {property1: 'value1', property2: 'value2'}) RETURN n"
+    #     gremlin = CypherToGremlin().to_gremlin(cypher)
+
+    #     assert (
+    #         gremlin
+    #         == 'V().hasLabel("label").has("property1", "value1").has("property2", "value2").as("n").select("n")'
+    #     )
+
+    def test_multi_relation(self):
+        cypher = """
+MATCH (d:document)-[:HAS_KEYWORD]->(k1:keyword)
+WHERE k1.name IN ['kw11', 'kw12', 'kw13']
+WITH d
+MATCH (d)-[:HAS_KEYWORD]->(k2:keyword)
+WHERE k2.name IN ['kw21', 'kw22']
+WITH d
+MATCH (d)-[:HAS_KEYWORD]->(k3:keyword)
+WHERE k3.name IN ['kw31', 'kw32', 'kw33']
+RETURN d
+"""
+        expected_gremlin = """
+V().hasLabel('document')
+  .where(out('HAS_KEYWORD').has('name', within('kw11', 'kw12', 'kw13')))
+  .where(out('HAS_KEYWORD').has('name', within('kw21', 'kw22')).count())
+  .where(out('HAS_KEYWORD').has('name', within('kw31', 'kw32', 'kw33'))).as('document').select('document')
+"""
