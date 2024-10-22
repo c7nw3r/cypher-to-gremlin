@@ -1,15 +1,18 @@
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.__spi__.classes import (
+    Context,
+    CypherElement,
+    CypherElementVisitor,
+)
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
 class OCLiteral(CypherElement):
-
     def __init__(self, repr: str):
         self.repr = repr
 
-        if '"' in repr:  # str
+        if '"' in repr or "'" in repr:  # str
             self.value = repr[1:-1]
-        elif '.' in repr:  # float
+        elif "." in repr:  # float
             self.value = float(repr)
         elif repr in ["true", "false"]:  # bool
             self.value = repr == "true"
