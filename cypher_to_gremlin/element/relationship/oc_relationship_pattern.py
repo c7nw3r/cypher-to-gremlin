@@ -2,9 +2,7 @@ from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
-from cypher_to_gremlin.element.oc_node_label import OCNodeLabel
 from cypher_to_gremlin.element.relationship.oc_left_arrow_head import OCLeftArrowHead
-from cypher_to_gremlin.element.relationship.oc_rel_type_name import OCRelTypeName
 from cypher_to_gremlin.element.relationship.oc_relationship_detail import (
     OCRelationshipDetail,
 )
@@ -38,4 +36,11 @@ class OCRelationshipPattern(CypherElement):
         return OCRelationshipPattern(supplier(ctx))
 
     def __repr__(self):
+        if self.is_incoming and self.is_outgoing:
+            return f"-{self.rel_details}-"
+        if self.is_incoming:
+            return f"<-{self.rel_details}-"
+        return f"-{self.rel_details}->"
+
+
         return f"{''.join([str(e) for e in self.rel_details])}"

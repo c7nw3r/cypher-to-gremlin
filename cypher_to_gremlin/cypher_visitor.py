@@ -12,6 +12,8 @@ from cypher_to_gremlin.element.expression.oc_partial_comparison_expression impor
 from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expression import (
     OCStringListNullPredicateExpression,
 )
+from cypher_to_gremlin.element.function.oc_function_invocation import OCFunctionInvocation
+from cypher_to_gremlin.element.function.oc_function_name import OCFunctionName
 from cypher_to_gremlin.element.oc_atom import OCAtom
 from cypher_to_gremlin.element.oc_literal import OCLiteral
 from cypher_to_gremlin.element.oc_match import OCMatch
@@ -123,6 +125,12 @@ class CypherVisitorImpl(CypherVisitor):
 
     def visitOC_Atom(self, ctx: CypherParser.OC_AtomContext):
         return OCAtom.parse(ctx, super().visitOC_Atom)
+
+    def visitOC_FunctionInvocation(self, ctx: CypherParser.OC_FunctionInvocationContext):
+        return OCFunctionInvocation.parse(ctx, super().visitOC_FunctionInvocation)
+
+    def visitOC_FunctionName(self, ctx: CypherParser.OC_FunctionNameContext):
+        return OCFunctionName.parse(ctx, super().visitOC_FunctionName)
 
     def aggregateResult(self, aggregate, next_result):
         array = []

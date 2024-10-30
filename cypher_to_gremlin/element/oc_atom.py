@@ -16,7 +16,7 @@ class OCAtom(CypherElement):
     @staticmethod
     def parse(ctx: CypherParser.OC_AtomContext, supplier):
         elements = supplier(ctx)
-        if len(elements) == 0:
+        if "count" in ctx.getText().lower():
             return OCAtom(ctx.getText())
         return elements
 
