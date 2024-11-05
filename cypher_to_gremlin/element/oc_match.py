@@ -41,4 +41,4 @@ class OCMatch(CypherElement):
         return OCMatch(supplier(ctx))
 
     def __repr__(self):
-        return f"MATCH {[''.join([str(e) for e in self.elements])]}"
+        return f"MATCH {''.join([str(e) for e in self.elements])}"

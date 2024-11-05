@@ -231,7 +231,7 @@ oC_RelationshipsPattern
                     :  oC_NodePattern ( SP? oC_PatternElementChain )+ ;
 
 oC_NodePattern
-           :  '(' SP? ( oC_Variable SP? )? ( oC_NodeLabels SP? )? ( oC_Properties SP? )? ')' ;
+           :  '(' SP? ( oC_Variable SP? )? ( oC_NodeLabels SP? )? ( oC_Where SP? )? ( oC_Properties SP? )? ')' ;
 
 oC_PatternElementChain
                    :  oC_RelationshipPattern SP? oC_NodePattern ;
