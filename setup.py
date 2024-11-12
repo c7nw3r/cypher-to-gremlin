@@ -8,7 +8,7 @@ from setuptools import find_packages, setup
 
 long_description = Path(__file__).with_name("README.md").read_text()
 
-version = "0.4.12"
+version = "0.4.13"
 
 setup(
     name="cypher-to-gremlin",
