@@ -22,7 +22,8 @@ class OCPattern(CypherElement):
 
             return "".join([
                 result[0][0],
-                *[f'.where({"".join(e[1:])[1:]})' for e in result]
+                *[f'.where({"".join(e[1:])[1:]})' for e in result],
+                f'.as("{self.elements[0].source_var}")'
             ])
 
         raise ValueError("pattern parts with different source nodes are not supported")

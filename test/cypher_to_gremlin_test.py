@@ -130,10 +130,10 @@ V().hasLabel('document')
         RETURN document
         """)
 
-        assert (
+        self.assertEquals(
                 gremlin
-                == """
-V().hasLabel("Document").where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "A")).where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "B")).select("document")
+                ,"""
+V().hasLabel("Document").where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "A")).where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "B")).as("document").select("document")
             """.strip()
         )
 
