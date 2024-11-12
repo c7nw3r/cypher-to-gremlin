@@ -1,6 +1,10 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import Context, CypherElement, CypherElementVisitor
+from cypher_to_gremlin.__spi__.classes import (
+    Context,
+    CypherElement,
+    CypherElementVisitor,
+)
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.mixin.aggregate_mixin import AggregateMixin
 from cypher_to_gremlin.mixin.variable_mixin import VariableVisitor
@@ -14,7 +18,8 @@ class OCReturn(CypherElement, AggregateMixin):
         visitor = VariableVisitor()
         self.accept(visitor)
 
-        var_names = [f'"{e}"' for e in visitor]
+        # order preserving deduplication
+        var_names = list(dict.fromkeys(f'"{e}"' for e in visitor))
 
         if len(self.aggregators) > 0:
             # FIXME
