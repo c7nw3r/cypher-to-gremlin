@@ -18,7 +18,8 @@ class OCReturn(CypherElement, AggregateMixin):
         visitor = VariableVisitor()
         self.accept(visitor)
 
-        var_names = set(f'"{e}"' for e in visitor)
+        # order preserving deduplication
+        var_names = list(dict.fromkeys(f'"{e}"' for e in visitor))
 
         if len(self.aggregators) > 0:
             # FIXME
