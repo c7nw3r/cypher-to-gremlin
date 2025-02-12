@@ -130,7 +130,7 @@ V().hasLabel('document')
         RETURN document
         """)
 
-        self.assertEquals(
+        self.assertEqual(
                 gremlin
                 ,"""
 V().hasLabel("Document").where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "A")).where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "B")).as("document").select("document")
@@ -156,4 +156,22 @@ V().hasLabel("document").as("d").count()
         RETURN COUNT(d) AS documentCount
         """)
 
-        self.assertEquals(gremlin, 'V().hasLabel("document").has("valid_until", le(datetime())).as("d").count()')
+        self.assertEqual(gremlin, 'V().hasLabel("document").has("valid_until", le(datetime())).as("d").count()')
+
+    def test_is_null(self):
+        gremlin = CypherToGremlin().to_gremlin("""
+        MATCH (d:document)
+        WHERE d.valid_until is null 
+        RETURN COUNT(d) AS documentCount
+        """)
+
+        self.assertEqual(gremlin, 'V().hasLabel("document").has("valid_until", "__NULL__").as("d").count()')
+
+    def test_is_not_null(self):
+        gremlin = CypherToGremlin().to_gremlin("""
+            MATCH (d:document)
+            WHERE d.valid_until is not null 
+            RETURN COUNT(d) AS documentCount
+            """)
+
+        self.assertEqual(gremlin, 'V().hasLabel("document").not(has("valid_until", "__NULL__")).as("d").count()')

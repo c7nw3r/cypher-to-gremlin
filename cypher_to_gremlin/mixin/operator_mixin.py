@@ -1,6 +1,7 @@
 from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, CypherElementVisitor, Visitable
+from cypher_to_gremlin.element.expression.oc_null_predicate_expression import OCNullPredicateExpression
 from cypher_to_gremlin.element.expression.oc_partial_comparison_expression import OCPartialComparisonExpression
 
 
@@ -8,6 +9,8 @@ class OperatorVisitor(CypherElementVisitor, list):
     def visit(self, element: CypherElement):
         if isinstance(element, OCPartialComparisonExpression):
             self.append(element.operator)
+        if isinstance(element, OCNullPredicateExpression):
+            self.append(str(element))
 
 
 class OperatorMixin(Visitable):

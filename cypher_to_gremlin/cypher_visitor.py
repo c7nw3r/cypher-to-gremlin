@@ -6,6 +6,7 @@ from cypher_to_gremlin.element.expression.oc_comparison_expression import (
 )
 from cypher_to_gremlin.element.expression.oc_list_predicate_expression import OCListPredicateExpression
 from cypher_to_gremlin.element.expression.oc_non_arithmetic_operator_expression import OCNonArithmeticOperatorExpression
+from cypher_to_gremlin.element.expression.oc_null_predicate_expression import OCNullPredicateExpression
 from cypher_to_gremlin.element.expression.oc_partial_comparison_expression import (
     OCPartialComparisonExpression,
 )
@@ -131,6 +132,9 @@ class CypherVisitorImpl(CypherVisitor):
 
     def visitOC_FunctionName(self, ctx: CypherParser.OC_FunctionNameContext):
         return OCFunctionName.parse(ctx, super().visitOC_FunctionName)
+
+    def visitOC_NullPredicateExpression(self, ctx: CypherParser.OC_NullPredicateExpressionContext):
+        return OCNullPredicateExpression.parse(ctx, super().visitOC_NullPredicateExpression)
 
     def aggregateResult(self, aggregate, next_result):
         array = []
