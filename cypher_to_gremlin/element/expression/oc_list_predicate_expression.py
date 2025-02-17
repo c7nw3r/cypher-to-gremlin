@@ -50,7 +50,8 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             source = context.value_resolver(
                 context.labels[_variable], _property, source
             )
-            return f'.filter(values("{target.name}").unfold().is(containing({source})))'
+            # return f'.filter(values("{target.name}").unfold().is(containing({source})))'
+            return f'.has("{target.name}", {source})'
 
         _variable = self._resolve_variable()
         _property = self._resolve_property()

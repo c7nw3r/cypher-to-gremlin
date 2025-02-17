@@ -188,7 +188,7 @@ V().hasLabel("document").as("d").count()
             RETURN d
             """)
 
-        self.assertEqual('V().hasLabel("document").or(has("document_owner", "Thomas Hirschegger"), filter(values("document_assigned_to").unfold().is(containing("Thomas Hirschegger")))).as("d").select("d")', gremlin)
+        self.assertEqual('V().hasLabel("document").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")', gremlin)
 
     def test_and_or_expression(self):
         gremlin = CypherToGremlin().to_gremlin("""
@@ -198,4 +198,4 @@ V().hasLabel("document").as("d").count()
             RETURN d
             """)
 
-        self.assertEqual('V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), filter(values("document_assigned_to").unfold().is(containing("Thomas Hirschegger")))).as("d").select("d")', gremlin)
+        self.assertEqual('V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")', gremlin)
