@@ -61,7 +61,7 @@ class OCComparisonExpression(CypherElement, VariableMixin):
     def _resolve_literals(self):
         visitor = LiteralsVisitor(as_repr=False)
         [e.accept(visitor) for e in self.elements]
-        return visitor[0] if len(visitor) == 1 else visitor if len(visitor) > 0 else None
+        return visitor[0] if len(visitor) == 1 else list(visitor) if len(visitor) > 0 else None
 
     def _resolve_operator(self):
         visitor = OperatorVisitor()

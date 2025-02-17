@@ -8,6 +8,6 @@ class ValueResolver(Protocol):
 
     @abstractmethod
     def __call__(
-        self, labels: List[str], key: str, value: Value
+        self, labels: List[str], key: str, value: Value | list[Value]
     ) -> Union[Value, List[Value]]:
         pass

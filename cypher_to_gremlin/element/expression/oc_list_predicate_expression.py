@@ -5,7 +5,7 @@ from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.oc_literal import OCLiteral
 from cypher_to_gremlin.element.oc_property_lookup import OCPropertyLookup
 from cypher_to_gremlin.mixin.property_mixin import PropertyVisitor
-from cypher_to_gremlin.mixin.variable_mixin import VariableMixin
+from cypher_to_gremlin.mixin.variable_mixin import VariableMixin, VariableVisitor
 
 
 def get_source(element: CypherElement, context: Context):
@@ -45,9 +45,30 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
         target = get_target(self.elements[1], context)
 
         if isinstance(target, OCPropertyLookup):
+            _variable = self._resolve_variable()
+            _property = self._resolve_property()
+            source = context.value_resolver(
+                context.labels[_variable], _property, source
+            )
             return f'.filter(values("{target.name}").unfold().is(containing({source})))'
 
+        _variable = self._resolve_variable()
+        _property = self._resolve_property()
+        target = context.value_resolver(
+            context.labels[_variable], _property, target
+        )
+
         return f'.has("{source}", within({", ".join(target)}))'
+
+    def _resolve_variable(self):
+        visitor = VariableVisitor()
+        [e.accept(visitor) for e in self.elements]
+        return visitor[0] if len(visitor) > 0 else None
+
+    def _resolve_property(self):
+        visitor = PropertyVisitor()
+        [e.accept(visitor) for e in self.elements]
+        return visitor[0] if len(visitor) > 0 else None
 
     @staticmethod
     def parse(ctx: CypherParser.OC_ListPredicateExpressionContext, supplier):
