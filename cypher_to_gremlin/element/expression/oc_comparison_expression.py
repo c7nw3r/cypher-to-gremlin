@@ -70,7 +70,8 @@ class OCComparisonExpression(CypherElement, VariableMixin):
 
     @staticmethod
     def parse(ctx: CypherParser.OC_ComparisonExpressionContext, supplier):
-        return OCComparisonExpression(supplier(ctx))
+        elements = supplier(ctx)
+        return OCComparisonExpression(elements) if len(elements) > 1 else elements
 
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)

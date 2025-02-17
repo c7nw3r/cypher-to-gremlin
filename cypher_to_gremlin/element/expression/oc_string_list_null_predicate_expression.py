@@ -2,10 +2,13 @@ from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
+from cypher_to_gremlin.element.expression.oc_comparison_expression import OCComparisonExpression
+from cypher_to_gremlin.element.expression.oc_list_predicate_expression import OCListPredicateExpression
 from cypher_to_gremlin.element.oc_variable import OCVariable
+from cypher_to_gremlin.mixin.variable_mixin import VariableMixin
 
 
-class OCStringListNullPredicateExpression(CypherElement):
+class OCStringListNullPredicateExpression(CypherElement, VariableMixin):
 
     def __init__(self, elements: List[CypherElement]):
         self.elements = elements
@@ -20,7 +23,14 @@ class OCStringListNullPredicateExpression(CypherElement):
 
     @staticmethod
     def parse(ctx: CypherParser.OC_StringListNullPredicateExpressionContext, supplier):
-        return OCStringListNullPredicateExpression(supplier(ctx))
+        elements = supplier(ctx)
+        if len(elements) == 1:
+            return elements
+
+        if "NULL" in ctx.getText().upper():
+            return OCComparisonExpression(elements)
+
+        return OCListPredicateExpression(elements)
 
     def __repr__(self):
         return "".join([str(e) for e in self.elements])

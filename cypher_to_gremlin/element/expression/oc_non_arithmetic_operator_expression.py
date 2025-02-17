@@ -14,7 +14,8 @@ class OCNonArithmeticOperatorExpression(CypherElement):
 
     @staticmethod
     def parse(ctx: CypherParser.OC_NonArithmeticOperatorExpressionContext, supplier):
-        return OCNonArithmeticOperatorExpression(supplier(ctx))
+        elements = supplier(ctx)
+        return OCNonArithmeticOperatorExpression(elements) if len(elements) > 1 else elements
 
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)

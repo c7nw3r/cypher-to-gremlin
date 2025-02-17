@@ -24,4 +24,4 @@ class OCPartialComparisonExpression(CypherElement):
         return OCPartialComparisonExpression(segments[0], supplier(ctx))
 
     def __repr__(self):
-        return f"{self.operator}"
+        return f"{self.operator} {self.elements}"

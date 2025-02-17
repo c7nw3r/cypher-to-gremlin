@@ -56,3 +56,10 @@ class CypherElement(ABC, Visitable):
     @abstractmethod
     def execute(self, context: Context) -> CharSequence:
         pass
+
+
+class ExpressionContainer(ABC):
+
+    @abstractmethod
+    def get_expressions(self) -> List[CypherElement]:
+        pass

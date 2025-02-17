@@ -12,6 +12,7 @@ class CypherToGremlinTest(TestCase):
         gremlin = CypherToGremlin().to_gremlin(
             'MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset'
         )
+        print(gremlin)
         assert (
                 gremlin
                 == 'V().hasLabel("Asset").has("name", "test").as("asset").select("asset")'
@@ -53,6 +54,8 @@ class CypherToGremlinTest(TestCase):
         WHERE product.name = "A" and vendor.name = "B"
         RETURN product, vendor
         """)
+        print(gremlin)
+        print('V().hasLabel("Product").has("name", "A").as("product").out("createdBy").hasLabel("Vendor").has("name", "B").as("vendor").select("product", "vendor")')
         assert (
                 gremlin
                 == 'V().hasLabel("Product").has("name", "A").as("product").out("createdBy").hasLabel("Vendor").has("name", "B").as("vendor").select("product", "vendor")'
@@ -72,6 +75,8 @@ class CypherToGremlinTest(TestCase):
         MATCH (document:Document) WHERE document.type IN ["A", "B", "C"] RETURN document
         """)
 
+        print(gremlin)
+        print('V().hasLabel("Document").has("type", within("A", "B", "C")).as("document").select("document")')
         assert (
                 gremlin
                 == 'V().hasLabel("Document").has("type", within("A", "B", "C")).as("document").select("document")'
@@ -175,3 +180,22 @@ V().hasLabel("document").as("d").count()
             """)
 
         self.assertEqual(gremlin, 'V().hasLabel("document").not(has("valid_until", "__NULL__")).as("d").count()')
+
+    def test_or_expression(self):
+        gremlin = CypherToGremlin().to_gremlin("""
+            MATCH (d:document) 
+            WHERE (d.document_owner = 'Thomas Hirschegger' OR 'Thomas Hirschegger' IN d.document_assigned_to) 
+            RETURN d
+            """)
+
+        self.assertEqual('V().hasLabel("document").or(has("document_owner", "Thomas Hirschegger"), filter(values("document_assigned_to").unfold().is(containing("Thomas Hirschegger")))).as("d").select("d")', gremlin)
+
+    def test_and_or_expression(self):
+        gremlin = CypherToGremlin().to_gremlin("""
+            MATCH (d:document) 
+            WHERE d.document_status = 'Nicht begonnen' 
+            AND  (d.document_owner = 'Thomas Hirschegger' OR 'Thomas Hirschegger' IN d.document_assigned_to) 
+            RETURN d
+            """)
+
+        self.assertEqual('V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), filter(values("document_assigned_to").unfold().is(containing("Thomas Hirschegger")))).as("d").select("d")', gremlin)
