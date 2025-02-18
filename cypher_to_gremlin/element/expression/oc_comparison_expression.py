@@ -21,7 +21,7 @@ class OCComparisonExpression(CypherElement, VariableMixin):
 
         value = context.value_resolver(
             context.labels[_variable], _property, _literals
-        )
+        ) if _literals is not None else None
 
         if isinstance(value, list):
             values = ", ".join([decorate_literal(e) for e in value])
