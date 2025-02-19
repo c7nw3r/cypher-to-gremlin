@@ -1,6 +1,7 @@
 from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.__util__.str_util import decorate_literal
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.oc_literal import OCLiteral
 from cypher_to_gremlin.element.oc_property_lookup import OCPropertyLookup
@@ -10,7 +11,7 @@ from cypher_to_gremlin.mixin.variable_mixin import VariableMixin, VariableVisito
 
 def get_source(element: CypherElement, context: Context):
     if isinstance(element, OCLiteral):
-        return element.execute(context).replace("'", '"')
+        return element.execute(context).replace("'", '').replace('"', '')
 
     visitor = PropertyVisitor()
     element.accept(visitor)
@@ -50,12 +51,14 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             source = context.value_resolver(
                 context.labels[_variable], _property, source
             )
-            if isinstance(source, list):
-                if context.dialect == "gremlinpython":
-                    return f'.has("{target.name}", within([{", ".join(source)}]))'
-                return f'.has("{target.name}", within({", ".join(source)}))'
 
-            return f'.has("{target.name}", {source})'
+            if isinstance(source, list):
+                source = ", ".join([decorate_literal(e) for e in source])
+                if context.dialect == "gremlinpython":
+                    return f'.has("{target.name}", within([{source}]))'
+                return f'.has("{target.name}", within({source}))'
+
+            return f'.has("{target.name}", {decorate_literal(source)})'
 
         _variable = self._resolve_variable()
         _property = self._resolve_property()
@@ -63,9 +66,13 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             context.labels[_variable], _property, target
         )
 
-        if context.dialect == "gremlinpython":
-            return f'.has("{source}", within([{", ".join(target)}]))'
-        return f'.has("{source}", within({", ".join(target)}))'
+        if isinstance(target, list):
+            target = ", ".join([decorate_literal(e) for e in target])
+            if context.dialect == "gremlinpython":
+                return f'.has("{source}", within([{target}]))'
+            return f'.has("{source}", within({target}))'
+
+        return f'.has("{source}", {decorate_literal(target)})'
 
     def _resolve_variable(self):
         visitor = VariableVisitor()
