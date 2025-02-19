@@ -1,12 +1,14 @@
-from typing import List, Optional, Any
+from typing import List, Optional
 
 from cypher_to_gremlin.__spi__.classes import Context, CypherElement, CypherElementVisitor
 from cypher_to_gremlin.__util__.str_util import decorate_literal
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
-from cypher_to_gremlin.mixin.literals_mixin import LiteralsVisitor
+from cypher_to_gremlin.mixin.literals_mixin import LiteralsVisitor, DynamicValue
 from cypher_to_gremlin.mixin.operator_mixin import OperatorVisitor
 from cypher_to_gremlin.mixin.property_mixin import PropertyVisitor
 from cypher_to_gremlin.mixin.variable_mixin import VariableMixin, VariableVisitor
+
+ResolvedLiteral = str | DynamicValue
 
 
 class OCComparisonExpression(CypherElement, VariableMixin):
@@ -19,15 +21,16 @@ class OCComparisonExpression(CypherElement, VariableMixin):
         _literals = self._resolve_literals()
         _operator = self._resolve_operator()
 
-        if _literals is None:
-            value = None
-        elif isinstance(_literals, list):
+        if isinstance(_literals, list):
             value = [
                 context.value_resolver(context.labels[_variable], _property, e)
                 for e in _literals
             ]
         else:
-            value = context.value_resolver(context.labels[_variable], _property, _literals)
+            value = (
+                context.value_resolver(context.labels[_variable], _property, _literals)
+                if _literals is not None else None
+            )
 
         if isinstance(value, list):
             values = ", ".join([decorate_literal(e) for e in value])
@@ -64,7 +67,7 @@ class OCComparisonExpression(CypherElement, VariableMixin):
         [e.accept(visitor) for e in self.elements]
         return visitor[0] if len(visitor) > 0 else None
 
-    def _resolve_literals(self) -> Optional[Any | list]:
+    def _resolve_literals(self) -> Optional[ResolvedLiteral | list[ResolvedLiteral]]:
         visitor = LiteralsVisitor(as_repr=False)
         [e.accept(visitor) for e in self.elements]
         return visitor[0] if len(visitor) == 1 else visitor if len(visitor) > 0 else None

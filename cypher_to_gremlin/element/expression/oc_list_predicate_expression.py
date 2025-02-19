@@ -50,7 +50,11 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             source = context.value_resolver(
                 context.labels[_variable], _property, source
             )
-            # return f'.filter(values("{target.name}").unfold().is(containing({source})))'
+            if isinstance(source, list):
+                if context.dialect == "gremlinpython":
+                    return f'.has("{target.name}", within([{", ".join(source)}]))'
+                return f'.has("{target.name}", within({", ".join(source)}))'
+
             return f'.has("{target.name}", {source})'
 
         _variable = self._resolve_variable()
@@ -59,6 +63,8 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             context.labels[_variable], _property, target
         )
 
+        if context.dialect == "gremlinpython":
+            return f'.has("{source}", within([{", ".join(target)}]))'
         return f'.has("{source}", within({", ".join(target)}))'
 
     def _resolve_variable(self):

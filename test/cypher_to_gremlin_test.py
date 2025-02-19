@@ -199,3 +199,14 @@ V().hasLabel("document").as("d").count()
             """)
 
         self.assertEqual('V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")', gremlin)
+
+    def test_gremlinpython_and_or_expression(self):
+        context = Context(
+            dialect="gremlinpython",
+            value_resolver=lambda *e: [e[2]]
+        )
+        gremlin = CypherToGremlin(context).to_gremlin("""
+            MATCH (d:document) WHERE \'Max Mustermann\' = d.document_owner OR \'Max Mustermann\' IN d.document_assigned_to RETURN d
+            """)
+
+        self.assertEqual('V().hasLabel("document").or(has("document_owner", within(["Max Mustermann"])), has("document_assigned_to", within(["Max Mustermann"]))).as("d").select("d")', gremlin)
