@@ -19,9 +19,11 @@ class OCComparisonExpression(CypherElement, VariableMixin):
         _literals = self._resolve_literals()
         _operator = self._resolve_operator()
 
-        value = context.value_resolver(
-            context.labels[_variable], _property, _literals
-        ) if _literals is not None else None
+        _literals = [
+            context.value_resolver(context.labels[_variable], _property, e)
+            for e in _literals]
+
+        value = _literals[0] if len(_literals) == 1 else _literals
 
         if isinstance(value, list):
             values = ", ".join([decorate_literal(e) for e in value])
@@ -61,7 +63,7 @@ class OCComparisonExpression(CypherElement, VariableMixin):
     def _resolve_literals(self):
         visitor = LiteralsVisitor(as_repr=False)
         [e.accept(visitor) for e in self.elements]
-        return visitor[0] if len(visitor) == 1 else list(visitor) if len(visitor) > 0 else None
+        return visitor[0] if len(visitor) == 1 else visitor if len(visitor) > 0 else None
 
     def _resolve_operator(self):
         visitor = OperatorVisitor()
