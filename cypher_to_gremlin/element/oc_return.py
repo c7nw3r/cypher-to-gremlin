@@ -30,6 +30,22 @@ class OCReturn(CypherElement, AggregateMixin):
 
         return ""
 
+    async def async_execute(self, context: Context) -> str:
+        visitor = VariableVisitor()
+        self.accept(visitor)
+
+        # order preserving deduplication
+        var_names = list(dict.fromkeys(f'"{e}"' for e in visitor))
+
+        if len(self.aggregators) > 0:
+            # FIXME
+            return f".count()"
+
+        if len(var_names) > 0:
+            return f".select({', '.join(var_names)})"
+
+        return ""
+
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)
         [e.accept(visitor) for e in self.elements]

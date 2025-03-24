@@ -1,7 +1,7 @@
 from cypher_to_gremlin.__spi__.classes import (
     Context,
     CypherElement,
-    CypherElementVisitor,
+    CypherElementVisitor, AsyncCharSequence, CharSequence,
 )
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
@@ -19,7 +19,10 @@ class OCLiteral(CypherElement):
         else:  # int
             self.value = int(repr)
 
-    def execute(self, context: Context) -> str:
+    def execute(self, context: Context) -> CharSequence:
+        return self.repr
+
+    async def async_execute(self, context: Context) -> AsyncCharSequence:
         return self.repr
 
     def accept(self, visitor: CypherElementVisitor):

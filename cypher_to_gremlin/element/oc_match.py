@@ -27,6 +27,13 @@ class OCMatch(CypherElement):
             return self.path.execute(context.with_wheres([self.expr]))
         return self.path.execute(context)
 
+    async def async_execute(self, context: Context) -> str:
+        if isinstance(self.expr, OCAndExpression):
+            return await self.path.async_execute(context.with_wheres(self.expr.get_expressions()))
+        if self.expr:
+            return await self.path.async_execute(context.with_wheres([self.expr]))
+        return await self.path.async_execute(context)
+
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)
         [e.accept(visitor) for e in self.elements]

@@ -1,6 +1,7 @@
 from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor, ExpressionContainer
+from cypher_to_gremlin.__util__.async_util import gather_all
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
@@ -17,6 +18,10 @@ class OCOrExpression(CypherElement, ExpressionContainer):
 
     def execute(self, context: Context) -> str:
         return ".or(" + ", ".join([e.execute(context)[1:] for e in self.elements]) + ")"
+
+    async def async_execute(self, context: Context) -> str:
+        result = [e[1:] for e in await gather_all(self.elements, context)]
+        return ".or(" + ", ".join(result) + ")"
 
     def get_expressions(self):
         return [self]

@@ -42,6 +42,39 @@ class OCNodePattern(CypherElement, VariableMixin):
 
         return "".join(segments)
 
+    async def async_execute(self, context: Context) -> str:
+        import asyncio
+
+        var_name = await self.elements[0].async_execute(context)
+        labels = await asyncio.gather(*[
+            e.async_execute(context) for e in self.elements if isinstance(e, OCNodeLabel)
+        ])
+
+        context.labels[var_name] = [e[1:-1] for e in labels]
+
+        wheres = [
+            e for e in self.elements if isinstance(e, OCWhere)
+        ]
+
+        filters = [e for e in context.wheres if e.is_sufficient(context)]
+
+        segments = [f".hasLabel({', '.join(labels)})"] if len(labels) > 0 else []
+
+        for _filter in filters:
+            segments.append(_filter.execute(context))
+            context.wheres.remove(_filter)
+
+        if wheres:
+            segments.append(await wheres[0].async_execute(context))
+
+        if segments and context.alias:
+            segments.append(f'.as("{var_name}")')
+
+        if len(labels) == 0 and len(filters) == 0:
+            segments.append(f'.select("{var_name}")')
+
+        return "".join(segments)
+
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)
         [e.accept(visitor) for e in self.elements]

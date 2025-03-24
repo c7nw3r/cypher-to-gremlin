@@ -12,6 +12,9 @@ class OCAndExpression(CypherElement, ExpressionContainer):
     def execute(self, context: Context) -> str:
         return "".join([e.execute(context) for e in self.elements])
 
+    async def async_execute(self, context: Context) -> str:
+        return "".join([await e.async_execute(context) for e in self.elements])
+
     def is_sufficient(self, context: Context):
         return all([e.is_sufficient(context) for e in self.elements])
 

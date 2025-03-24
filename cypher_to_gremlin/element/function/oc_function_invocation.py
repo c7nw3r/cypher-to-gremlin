@@ -1,6 +1,7 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor, AsyncCharSequence, \
+    CharSequence
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
@@ -13,7 +14,10 @@ class OCFunctionInvocation(CypherElement):
     def name(self):
         return self.elements[0].name
 
-    def execute(self, context: Context) -> str:
+    def execute(self, context: Context) -> CharSequence:
+        return f"{self.elements[0]}({''.join([str(e) for e in self.elements[1:]])})"
+
+    async def async_execute(self, context: Context) -> AsyncCharSequence:
         return f"{self.elements[0]}({''.join([str(e) for e in self.elements[1:]])})"
 
     @staticmethod

@@ -10,6 +10,9 @@ class OCNodeLabel(CypherElement):
     def execute(self, context: Context) -> str:
         return f'"{self.name}"'
 
+    async def async_execute(self, context: Context) -> str:
+        return f'"{self.name}"'
+
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)
 

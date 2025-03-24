@@ -9,6 +9,9 @@ class OCVariable(CypherElement):
     def execute(self, context: Context) -> str:
         return self.name
 
+    async def async_execute(self, context: Context) -> str:
+        return self.name
+
     @property
     def var_name(self) -> str:
         return self.name

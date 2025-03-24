@@ -1,4 +1,5 @@
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor, AsyncCharSequence, \
+    CharSequence
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
 
@@ -7,7 +8,10 @@ class OCNullPredicateExpression(CypherElement):
     def __init__(self, negated: bool):
         self.negated = negated
 
-    def execute(self, context: Context) -> str:
+    def execute(self, context: Context) -> CharSequence:
+        return "IS NOT NULL" if self.negated else "IS NULL"
+
+    async def async_execute(self, context: Context) -> AsyncCharSequence:
         return "IS NOT NULL" if self.negated else "IS NULL"
 
     @staticmethod

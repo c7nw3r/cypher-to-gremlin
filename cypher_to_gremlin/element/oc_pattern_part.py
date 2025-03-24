@@ -1,6 +1,8 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor, StringLike, CharSequence
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor, StringLike, CharSequence, \
+    AsyncCharSequence
+from cypher_to_gremlin.__util__.async_util import gather_all
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.mixin.variable_mixin import VariableVisitor
 
@@ -24,6 +26,10 @@ class OCPatternPart(CypherElement):
 
     def execute(self, context: Context) -> CharSequence:
         return StringLike([e.execute(context) for e in self.elements])
+
+    async def async_execute(self, context: Context) -> AsyncCharSequence:
+        result = await gather_all(self.elements, context)
+        return StringLike(result)
 
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)

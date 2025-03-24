@@ -57,6 +57,48 @@ class OCComparisonExpression(CypherElement, VariableMixin):
 
         raise ValueError("invalid operator " + _operator)
 
+    async def async_execute(self, context: Context) -> str:
+        _variable = self._resolve_variable()
+        _property = self._resolve_property()
+        _literals = self._resolve_literals()
+        _operator = self._resolve_operator()
+
+        if isinstance(_literals, list):
+            value = [
+                context.value_resolver(context.labels[_variable], _property, e)
+                for e in _literals
+            ]
+        else:
+            value = (
+                context.value_resolver(context.labels[_variable], _property, _literals)
+                if _literals is not None else None
+            )
+
+        if isinstance(value, list):
+            values = ", ".join([decorate_literal(e) for e in value])
+            if context.dialect == "gremlinpython":
+                return f'.has("{_property}", within([{values}]))'
+            return f'.has("{_property}", within({values}))'
+
+        if _operator is None:
+            return f'.has("{_property}", {decorate_literal(value)})'
+        if _operator == "=":
+            return f'.has("{_property}", {decorate_literal(value)})'
+        if _operator == ">=":
+            return f'.has("{_property}", ge({decorate_literal(value)}))'
+        if _operator == ">":
+            return f'.has("{_property}", gt({decorate_literal(value)}))'
+        if _operator == "<=":
+            return f'.has("{_property}", le({decorate_literal(value)}))'
+        if _operator == "<":
+            return f'.has("{_property}", lt({decorate_literal(value)}))'
+        if _operator == "IS NULL":
+            return f'.has("{_property}", "__NULL__")'
+        if _operator == "IS NOT NULL":
+            return f'.not(has("{_property}", "__NULL__"))'
+
+        raise ValueError("invalid operator " + _operator)
+
     def _resolve_variable(self):
         visitor = VariableVisitor()
         [e.accept(visitor) for e in self.elements]

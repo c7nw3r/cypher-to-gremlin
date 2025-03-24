@@ -1,6 +1,7 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor, AsyncCharSequence, \
+    CharSequence
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.relationship.oc_left_arrow_head import OCLeftArrowHead
 from cypher_to_gremlin.element.relationship.oc_relationship_detail import (
@@ -18,7 +19,7 @@ class OCRelationshipPattern(CypherElement):
         self.is_outgoing = any([isinstance(e, OCRightArrowHead) for e in elements])
         self.is_incoming = any([isinstance(e, OCLeftArrowHead) for e in elements])
 
-    def execute(self, context: Context) -> str:
+    def execute(self, context: Context) -> CharSequence:
         if self.is_outgoing and self.is_incoming:
             return f".both({', '.join([str(e) for e in self.rel_details.type_names])})"
         if self.is_outgoing:
@@ -26,6 +27,9 @@ class OCRelationshipPattern(CypherElement):
         if self.is_incoming:
             return f".in({', '.join([e.name for e in self.rel_details.type_names])})"
         raise ValueError("not implemented")
+
+    async def async_execute(self, context: Context) -> AsyncCharSequence:
+        return self.execute(context)
 
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)
@@ -41,6 +45,5 @@ class OCRelationshipPattern(CypherElement):
         if self.is_incoming:
             return f"<-{self.rel_details}-"
         return f"-{self.rel_details}->"
-
 
         return f"{''.join([str(e) for e in self.rel_details])}"

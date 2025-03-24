@@ -37,6 +37,25 @@ def get_target(element: CypherElement, context: Context):
     return collector
 
 
+def render_property(source, target, context) -> str:
+    if isinstance(source, list):
+        source = ", ".join([decorate_literal(e) for e in source])
+        if context.dialect == "gremlinpython":
+            return f'.has("{target.name}", within([{source}]))'
+        return f'.has("{target.name}", within({source}))'
+
+    return f'.has("{target.name}", {decorate_literal(source)})'
+
+def render_list(source, target, context) -> str:
+    if isinstance(target, list):
+        target = ", ".join([decorate_literal(e) for e in target])
+        if context.dialect == "gremlinpython":
+            return f'.has("{source}", within([{target}]))'
+        return f'.has("{source}", within({target}))'
+
+    return f'.has("{source}", {decorate_literal(target)})'
+
+
 class OCListPredicateExpression(CypherElement, VariableMixin):
     def __init__(self, elements: List[CypherElement]):
         self.elements = elements
@@ -46,33 +65,38 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
         target = get_target(self.elements[1], context)
 
         if isinstance(target, OCPropertyLookup):
-            _variable = self._resolve_variable()
-            _property = self._resolve_property()
             source = context.value_resolver(
-                context.labels[_variable], _property, source
+                labels=context.labels[self._resolve_variable()],
+                key=self._resolve_property(),
+                value=source
             )
+            return render_property(source, target, context)
 
-            if isinstance(source, list):
-                source = ", ".join([decorate_literal(e) for e in source])
-                if context.dialect == "gremlinpython":
-                    return f'.has("{target.name}", within([{source}]))'
-                return f'.has("{target.name}", within({source}))'
-
-            return f'.has("{target.name}", {decorate_literal(source)})'
-
-        _variable = self._resolve_variable()
-        _property = self._resolve_property()
         target = context.value_resolver(
-            context.labels[_variable], _property, target
+            labels=context.labels[self._resolve_variable()],
+            key=self._resolve_property(),
+            value=target
         )
+        return render_list(source, target, context)
 
-        if isinstance(target, list):
-            target = ", ".join([decorate_literal(e) for e in target])
-            if context.dialect == "gremlinpython":
-                return f'.has("{source}", within([{target}]))'
-            return f'.has("{source}", within({target}))'
+    async def async_execute(self, context: Context) -> str:
+        source = get_source(self.elements[0], context)
+        target = get_target(self.elements[1], context)
 
-        return f'.has("{source}", {decorate_literal(target)})'
+        if isinstance(target, OCPropertyLookup):
+            source = await context.value_resolver.async_resolve(
+                labels=context.labels[self._resolve_variable()],
+                key=self._resolve_property(),
+                value=source
+            )
+            return render_property(source, target, context)
+
+        target = await context.value_resolver.async_resolve(
+            labels=context.labels[self._resolve_variable()],
+            key=self._resolve_property(),
+            value=target
+        )
+        return render_list(source, target, context)
 
     def _resolve_variable(self):
         visitor = VariableVisitor()

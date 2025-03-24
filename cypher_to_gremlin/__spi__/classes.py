@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
-from typing import List, Literal, Union
+from typing import List, Literal, Union, Awaitable
 
-from cypher_to_gremlin.__spi__.protocols import ValueResolver
+from cypher_to_gremlin.__spi__.protocols import ValueResolver, NoOpValueResolver
 
 Dialect = Literal["tinkerpop", "gremlinpython"]
 
@@ -11,7 +11,7 @@ Dialect = Literal["tinkerpop", "gremlinpython"]
 class Context:
     labels: dict = field(default_factory=lambda: {})
     wheres: List["CypherElement"] = field(default_factory=lambda: [])
-    value_resolver: ValueResolver = lambda *e: e[2]
+    value_resolver: ValueResolver = field(default_factory=lambda: NoOpValueResolver())
     dialect: Dialect = "tinkerpop"
     alias: bool = True
 
@@ -50,11 +50,16 @@ class StringLike:
 
 
 CharSequence = Union[str, StringLike]
+AsyncCharSequence = Awaitable[str | StringLike]
 
 
 class CypherElement(ABC, Visitable):
     @abstractmethod
     def execute(self, context: Context) -> CharSequence:
+        pass
+
+    @abstractmethod
+    async def async_execute(self, context: Context) -> AsyncCharSequence:
         pass
 
 

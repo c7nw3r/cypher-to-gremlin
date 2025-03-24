@@ -12,6 +12,9 @@ class OCSingleQuery(CypherElement):
     def execute(self, context: Context) -> str:
         return "".join([str(e.execute(context)) for e in self.elements])
 
+    async def async_execute(self, context: Context) -> str:
+        return "".join([str(await e.async_execute(context)) for e in self.elements])
+
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)
         [e.accept(visitor) for e in self.elements]

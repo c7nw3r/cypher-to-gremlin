@@ -1,6 +1,7 @@
 from typing import List
 
-from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor, CharSequence, \
+    AsyncCharSequence
 from cypher_to_gremlin.__spi__.types import Operator
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 
@@ -11,7 +12,10 @@ class OCPartialComparisonExpression(CypherElement):
         self.operator = operator
         self.elements = elements
 
-    def execute(self, context: Context, **kwargs) -> str:
+    def execute(self, context: Context, **kwargs) -> CharSequence:
+        return self.operator
+
+    async def async_execute(self, context: Context, **kwargs) -> AsyncCharSequence:
         return self.operator
 
     def accept(self, visitor: CypherElementVisitor):
