@@ -70,14 +70,14 @@ class OCComparisonExpression(CypherElement, VariableMixin):
 
         if isinstance(_literals, list):
             value = [
-                context.value_resolver.async_resolve(
+                await context.value_resolver.async_resolve(
                     context.labels[_variable], _property, e
                 )
                 for e in _literals
             ]
         else:
             value = (
-                context.value_resolver.async_resolve(
+                await context.value_resolver.async_resolve(
                     context.labels[_variable], _property, _literals
                 )
                 if _literals is not None

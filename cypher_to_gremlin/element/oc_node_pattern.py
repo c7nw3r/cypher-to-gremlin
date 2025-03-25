@@ -65,7 +65,7 @@ class OCNodePattern(CypherElement, VariableMixin):
         segments = [f".hasLabel({', '.join(labels)})"] if len(labels) > 0 else []
 
         for _filter in filters:
-            segments.append(_filter.async_execute(context))
+            segments.append(await _filter.async_execute(context))
             context.wheres.remove(_filter)
 
         if wheres:
