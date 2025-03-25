@@ -2,7 +2,7 @@ from unittest import IsolatedAsyncioTestCase
 
 from cypher_to_gremlin import CypherToGremlin
 from cypher_to_gremlin.__spi__.classes import Context
-from cypher_to_gremlin.__spi__.protocols import NoOpValueResolver
+from cypher_to_gremlin.value_resolver.delegate_value_resolver import DelegateValueResolver
 
 
 class AsyncCypherToGremlinTest(IsolatedAsyncioTestCase):
@@ -15,7 +15,7 @@ class AsyncCypherToGremlinTest(IsolatedAsyncioTestCase):
         assert gremlin == 'g.V().hasLabel("Asset").has("name", "test").as("asset").select("asset")'
 
     async def test_simple_where_with_value_resolver(self):
-        context = Context(value_resolver=lambda a, b, c: c + "2")
+        context = Context(value_resolver=DelegateValueResolver(lambda a, b, c: c + "2"))
         gremlin = await CypherToGremlin(context).async_execute(
             'MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset'
         )
@@ -24,8 +24,19 @@ class AsyncCypherToGremlinTest(IsolatedAsyncioTestCase):
                 == 'g.V().hasLabel("Asset").has("name", "test2").as("asset").select("asset")'
         )
 
+    async def test_simple_where_with_batch_value_resolver(self):
+        context = Context(value_resolver=DelegateValueResolver(lambda a, b, c: c + "2"))
+        gremlin = await CypherToGremlin(context).async_execute(
+            'MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset',
+            batch=True
+        )
+        assert (
+                gremlin
+                == 'g.V().hasLabel("Asset").has("name", "test2").as("asset").select("asset")'
+        )
+
     async def test_simple_where_with_value_resolver_list(self):
-        context = Context(value_resolver=lambda a, b, c: [c + "1", c + "2"])
+        context = Context(value_resolver=DelegateValueResolver(lambda a, b, c: [c + "1", c + "2"]))
         gremlin = await CypherToGremlin(context).async_execute(
             'MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset'
         )
@@ -99,7 +110,21 @@ class AsyncCypherToGremlinTest(IsolatedAsyncioTestCase):
 
         self.assertEqual(
             gremlin
-            ,"""
+            , """
+g.V().hasLabel("Document").where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "A")).where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "B")).as("document").select("document")
+            """.strip()
+        )
+
+    async def test_several_matches_with_batch(self):
+        gremlin = await CypherToGremlin().async_execute("""
+        MATCH (document:Document)-[:HAS_KEYWORD]->(kw1:Keyword WHERE kw1.name = "A"),
+              (document)         -[:HAS_KEYWORD]->(kw2:Keyword WHERE kw2.name = "B")
+        RETURN document
+        """, batch=True)
+
+        self.assertEqual(
+            gremlin
+            , """
 g.V().hasLabel("Document").where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "A")).where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "B")).as("document").select("document")
             """.strip()
         )
@@ -150,7 +175,9 @@ g.V().hasLabel("document").as("d").count()
             RETURN d
             """)
 
-        self.assertEqual('g.V().hasLabel("document").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")', gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")',
+            gremlin)
 
     async def test_and_or_expression(self):
         gremlin = await CypherToGremlin().async_execute("""
@@ -160,15 +187,16 @@ g.V().hasLabel("document").as("d").count()
             RETURN d
             """)
 
-        self.assertEqual('g.V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")', gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")',
+            gremlin)
 
     async def test_gremlinpython_and_or_expression(self):
-        context = Context(
-            dialect="gremlinpython",
-            value_resolver=NoOpValueResolver(as_list=True)
-        )
+        context = Context(dialect="gremlinpython")
         gremlin = await CypherToGremlin(context).async_execute("""
             MATCH (d:document) WHERE \'Max Mustermann\' = d.document_owner OR \'Max Mustermann\' IN d.document_assigned_to RETURN d
             """)
 
-        self.assertEqual('g.V().hasLabel("document").or(has("document_owner", within(["Max Mustermann"])), has("document_assigned_to", within(["Max Mustermann"]))).as("d").select("d")', gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").or(has("document_owner", "Max Mustermann"), has("document_assigned_to", "Max Mustermann")).as("d").select("d")',
+            gremlin)

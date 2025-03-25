@@ -27,15 +27,18 @@ class OCComparisonExpression(CypherElement, VariableMixin):
 
         if isinstance(_literals, list):
             value = [
-                context.value_resolver(context.labels[_variable], _property, e)
+                context.value_resolver.resolve(context.labels[_variable], _property, e)
                 for e in _literals
             ]
         else:
             value = (
-                context.value_resolver(context.labels[_variable], _property, _literals)
+                context.value_resolver.resolve(context.labels[_variable], _property, _literals)
                 if _literals is not None
                 else None
             )
+
+        if value is not None and len(value) == 1:
+            value = value[0]
 
         if isinstance(value, list):
             values = ", ".join([decorate_literal(e) for e in value])
@@ -83,6 +86,9 @@ class OCComparisonExpression(CypherElement, VariableMixin):
                 if _literals is not None
                 else None
             )
+
+        if value is not None and len(value) == 1:
+            value = value[0]
 
         if isinstance(value, list):
             values = ", ".join([decorate_literal(e) for e in value])

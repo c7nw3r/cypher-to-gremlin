@@ -1,5 +1,4 @@
 import os
-
 # read the contents of your README file
 from pathlib import Path
 
@@ -8,7 +7,7 @@ from setuptools import find_packages, setup
 
 long_description = Path(__file__).with_name("README.md").read_text()
 
-version = "0.5.4"
+version = "0.5.5"
 
 setup(
     name="cypher-to-gremlin",

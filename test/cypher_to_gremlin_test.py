@@ -2,6 +2,7 @@ from unittest import TestCase
 
 from cypher_to_gremlin import Context, CypherToGremlin
 from cypher_to_gremlin.__spi__.protocols import NoOpValueResolver
+from cypher_to_gremlin.value_resolver.delegate_value_resolver import DelegateValueResolver
 
 
 class CypherToGremlinTest(TestCase):
@@ -20,7 +21,7 @@ class CypherToGremlinTest(TestCase):
         )
 
     def test_simple_where_with_value_resolver(self):
-        context = Context(value_resolver=lambda a, b, c: c + "2")
+        context = Context(value_resolver=DelegateValueResolver(lambda a, b, c: c + "2"))
         gremlin = CypherToGremlin(context).execute(
             'MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset'
         )
@@ -29,8 +30,19 @@ class CypherToGremlinTest(TestCase):
                 == 'g.V().hasLabel("Asset").has("name", "test2").as("asset").select("asset")'
         )
 
+    def test_simple_where_with_batch_value_resolver(self):
+        context = Context(value_resolver=DelegateValueResolver(lambda a, b, c: c + "2"))
+        gremlin = CypherToGremlin(context).execute(
+            'MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset',
+            batch=True
+        )
+        assert (
+                gremlin
+                == 'g.V().hasLabel("Asset").has("name", "test2").as("asset").select("asset")'
+        )
+
     def test_simple_where_with_value_resolver_list(self):
-        context = Context(value_resolver=lambda a, b, c: [c + "1", c + "2"])
+        context = Context(value_resolver=DelegateValueResolver(lambda a, b, c: [c + "1", c + "2"]))
         gremlin = CypherToGremlin(context).execute(
             'MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset'
         )
@@ -55,8 +67,6 @@ class CypherToGremlinTest(TestCase):
         WHERE product.name = "A" and vendor.name = "B"
         RETURN product, vendor
         """)
-        print(gremlin)
-        print('g.V().hasLabel("Product").has("name", "A").as("product").out("createdBy").hasLabel("Vendor").has("name", "B").as("vendor").select("product", "vendor")')
         assert (
                 gremlin
                 == 'g.V().hasLabel("Product").has("name", "A").as("product").out("createdBy").hasLabel("Vendor").has("name", "B").as("vendor").select("product", "vendor")'
@@ -75,9 +85,6 @@ class CypherToGremlinTest(TestCase):
         gremlin = CypherToGremlin().execute("""
         MATCH (document:Document) WHERE document.type IN ["A", "B", "C"] RETURN document
         """)
-
-        print(gremlin)
-        print('g.V().hasLabel("Document").has("type", within("A", "B", "C")).as("document").select("document")')
         assert (
                 gremlin
                 == 'g.V().hasLabel("Document").has("type", within("A", "B", "C")).as("document").select("document")'
@@ -100,35 +107,6 @@ class CypherToGremlinTest(TestCase):
 
         assert gremlin == 'g.V().hasLabel("Document").as("document").count()'
 
-    # TODO: implement
-    # def test_and_where(self):
-    #     cypher = "MATCH (n:label {property1: 'value1', property2: 'value2'}) RETURN n"
-    #     gremlin = CypherToGremlin().to_gremlin(cypher)
-
-    #     assert (
-    #         gremlin
-    #         == 'g.V().hasLabel("label").has("property1", "value1").has("property2", "value2").as("n").select("n")'
-    #     )
-
-    def test_multi_relation(self):
-        cypher = """
-MATCH (d:document)-[:HAS_KEYWORD]->(k1:keyword)
-WHERE k1.name IN ['kw11', 'kw12', 'kw13']
-WITH d
-MATCH (d)-[:HAS_KEYWORD]->(k2:keyword)
-WHERE k2.name IN ['kw21', 'kw22']
-WITH d
-MATCH (d)-[:HAS_KEYWORD]->(k3:keyword)
-WHERE k3.name IN ['kw31', 'kw32', 'kw33']
-RETURN d
-"""
-        expected_gremlin = """
-g.V().hasLabel('document')
-  .where(out('HAS_KEYWORD').has('name', within('kw11', 'kw12', 'kw13')))
-  .where(out('HAS_KEYWORD').has('name', within('kw21', 'kw22')).count())
-  .where(out('HAS_KEYWORD').has('name', within('kw31', 'kw32', 'kw33'))).as('document').select('document')
-"""
-
     def test_several_matches(self):
         gremlin = CypherToGremlin().execute("""
         MATCH (document:Document)-[:HAS_KEYWORD]->(kw1:Keyword WHERE kw1.name = "A"),
@@ -137,8 +115,22 @@ g.V().hasLabel('document')
         """)
 
         self.assertEqual(
-                gremlin
-                ,"""
+            gremlin
+            , """
+g.V().hasLabel("Document").where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "A")).where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "B")).as("document").select("document")
+            """.strip()
+        )
+
+    def test_several_matches_with_batch(self):
+        gremlin = CypherToGremlin().execute("""
+        MATCH (document:Document)-[:HAS_KEYWORD]->(kw1:Keyword WHERE kw1.name = "A"),
+              (document)         -[:HAS_KEYWORD]->(kw2:Keyword WHERE kw2.name = "B")
+        RETURN document
+        """, batch=True)
+
+        self.assertEqual(
+            gremlin
+            , """
 g.V().hasLabel("Document").where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "A")).where(out("HAS_KEYWORD").hasLabel("Keyword").has("name", "B")).as("document").select("document")
             """.strip()
         )
@@ -189,7 +181,9 @@ g.V().hasLabel("document").as("d").count()
             RETURN d
             """)
 
-        self.assertEqual('g.V().hasLabel("document").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")', gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")',
+            gremlin)
 
     def test_and_or_expression(self):
         gremlin = CypherToGremlin().execute("""
@@ -199,15 +193,19 @@ g.V().hasLabel("document").as("d").count()
             RETURN d
             """)
 
-        self.assertEqual('g.V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")', gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").has("document_status", "Nicht begonnen").or(has("document_owner", "Thomas Hirschegger"), has("document_assigned_to", "Thomas Hirschegger")).as("d").select("d")',
+            gremlin)
 
     def test_gremlinpython_and_or_expression(self):
         context = Context(
             dialect="gremlinpython",
-            value_resolver=NoOpValueResolver(as_list=True)
+            value_resolver=NoOpValueResolver()
         )
         gremlin = CypherToGremlin(context).execute("""
             MATCH (d:document) WHERE \'Max Mustermann\' = d.document_owner OR \'Max Mustermann\' IN d.document_assigned_to RETURN d
             """)
 
-        self.assertEqual('g.V().hasLabel("document").or(has("document_owner", within(["Max Mustermann"])), has("document_assigned_to", within(["Max Mustermann"]))).as("d").select("d")', gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").or(has("document_owner", "Max Mustermann"), has("document_assigned_to", "Max Mustermann")).as("d").select("d")',
+            gremlin)

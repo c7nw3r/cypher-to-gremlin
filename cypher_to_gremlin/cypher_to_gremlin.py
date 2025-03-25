@@ -8,6 +8,9 @@ from cypher_to_gremlin.antlr.CypherLexer import CypherLexer
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.cypher_visitor import CypherVisitorImpl
 from cypher_to_gremlin.listener.error_listener import CypherErrorListener
+from cypher_to_gremlin.value_resolver.eager_value_resolver import EagerValueResolver
+from cypher_to_gremlin.visitor.labels_visitor import LabelsVisitor
+from cypher_to_gremlin.visitor.resolvable_value_visitor import ValuesVisitor
 
 
 def decorate(
@@ -69,11 +72,24 @@ class CypherToGremlin:
             source: CypherSource,
             dedup: bool = False,
             to_value_map: bool = False,
-            limit: int | None = None
+            limit: int | None = None,
+            batch: bool = False
     ) -> str:
+        syntax_tree = self._parse_syntax_tree(source)
+        context = self.context
+
+        if batch:
+            visitor1 = LabelsVisitor(self.context)
+            syntax_tree[0].accept(visitor1)
+            context.labels = visitor1
+
+            visitor2 = ValuesVisitor(self.context)
+            syntax_tree[0].accept(visitor2)
+            context.value_resolver = EagerValueResolver(context.value_resolver, visitor2)
+
         gremlin = "g.V()" + "".join([
-            e.execute(self.context)
-            for e in self._parse_syntax_tree(source)
+            e.execute(context)
+            for e in syntax_tree
         ])
         return decorate(gremlin, dedup, to_value_map, limit)
 
@@ -82,11 +98,24 @@ class CypherToGremlin:
             source: CypherSource,
             dedup: bool = False,
             to_value_map: bool = False,
-            limit: int | None = None
+            limit: int | None = None,
+            batch: bool = False
     ) -> str:
+        syntax_tree = self._parse_syntax_tree(source)
+        context = self.context
+
+        if batch:
+            visitor1 = LabelsVisitor(self.context)
+            syntax_tree[0].accept(visitor1)
+            context.labels = visitor1
+
+            visitor2 = ValuesVisitor(self.context)
+            syntax_tree[0].accept(visitor2)
+            context.value_resolver = EagerValueResolver(context.value_resolver, visitor2)
+
         import asyncio
         results = await asyncio.gather(*[
-            e.async_execute(self.context)
+            e.async_execute(context)
             for e in self._parse_syntax_tree(source)
         ])
         return decorate("g.V()" + "".join(results), dedup, to_value_map, limit)

@@ -25,6 +25,11 @@ class Context:
             self.labels, self.wheres, self.value_resolver, self.dialect, alias
         )
 
+    def with_labels(self, labels: dict):
+        return Context(
+            labels, self.wheres, self.value_resolver, self.dialect, self.alias
+        )
+
 
 class CypherElementVisitor:
 

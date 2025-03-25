@@ -38,6 +38,9 @@ def get_target(element: CypherElement, context: Context):
 
 
 def render_property(source, target, context) -> str:
+    if len(source) == 1:
+        source = source[0]
+
     if isinstance(source, list):
         source = ", ".join([decorate_literal(e) for e in source])
         if context.dialect == "gremlinpython":
@@ -47,6 +50,9 @@ def render_property(source, target, context) -> str:
     return f'.has("{target.name}", {decorate_literal(source)})'
 
 def render_list(source, target, context) -> str:
+    if len(source) == 1:
+        source = source[0]
+
     if isinstance(target, list):
         target = ", ".join([decorate_literal(e) for e in target])
         if context.dialect == "gremlinpython":
@@ -65,14 +71,14 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
         target = get_target(self.elements[1], context)
 
         if isinstance(target, OCPropertyLookup):
-            source = context.value_resolver(
+            source = context.value_resolver.resolve(
                 labels=context.labels[self._resolve_variable()],
                 key=self._resolve_property(),
                 value=source
             )
             return render_property(source, target, context)
 
-        target = context.value_resolver(
+        target = context.value_resolver.resolve(
             labels=context.labels[self._resolve_variable()],
             key=self._resolve_property(),
             value=target
