@@ -1,9 +1,13 @@
 from typing import List, Optional
 
-from cypher_to_gremlin.__spi__.classes import Context, CypherElement, CypherElementVisitor
+from cypher_to_gremlin.__spi__.classes import (
+    Context,
+    CypherElement,
+    CypherElementVisitor,
+)
 from cypher_to_gremlin.__util__.str_util import decorate_literal
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
-from cypher_to_gremlin.mixin.literals_mixin import LiteralsVisitor, DynamicValue
+from cypher_to_gremlin.mixin.literals_mixin import DynamicValue, LiteralsVisitor
 from cypher_to_gremlin.mixin.operator_mixin import OperatorVisitor
 from cypher_to_gremlin.mixin.property_mixin import PropertyVisitor
 from cypher_to_gremlin.mixin.variable_mixin import VariableMixin, VariableVisitor
@@ -29,7 +33,8 @@ class OCComparisonExpression(CypherElement, VariableMixin):
         else:
             value = (
                 context.value_resolver(context.labels[_variable], _property, _literals)
-                if _literals is not None else None
+                if _literals is not None
+                else None
             )
 
         if isinstance(value, list):
@@ -65,13 +70,18 @@ class OCComparisonExpression(CypherElement, VariableMixin):
 
         if isinstance(_literals, list):
             value = [
-                context.value_resolver(context.labels[_variable], _property, e)
+                context.value_resolver.async_resolve(
+                    context.labels[_variable], _property, e
+                )
                 for e in _literals
             ]
         else:
             value = (
-                context.value_resolver(context.labels[_variable], _property, _literals)
-                if _literals is not None else None
+                context.value_resolver.async_resolve(
+                    context.labels[_variable], _property, _literals
+                )
+                if _literals is not None
+                else None
             )
 
         if isinstance(value, list):
@@ -112,7 +122,9 @@ class OCComparisonExpression(CypherElement, VariableMixin):
     def _resolve_literals(self) -> Optional[ResolvedLiteral | list[ResolvedLiteral]]:
         visitor = LiteralsVisitor(as_repr=False)
         [e.accept(visitor) for e in self.elements]
-        return visitor[0] if len(visitor) == 1 else visitor if len(visitor) > 0 else None
+        return (
+            visitor[0] if len(visitor) == 1 else visitor if len(visitor) > 0 else None
+        )
 
     def _resolve_operator(self):
         visitor = OperatorVisitor()
