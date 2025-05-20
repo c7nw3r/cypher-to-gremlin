@@ -5,6 +5,7 @@ from cypher_to_gremlin.__spi__.types import Value
 from cypher_to_gremlin.visitor.resolvable_value_visitor import ResolvableValue
 
 
+# TODO: rename to LazyValueResolver
 class EagerValueResolver(ValueResolver):
     def __init__(self, delegate: ValueResolver, resolvable_values: list[ResolvableValue]):
         self.delegate = delegate
