@@ -45,6 +45,8 @@ def render_property(source, target, context) -> str:
         source = ", ".join([decorate_literal(e) for e in source])
         if context.dialect == "gremlinpython":
             return f'.has("{target.name}", within([{source}]))'
+        if context.dialect == "cosmosdb":
+            return f'.has("{target.name}", within([{source}]))'
         return f'.has("{target.name}", within({source}))'
 
     return f'.has("{target.name}", {decorate_literal(source)})'
@@ -56,6 +58,8 @@ def render_list(source, target, context) -> str:
     if isinstance(target, list):
         target = ", ".join([decorate_literal(e) for e in target])
         if context.dialect == "gremlinpython":
+            return f'.has("{source}", within([{target}]))'
+        if context.dialect == "cosmosdb":
             return f'.has("{source}", within([{target}]))'
         return f'.has("{source}", within({target}))'
 

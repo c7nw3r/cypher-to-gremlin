@@ -21,7 +21,7 @@ def decorate(
 ) -> str:
     if dedup:
         gremlin += ".dedup()"
-    if to_value_map and "count()" not in gremlin:
+    if to_value_map and "count()" not in gremlin and "values(" not in gremlin:
         gremlin += ".valueMap(true)"
     if limit is not None:
         gremlin += f".limit({limit})"

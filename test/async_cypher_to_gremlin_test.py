@@ -202,12 +202,12 @@ g.V().hasLabel("document").as("d").count()
             gremlin)
 
     async def test_order_by_date(self):
-        context = Context(dialect="gremlinpython")
+        context = Context(dialect="cosmosdb")
         gremlin = await CypherToGremlin(context).async_execute("""
             MATCH (d:document) RETURN d.creation_time ORDER BY d.creation_time DESC LIMIT 1
             """)
 
         self.assertEqual(
-            'g.V().hasLabel("document").as("d").order().by("creation_time", desc).limit(1).values("creation_time")',
+            'g.V().hasLabel("document").as("d").order().by("creation_time", decr).limit(1).values("creation_time")',
             gremlin
         )

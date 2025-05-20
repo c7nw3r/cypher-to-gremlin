@@ -19,9 +19,13 @@ class OCSortItem(CypherElement):
         return visitor[0]
 
     def execute(self, context: Context) -> str:
+        if context.dialect == "cosmosdb":
+            return f'.by("{self.property_name}", {"decr" if self.descending else "incr"})'
         return f'.by("{self.property_name}", {"desc" if self.descending else "asc"})'
 
     async def async_execute(self, context: Context) -> str:
+        if context.dialect == "cosmosdb":
+            return f'.by("{self.property_name}", {"decr" if self.descending else "incr"})'
         return f'.by("{self.property_name}", {"desc" if self.descending else "asc"})'
 
     def accept(self, visitor: CypherElementVisitor):

@@ -4,7 +4,7 @@ from typing import List, Literal, Union, Awaitable
 
 from cypher_to_gremlin.__spi__.protocols import ValueResolver, NoOpValueResolver
 
-Dialect = Literal["tinkerpop", "gremlinpython"]
+Dialect = Literal["tinkerpop", "gremlinpython", "cosmosdb"]
 
 
 @dataclass

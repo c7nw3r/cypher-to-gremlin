@@ -44,6 +44,8 @@ class OCComparisonExpression(CypherElement, VariableMixin):
             values = ", ".join([decorate_literal(e) for e in value])
             if context.dialect == "gremlinpython":
                 return f'.has("{_property}", within([{values}]))'
+            if context.dialect == "cosmosdb":
+                return f'.has("{_property}", within([{values}]))'
             return f'.has("{_property}", within({values}))'
 
         if _operator is None:
@@ -93,6 +95,8 @@ class OCComparisonExpression(CypherElement, VariableMixin):
         if isinstance(value, list):
             values = ", ".join([decorate_literal(e) for e in value])
             if context.dialect == "gremlinpython":
+                return f'.has("{_property}", within([{values}]))'
+            if context.dialect == "cosmosdb":
                 return f'.has("{_property}", within([{values}]))'
             return f'.has("{_property}", within({values}))'
 
