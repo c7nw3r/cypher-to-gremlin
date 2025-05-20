@@ -17,15 +17,18 @@ from cypher_to_gremlin.element.expression.oc_string_list_null_predicate_expressi
 from cypher_to_gremlin.element.function.oc_function_invocation import OCFunctionInvocation
 from cypher_to_gremlin.element.function.oc_function_name import OCFunctionName
 from cypher_to_gremlin.element.oc_atom import OCAtom
+from cypher_to_gremlin.element.oc_limit import OCLimit
 from cypher_to_gremlin.element.oc_literal import OCLiteral
 from cypher_to_gremlin.element.oc_match import OCMatch
 from cypher_to_gremlin.element.oc_node_label import OCNodeLabel
 from cypher_to_gremlin.element.oc_node_pattern import OCNodePattern
+from cypher_to_gremlin.element.oc_order import OCOrder
 from cypher_to_gremlin.element.oc_pattern import OCPattern
 from cypher_to_gremlin.element.oc_pattern_part import OCPatternPart
 from cypher_to_gremlin.element.oc_property_lookup import OCPropertyLookup
 from cypher_to_gremlin.element.oc_return import OCReturn
 from cypher_to_gremlin.element.oc_single_query import OCSingleQuery
+from cypher_to_gremlin.element.oc_sort_item import OCSortItem
 from cypher_to_gremlin.element.oc_variable import OCVariable
 from cypher_to_gremlin.element.oc_where import OCWhere
 from cypher_to_gremlin.element.relationship.oc_dash import OCDash
@@ -139,6 +142,15 @@ class CypherVisitorImpl(CypherVisitor):
 
     def visitOC_NullPredicateExpression(self, ctx: CypherParser.OC_NullPredicateExpressionContext):
         return OCNullPredicateExpression.parse(ctx, super().visitOC_NullPredicateExpression)
+
+    def visitOC_Order(self, ctx: CypherParser.OC_OrderContext):
+        return OCOrder.parse(ctx, super().visitOC_Order)
+
+    def visitOC_SortItem(self, ctx: CypherParser.OC_SortItemContext):
+        return OCSortItem.parse(ctx, super().visitOC_SortItem)
+
+    def visitOC_Limit(self, ctx: CypherParser.OC_LimitContext):
+        return OCLimit.parse(ctx, super().visitOC_Limit)
 
     def aggregateResult(self, aggregate, next_result):
         array = []

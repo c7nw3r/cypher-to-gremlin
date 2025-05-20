@@ -200,3 +200,14 @@ g.V().hasLabel("document").as("d").count()
         self.assertEqual(
             'g.V().hasLabel("document").or(has("document_owner", "Max Mustermann"), has("document_assigned_to", "Max Mustermann")).as("d").select("d")',
             gremlin)
+
+    async def test_order_by_date(self):
+        context = Context(dialect="gremlinpython")
+        gremlin = await CypherToGremlin(context).async_execute("""
+            MATCH (d:document) RETURN d.creation_time ORDER BY d.creation_time DESC LIMIT 1
+            """)
+
+        self.assertEqual(
+            'g.V().hasLabel("document").as("d").order().by("creation_time", desc).limit(1).values("creation_time")',
+            gremlin
+        )
