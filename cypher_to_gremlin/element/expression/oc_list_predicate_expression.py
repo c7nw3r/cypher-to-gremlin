@@ -82,11 +82,12 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             )
             return render_property(source, target, context)
 
-        target = context.value_resolver.resolve(
+        target = [context.value_resolver.resolve(
             labels=context.labels[self._resolve_variable()],
             key=self._resolve_property(),
-            value=target
-        )
+            value=e
+        ) for e in target]
+        target = [e for subset in target for e in subset]
         return render_list(source, target, context)
 
     async def async_execute(self, context: Context) -> str:
