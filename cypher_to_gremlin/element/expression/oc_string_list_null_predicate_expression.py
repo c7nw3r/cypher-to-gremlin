@@ -36,7 +36,13 @@ class OCStringListNullPredicateExpression(CypherElement, VariableMixin):
         if "NULL" in ctx.getText().upper():
             return OCComparisonExpression(elements)
 
-        return OCListPredicateExpression(elements)
+        if "STARTS" in ctx.getText().upper() and "WITH" in ctx.getText().upper():
+            return OCListPredicateExpression(elements, "startingWith")
+
+        if "ENDS" in ctx.getText().upper() and "WITH" in ctx.getText().upper():
+            return OCListPredicateExpression(elements, "endingWith")
+
+        return OCListPredicateExpression(elements, "within")
 
     def __repr__(self):
         return "".join([str(e) for e in self.elements])

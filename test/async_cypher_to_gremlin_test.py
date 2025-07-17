@@ -211,3 +211,25 @@ g.V().hasLabel("document").as("d").count()
             'g.V().hasLabel("document").as("d").order().by("creation_time", decr).limit(1).values("creation_time")',
             gremlin
         )
+
+    async def test_starts_with(self):
+        context = Context()
+        gremlin = await CypherToGremlin(context).async_execute("""
+            MATCH (d:document) WHERE d.name STARTS WITH 'ABC' RETURN d
+            """)
+        print(gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").has("name", startingWith("ABC")).as("d").select("d")',
+            gremlin
+        )
+
+    async def test_ends_with(self):
+        context = Context()
+        gremlin = await CypherToGremlin(context).async_execute("""
+            MATCH (d:document) WHERE d.name ENDS WITH 'ABC' RETURN d
+            """)
+        print(gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("document").has("name", endingWith("ABC")).as("d").select("d")',
+            gremlin
+        )

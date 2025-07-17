@@ -37,38 +37,39 @@ def get_target(element: CypherElement, context: Context):
     return collector
 
 
-def render_property(source, target, context) -> str:
+def render_property(source, target, context, predicate: str) -> str:
     if len(source) == 1:
         source = source[0]
 
     if isinstance(source, list):
         source = ", ".join([decorate_literal(e) for e in source])
         if context.dialect == "gremlinpython":
-            return f'.has("{target.name}", within([{source}]))'
+            return f'.has("{target.name}", {predicate}([{source}]))'
         if context.dialect == "cosmosdb":
-            return f'.has("{target.name}", within([{source}]))'
-        return f'.has("{target.name}", within({source}))'
+            return f'.has("{target.name}", {predicate}([{source}]))'
+        return f'.has("{target.name}", {predicate}({source}))'
 
     return f'.has("{target.name}", {decorate_literal(source)})'
 
-def render_list(source, target, context) -> str:
+def render_list(source, target, context, predicate: str) -> str:
     if len(source) == 1:
         source = source[0]
 
     if isinstance(target, list):
         target = ", ".join([decorate_literal(e) for e in target])
         if context.dialect == "gremlinpython":
-            return f'.has("{source}", within([{target}]))'
+            return f'.has("{source}", {predicate}([{target}]))'
         if context.dialect == "cosmosdb":
-            return f'.has("{source}", within([{target}]))'
-        return f'.has("{source}", within({target}))'
+            return f'.has("{source}", {predicate}([{target}]))'
+        return f'.has("{source}", {predicate}({target}))'
 
     return f'.has("{source}", {decorate_literal(target)})'
 
 
 class OCListPredicateExpression(CypherElement, VariableMixin):
-    def __init__(self, elements: List[CypherElement]):
+    def __init__(self, elements: List[CypherElement], predicate: str):
         self.elements = elements
+        self.predicate = predicate
 
     def execute(self, context: Context) -> str:
         source = get_source(self.elements[0], context)
@@ -80,7 +81,7 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
                 key=self._resolve_property(),
                 value=source
             )
-            return render_property(source, target, context)
+            return render_property(source, target, context, self.predicate)
 
         target = [context.value_resolver.resolve(
             labels=context.labels[self._resolve_variable()],
@@ -88,7 +89,7 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             value=e
         ) for e in target]
         target = [e for subset in target for e in subset]
-        return render_list(source, target, context)
+        return render_list(source, target, context, self.predicate)
 
     async def async_execute(self, context: Context) -> str:
         source = get_source(self.elements[0], context)
@@ -100,14 +101,14 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
                 key=self._resolve_property(),
                 value=source
             )
-            return render_property(source, target, context)
+            return render_property(source, target, context, self.predicate)
 
         target = await context.value_resolver.async_resolve(
             labels=context.labels[self._resolve_variable()],
             key=self._resolve_property(),
             value=target
         )
-        return render_list(source, target, context)
+        return render_list(source, target, context, self.predicate)
 
     def _resolve_variable(self):
         visitor = VariableVisitor()
@@ -122,7 +123,7 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
     @staticmethod
     def parse(ctx: CypherParser.OC_ListPredicateExpressionContext, supplier):
         elements = supplier(ctx)
-        return OCListPredicateExpression(elements)
+        return OCListPredicateExpression(elements, "within")
 
     def accept(self, visitor: CypherElementVisitor):
         visitor.visit(self)
