@@ -8,6 +8,7 @@ from cypher_to_gremlin.element.oc_property_lookup import OCPropertyLookup
 from cypher_to_gremlin.mixin.property_mixin import PropertyVisitor
 from cypher_to_gremlin.mixin.variable_mixin import VariableMixin, VariableVisitor
 
+SKIP_VALUE_RESOLVER = ["startingWith", "endingWith"]
 
 def get_source(element: CypherElement, context: Context):
     if isinstance(element, OCLiteral):
@@ -80,14 +81,14 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
                 labels=context.labels[self._resolve_variable()],
                 key=self._resolve_property(),
                 value=source
-            )
+            ) if self.predicate not in SKIP_VALUE_RESOLVER else source
             return render_property(source, target, context, self.predicate)
 
         target = [context.value_resolver.resolve(
             labels=context.labels[self._resolve_variable()],
             key=self._resolve_property(),
             value=e
-        ) for e in target]
+        ) for e in target] if self.predicate not in SKIP_VALUE_RESOLVER else [target]
         target = [e for subset in target for e in subset]
         return render_list(source, target, context, self.predicate)
 
@@ -100,14 +101,14 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
                 labels=context.labels[self._resolve_variable()],
                 key=self._resolve_property(),
                 value=source
-            )
+            ) if self.predicate not in SKIP_VALUE_RESOLVER else source
             return render_property(source, target, context, self.predicate)
 
         target = await context.value_resolver.async_resolve(
             labels=context.labels[self._resolve_variable()],
             key=self._resolve_property(),
             value=target
-        )
+        ) if self.predicate not in SKIP_VALUE_RESOLVER else target
         return render_list(source, target, context, self.predicate)
 
     def _resolve_variable(self):
