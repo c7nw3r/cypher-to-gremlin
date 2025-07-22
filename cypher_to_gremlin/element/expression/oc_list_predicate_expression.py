@@ -56,6 +56,9 @@ def render_list(source, target, context, predicate: str) -> str:
     if len(source) == 1:
         source = source[0]
 
+    if predicate in SKIP_VALUE_RESOLVER:
+        return f'.has("{source}", {predicate}({decorate_literal(target[0])}))'
+
     if isinstance(target, list):
         target = ", ".join([decorate_literal(e) for e in target])
         if context.dialect == "gremlinpython":
