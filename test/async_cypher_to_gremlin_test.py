@@ -233,3 +233,14 @@ g.V().hasLabel("document").as("d").count()
             'g.V().hasLabel("document").has("name", endingWith("ABC")).as("d").select("d")',
             gremlin
         )
+
+    async def test_order_by(self):
+        context = Context()
+        gremlin = await CypherToGremlin(context).async_execute("""
+            MATCH (asset:Asset) WHERE asset.name = "test" RETURN asset ORDER BY asset.type
+            """)
+        print(gremlin)
+        self.assertEqual(
+            'g.V().hasLabel("Asset").has("name", "test").as("asset").order().by("type", asc).select("asset")',
+            gremlin
+        )

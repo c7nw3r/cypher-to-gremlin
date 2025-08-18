@@ -24,7 +24,7 @@ class OCReturn(CypherElement, AggregateMixin):
     @property
     def projections(self):
         visitor = PropertyVisitor()
-        self.accept(visitor)
+        self.elements[0].accept(visitor)
         projections = list(dict.fromkeys(f'"{e}"' for e in visitor))
         return projections[0:1]
 
@@ -38,7 +38,10 @@ class OCReturn(CypherElement, AggregateMixin):
             if self.limit:
                 segments.append(self.limit.execute(context))
 
-            segments.append(f".values({','.join(self.projections)})")
+            if len(self.projections) > 0:
+                segments.append(f".values({','.join(self.projections)})")
+            else:
+                segments.append(f".select(\"{self.elements[0].var_name}\")")
 
             return "".join(segments)
 
@@ -63,7 +66,10 @@ class OCReturn(CypherElement, AggregateMixin):
             if self.limit:
                 segments.append(self.limit.execute(context))
 
-            segments.append(f".values({','.join(self.projections)})")
+            if len(self.projections) > 0:
+                segments.append(f".values({','.join(self.projections)})")
+            else:
+                segments.append(f".select(\"{self.elements[0].var_name}\")")
 
             return "".join(segments)
 
