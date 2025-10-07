@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import Optional, List, Union
 
 from cypher_to_gremlin.__spi__.classes import CypherElement
 
@@ -15,3 +15,12 @@ def find(array: List[CypherElement], cls) -> CypherElement:
         if isinstance(item, cls):
             return item
     raise ValueError("cypher element not found")
+
+def flatten(array: list[Union[any, list]]) -> list:
+    if not array:
+        return array
+
+    if len(array) > 0 and isinstance(array[0], list):
+        return [e for subset in array for e in subset]
+
+    return array

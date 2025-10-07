@@ -1,6 +1,7 @@
 from typing import List
 
 from cypher_to_gremlin.__spi__.classes import CypherElement, Context, CypherElementVisitor
+from cypher_to_gremlin.__util__.list_util import flatten
 from cypher_to_gremlin.__util__.str_util import decorate_literal
 from cypher_to_gremlin.antlr.CypherParser import CypherParser
 from cypher_to_gremlin.element.oc_literal import OCLiteral
@@ -92,7 +93,7 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             key=self._resolve_property(),
             value=e
         ) for e in target] if self.predicate not in SKIP_VALUE_RESOLVER else [target]
-        target = [e for subset in target for e in subset]
+        target = flatten(target)
         return render_list(source, target, context, self.predicate)
 
     async def async_execute(self, context: Context) -> str:
@@ -112,6 +113,7 @@ class OCListPredicateExpression(CypherElement, VariableMixin):
             key=self._resolve_property(),
             value=target
         ) if self.predicate not in SKIP_VALUE_RESOLVER else target
+        target = flatten(target)
         return render_list(source, target, context, self.predicate)
 
     def _resolve_variable(self):
