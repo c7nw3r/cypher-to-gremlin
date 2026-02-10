@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "cypher-to-gremlin"
-version = "0.5.15"
+version = "0.5.16"
 description = "Convert Cypher queries to the Gremlin language"
 authors = ["c7nw3r", ]
 
